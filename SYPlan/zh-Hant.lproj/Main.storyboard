@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SYPlan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo_10" translatesAutoresizingMaskIntoConstraints="NO" id="dO2-Qe-A3L">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="214"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dO2-Qe-A3L" secondAttribute="height" multiplier="375:214" id="CN2-4E-Wd9"/>
+                                    <constraint firstAttribute="width" secondItem="dO2-Qe-A3L" secondAttribute="height" multiplier="454:375" id="J9U-lu-hKY"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="J9U-lu-hKY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="CN2-4E-Wd9"/>
+                                        <include reference="J9U-lu-hKY"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dO2-Qe-A3L" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="49v-38-yNp"/>
+                            <constraint firstItem="dO2-Qe-A3L" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5R3-eY-hBu"/>
+                            <constraint firstItem="dO2-Qe-A3L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7AS-6E-ptT"/>
+                            <constraint firstItem="dO2-Qe-A3L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9oj-GP-kjs"/>
+                            <constraint firstItem="dO2-Qe-A3L" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DAg-Rw-GVr"/>
+                            <constraint firstItem="dO2-Qe-A3L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wki-Tv-qR3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5R3-eY-hBu"/>
+                                <exclude reference="7AS-6E-ptT"/>
+                                <exclude reference="wki-Tv-qR3"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="49v-38-yNp"/>
+                                <include reference="5R3-eY-hBu"/>
+                                <include reference="7AS-6E-ptT"/>
+                                <exclude reference="9oj-GP-kjs"/>
+                                <exclude reference="DAg-Rw-GVr"/>
+                                <include reference="wki-Tv-qR3"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="5R3-eY-hBu"/>
+                                <include reference="7AS-6E-ptT"/>
+                                <include reference="wki-Tv-qR3"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="49v-38-yNp"/>
+                                <include reference="9oj-GP-kjs"/>
+                                <include reference="DAg-Rw-GVr"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-112.89355322338831" y="85.599999999999994"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo_10" width="240" height="160"/>
+    </resources>
+</document>

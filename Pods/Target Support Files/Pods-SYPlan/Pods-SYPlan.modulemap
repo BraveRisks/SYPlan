@@ -1,0 +1,6 @@
+framework module Pods_SYPlan {
+  umbrella header "Pods-SYPlan-umbrella.h"
+
+  export *
+  module * { export * }
+}

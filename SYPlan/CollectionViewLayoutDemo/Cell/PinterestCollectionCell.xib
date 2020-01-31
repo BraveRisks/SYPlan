@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansCJKtc-DemiLight.otf">
+            <string>NotoSansCJKtc-DemiLight</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PinterestCollectionCell" customModule="SYPlan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rFr-HD-Ds5">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo_1" translatesAutoresizingMaskIntoConstraints="NO" id="mqP-VU-hwX">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美麗的女孩兒" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTf-pT-wLH">
+                                <rect key="frame" x="0.0" y="152" width="150" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="AwR-X5-H0y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKtc-DemiLight" family="Noto Sans CJK TC" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="mqP-VU-hwX" firstAttribute="leading" secondItem="rFr-HD-Ds5" secondAttribute="leading" id="2nc-CN-6UC"/>
+                            <constraint firstItem="mqP-VU-hwX" firstAttribute="top" secondItem="rFr-HD-Ds5" secondAttribute="top" id="5ZF-fq-p1c"/>
+                            <constraint firstAttribute="trailing" secondItem="mqP-VU-hwX" secondAttribute="trailing" id="Ano-C6-wE7"/>
+                            <constraint firstItem="aTf-pT-wLH" firstAttribute="leading" secondItem="rFr-HD-Ds5" secondAttribute="leading" id="R1h-9x-WDj"/>
+                            <constraint firstAttribute="bottom" secondItem="aTf-pT-wLH" secondAttribute="bottom" id="Uxi-LV-EHx"/>
+                            <constraint firstAttribute="trailing" secondItem="aTf-pT-wLH" secondAttribute="trailing" id="bhY-L0-g1N"/>
+                            <constraint firstAttribute="bottom" secondItem="mqP-VU-hwX" secondAttribute="bottom" id="lwx-fn-sbd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="rFr-HD-Ds5" secondAttribute="trailing" id="7ta-dl-tcs"/>
+                <constraint firstAttribute="bottom" secondItem="rFr-HD-Ds5" secondAttribute="bottom" id="YKs-qw-K6G"/>
+                <constraint firstItem="rFr-HD-Ds5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="v3M-Hg-fGo"/>
+                <constraint firstItem="rFr-HD-Ds5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vPx-FF-3HJ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="mImgView" destination="mqP-VU-hwX" id="ISF-jn-JMh"/>
+                <outlet property="mTitleLab" destination="aTf-pT-wLH" id="D33-N0-Ub3"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="photo_1" width="240" height="160"/>
+    </resources>
+</document>

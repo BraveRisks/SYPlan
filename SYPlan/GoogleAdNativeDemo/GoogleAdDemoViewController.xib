@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GoogleAdDemoViewController" customModule="SYPlan" customModuleProvider="target">
+            <connections>
+                <outlet property="placeholderAdView" destination="shq-Qp-u7d" id="52v-nZ-fj8"/>
+                <outlet property="refreshButton" destination="YeY-yY-KPu" id="MXB-lC-d2o"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shq-Qp-u7d">
+                    <rect key="frame" x="8" y="84" width="359" height="260"/>
+                    <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="260" id="WLP-x0-osA"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeY-yY-KPu">
+                    <rect key="frame" x="127.66666666666669" y="394" width="120" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="8kO-aa-Y2x"/>
+                        <constraint firstAttribute="height" constant="50" id="Jqh-vH-3sR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <state key="normal" title="Refresh">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="shq-Qp-u7d" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8Vz-29-lAY"/>
+                <constraint firstItem="shq-Qp-u7d" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="Ghh-hb-WU7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="shq-Qp-u7d" secondAttribute="trailing" constant="8" id="WH0-7k-Ucn"/>
+                <constraint firstItem="YeY-yY-KPu" firstAttribute="top" secondItem="shq-Qp-u7d" secondAttribute="bottom" constant="50" id="heY-Oc-qEm"/>
+                <constraint firstItem="shq-Qp-u7d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="sdd-a4-pZt"/>
+                <constraint firstItem="YeY-yY-KPu" firstAttribute="centerX" secondItem="shq-Qp-u7d" secondAttribute="centerX" id="tin-W7-8nq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
