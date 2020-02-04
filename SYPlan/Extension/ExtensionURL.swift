@@ -10,8 +10,13 @@ import Foundation
 
 extension URL {
     
+    /// 取得URL帶的參數,
+    /// e.g. https://brave2risks.com.tw?s=google&lang=zh-TW ,
+    /// Return ["s": "google", "lang": "zh-TW"]
     public var queryParameters: [String: String]? {
-        guard let components = URLComponents(url: self, resolvingAgainstBaseURL: true), let queryItems = components.queryItems else {
+        guard
+            let components = URLComponents(url: self, resolvingAgainstBaseURL: true),
+            let queryItems = components.queryItems else {
             return nil
         }
         

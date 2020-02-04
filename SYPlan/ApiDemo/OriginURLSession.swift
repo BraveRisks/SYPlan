@@ -191,8 +191,8 @@ class OriginURLSession: NSObject {
             }
         }
         
-        task.resume()
         tasks[req] = task
+        task.resume()
     }
     
     /// 取消目前連線

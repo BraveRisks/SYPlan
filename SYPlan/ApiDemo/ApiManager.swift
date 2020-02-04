@@ -133,7 +133,7 @@ public class ApiRequest: Hashable, CustomStringConvertible, Equatable {
             "PWD"      : "mnbvcxz",
             "DevType"  : "2",
             "OSVer"    : "13.2.2",
-            "ApVer"    : "1.0.27",
+            "ApVer"    : "1.0.29",
             "MobileId" : "iPhone 11 Pro",
             "APName"   : "TA2",
             "DevNewHID": "554543bc7d8e409db3d6a600343ec06a"

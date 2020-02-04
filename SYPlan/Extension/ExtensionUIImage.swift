@@ -10,34 +10,55 @@ import UIKit
 
 extension UIImage {
     
-    func resize(withWidth width: CGFloat) -> UIImage {
-        let scale = width / self.size.width
-        let height = self.size.height * scale
-        UIGraphicsBeginImageContext(CGSize(width: width, height: height))
-        self.draw(in: CGRect(x: 0.0, y: 0.0, width: width, height: height))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage ?? self
+    /// 資料型別
+    ///
+    /// - jpeg: jpeg
+    /// - png: png
+    enum DataType {
+        
+        case jpeg(quality: CGFloat)
+        
+        case png
     }
     
-    func resize(withHeight height: CGFloat) -> UIImage {
-        let scale = height / self.size.height
-        let width = self.size.width * scale
-        UIGraphicsBeginImageContext(CGSize(width: width, height: height))
-        self.draw(in: CGRect(x: 0.0, y: 0.0, width: width, height: height))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage ?? self
+    /// 調整圖片大小
+    /// - Parameter size: you want to size
+    func resize(with size: CGSize) -> UIImage? {
+        let scale = UIScreen.main.scale
+
+        if #available(iOS 10.0, *) {
+            let format = UIGraphicsImageRendererFormat()
+            format.scale = scale
+            format.opaque = false
+            
+            let renderer = UIGraphicsImageRenderer(size: size, format: format)
+            return renderer.image { (context) in
+                self.draw(in: CGRect(origin: .zero, size: size))
+            }
+        } else {
+            UIGraphicsBeginImageContextWithOptions(size, false, scale)
+            self.draw(in: CGRect(origin: .zero, size: size))
+            let newImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            return newImage
+        }
     }
     
-    func resize(witScale scale: CGFloat) -> UIImage {
-        let width = self.size.width * scale
-        let height = self.size.height * scale
-        UIGraphicsBeginImageContext(CGSize(width: width, height: height))
-        self.draw(in: CGRect(x: 0.0, y: 0.0, width: width, height: height))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage ?? self
+    /// 裁減圖片 reference: https://developer.apple.com/documentation/coregraphics/cgimage/1454683-cropping
+    /// - Parameter rect: 裁減範圍
+    func crop(with rect: CGRect) -> UIImage {
+        guard let cgImage = self.cgImage else { return self }
+        
+        guard let cropImage = cgImage.cropping(to: rect) else { return self }
+        
+        let scale = UIScreen.main.scale
+        let image = UIImage(cgImage: cropImage, scale: scale, orientation: .up)
+        
+//        #if targetEnvironment(simulator)
+//            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+//        #endif
+        
+        return image
     }
     
     func resizeForScale() -> UIImage {
@@ -71,16 +92,29 @@ extension UIImage {
         return newImage ?? self
     }
     
-    func base64Str(isJPG: Bool = true, quality: CGFloat = 0.8) -> String? {
-        if isJPG {
-            return self.jpegData(compressionQuality: quality)?.base64EncodedString(options: .lineLength64Characters)
-        } else {
-            return self.pngData()?.base64EncodedString(options: .lineLength64Characters)
-        }        
+    /// 圖片轉Base64 String
+    ///
+    /// - Parameter: type: See more `DataType`
+    ///
+    /// - Returns: String?
+    func base64Str(from type: DataType) -> String? {
+        switch type {
+        case .jpeg(let quality):
+            let data = self.jpegData(compressionQuality: quality)
+            return data?.base64EncodedString(options: [])
+        case .png:
+            let data = self.pngData()
+            return data?.base64EncodedString(options: [])
+        }
     }
     
+    /// 將圖片旋轉
+    /// - Parameter radians: 弧度
     func rotate(radians: Float) -> UIImage? {
-        var newSize = CGRect(origin: CGPoint.zero, size: self.size).applying(CGAffineTransform(rotationAngle: CGFloat(radians))).size
+        var newSize = CGRect(origin: CGPoint.zero, size: self.size)
+                            .applying(CGAffineTransform(rotationAngle: CGFloat(radians)))
+                            .size
+        
         // Trim off the extremely small float value to prevent core graphics from rounding it up
         newSize.width = floor(newSize.width)
         newSize.height = floor(newSize.height)
@@ -90,8 +124,10 @@ extension UIImage {
         
         // Move origin to middle
         context.translateBy(x: newSize.width / 2, y: newSize.height / 2)
+        
         // Rotate around middle
         context.rotate(by: CGFloat(radians))
+        
         // Draw the image at its center
         self.draw(in: CGRect(x: -self.size.width / 2, y: -self.size.height / 2,
                              width: self.size.width, height: self.size.height))

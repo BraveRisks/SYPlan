@@ -10,6 +10,7 @@ import UIKit
 
 extension CGFloat {
     
+    /// 角度轉換為弧度
     func radians() -> CGFloat {
         return self * .pi / 180.0
     }

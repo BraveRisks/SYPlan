@@ -22,34 +22,6 @@ extension Dictionary {
             return String(data: data, encoding: .utf8) ?? ""
         }
     }
-    
-    /// 自定義的HashValue，解決Dictionary<String, Any>無法比較問題
-    var hashValueCustomize: Int {
-        get {
-            var result: Int = 0
-            self.forEach { (tuple) in
-                if let key = tuple.key as? String {
-                    result += key.hashValue
-                }
-                
-                switch tuple.value {
-                case is String:
-                    result += (tuple.value as! String).hashValue
-                case is Int:
-                    result += (tuple.value as! Int).hashValue
-                case is Float:
-                    result += (tuple.value as! Float).hashValue
-                case is Double:
-                    result += (tuple.value as! Double).hashValue
-                case is Bool:
-                    result += (tuple.value as! Bool).hashValue
-                default: break
-                }
-            }
-            
-            return result
-        }
-    }
 }
 
 extension Data {

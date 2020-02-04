@@ -10,17 +10,17 @@ import Foundation
 
 extension Date {
     
-    /// 獲取 當前秒級時間戳 -  10位
+    /// 取得當前秒級時間戳 -  10位
     var timeStamp : String {
         let timeInterval: TimeInterval = self.timeIntervalSince1970
         let timeStamp = Int(timeInterval)
         return "\(timeStamp)"
     }
     
-    /// 獲取 當前毫秒級時間戳 - 13位
+    /// 取得當前毫秒級時間戳 - 13位
     var milliStamp : String {
         let timeInterval: TimeInterval = self.timeIntervalSince1970
-        let millisecond = CLongLong(round(timeInterval*1000))
+        let millisecond = CLongLong(round(timeInterval * 1000))
         return "\(millisecond)"
     }
 }

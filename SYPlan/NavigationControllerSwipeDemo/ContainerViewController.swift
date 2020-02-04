@@ -39,7 +39,7 @@ class ContainerViewController: UIViewController {
             case .ui:
                 return [.fbWeb, .customCollectionViewLayout, .coreImage,
                         .animationNumber, .qrCode, .waterMark, .font,
-                        .drakMode]
+                        .drakMode, .cropImage]
             case .network:
                 return [.upload, .download, .webService, .apiRefresh]
             case .other:
@@ -93,6 +93,8 @@ class ContainerViewController: UIViewController {
             case drakMode = "Dark Mode"
             
             case apiRefresh = "Api Refresh"
+            
+            case cropImage = "Crop Image"
         }
     }
     
@@ -309,6 +311,11 @@ extension ContainerViewController: UICollectionViewDataSource, UICollectionViewD
             vc.title = content.rawValue
             vc.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(vc, animated: true)
+        case .cropImage:
+            let vc = CropImageDemoVC(nibName: "CropImageDemoVC", bundle: nil)
+            vc.title = content.rawValue
+            vc.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
     
@@ -317,6 +324,7 @@ extension ContainerViewController: UICollectionViewDataSource, UICollectionViewD
     // func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath:                     IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
     //     reutrn nil
     // }
+    
     @available(iOS 13.0, *)
     func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
         

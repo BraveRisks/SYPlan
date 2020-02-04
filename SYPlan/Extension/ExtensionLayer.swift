@@ -53,7 +53,6 @@ extension CAGradientLayer {
         }
     }
     
-    
     /// 產生漸層Layer
     ///
     /// - Parameters:

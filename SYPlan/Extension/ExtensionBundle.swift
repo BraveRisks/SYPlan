@@ -10,9 +10,19 @@ import Foundation
 
 extension Bundle {
     
-    static func load<T: AnyObject>(with name: String, type: T.Type) -> T? {
-        // Bundle(for: OOXX.self)
-        // Bundle.main
+    /// 取得檔案URL
+    /// - Parameters:
+    ///   - fileName: 檔案名稱
+    ///   - withExtension: 檔案副檔名
+    class func url(from fileName: String?, withExtension: String?) -> URL? {
+        return Bundle.main.url(forResource: fileName, withExtension: withExtension)
+    }
+    
+    /// 取得UINib
+    /// - Parameters:
+    ///   - name: Nib 名稱
+    ///   - type: 型別
+    static func loadNib<T: AnyObject>(with name: String, type: T.Type) -> T? {
         return Bundle(for: type).loadNibNamed(name, owner: type, options: nil)?.first as? T
     }
 }

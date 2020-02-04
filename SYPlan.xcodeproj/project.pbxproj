@@ -13,6 +13,8 @@
 		EB11848121885EE200753334 /* PinterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB11848021885EE200753334 /* PinterestViewController.swift */; };
 		EB1184852188625D00753334 /* PinterestCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1184832188625D00753334 /* PinterestCollectionCell.swift */; };
 		EB1184862188625D00753334 /* PinterestCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1184842188625D00753334 /* PinterestCollectionCell.xib */; };
+		EB13499423E81FF700C1FF0F /* CropImageDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB13499223E81FF700C1FF0F /* CropImageDemoVC.swift */; };
+		EB13499523E81FF700C1FF0F /* CropImageDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB13499323E81FF700C1FF0F /* CropImageDemoVC.xib */; };
 		EB15562221378CAE007C6BF8 /* UploadResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB15562121378CAE007C6BF8 /* UploadResult.swift */; };
 		EB177BE521AE3CCC00921060 /* UIPagerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB177BE421AE3CCC00921060 /* UIPagerTabView.swift */; };
 		EB1BFD40219E991100B12F68 /* ExtensionCGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BFD3F219E991100B12F68 /* ExtensionCGFloat.swift */; };
@@ -84,6 +86,7 @@
 		EB82D7CE21AB9A5D007C0E3C /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB82D7CD21AB9A5D007C0E3C /* ExtensionView.swift */; };
 		EB877DB62109686E0075788C /* RegularExpressionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB877DB42109686E0075788C /* RegularExpressionViewController.swift */; };
 		EB877DBA210975CF0075788C /* AttributedStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB877DB9210975CF0075788C /* AttributedStringHelper.swift */; };
+		EBA47DE023E918FC002A8718 /* ExtensionDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA47DDF23E918FC002A8718 /* ExtensionDouble.swift */; };
 		EBA5A50E217EAB99000A31E2 /* FontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA5A50D217EAB99000A31E2 /* FontViewController.swift */; };
 		EBA5A525217F0F68000A31E2 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBA5A51E217F0F67000A31E2 /* Roboto-Thin.ttf */; };
 		EBA5A52A217F121F000A31E2 /* Mali-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBA5A529217F121F000A31E2 /* Mali-Bold.ttf */; };
@@ -190,6 +193,8 @@
 		EB11848021885EE200753334 /* PinterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestViewController.swift; sourceTree = "<group>"; };
 		EB1184832188625D00753334 /* PinterestCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestCollectionCell.swift; sourceTree = "<group>"; };
 		EB1184842188625D00753334 /* PinterestCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PinterestCollectionCell.xib; sourceTree = "<group>"; };
+		EB13499223E81FF700C1FF0F /* CropImageDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropImageDemoVC.swift; sourceTree = "<group>"; };
+		EB13499323E81FF700C1FF0F /* CropImageDemoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CropImageDemoVC.xib; sourceTree = "<group>"; };
 		EB15562121378CAE007C6BF8 /* UploadResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadResult.swift; sourceTree = "<group>"; };
 		EB177BE421AE3CCC00921060 /* UIPagerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPagerTabView.swift; sourceTree = "<group>"; };
 		EB1BFD3F219E991100B12F68 /* ExtensionCGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCGFloat.swift; sourceTree = "<group>"; };
@@ -263,6 +268,7 @@
 		EB82D7CD21AB9A5D007C0E3C /* ExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
 		EB877DB42109686E0075788C /* RegularExpressionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionViewController.swift; sourceTree = "<group>"; };
 		EB877DB9210975CF0075788C /* AttributedStringHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringHelper.swift; sourceTree = "<group>"; };
+		EBA47DDF23E918FC002A8718 /* ExtensionDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDouble.swift; sourceTree = "<group>"; };
 		EBA5A50D217EAB99000A31E2 /* FontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontViewController.swift; sourceTree = "<group>"; };
 		EBA5A51E217F0F67000A31E2 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		EBA5A529217F121F000A31E2 /* Mali-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mali-Bold.ttf"; sourceTree = "<group>"; };
@@ -404,6 +410,15 @@
 				EB1184842188625D00753334 /* PinterestCollectionCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		EB13498C23E7B62400C1FF0F /* CropImageDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EB13499223E81FF700C1FF0F /* CropImageDemoVC.swift */,
+				EB13499323E81FF700C1FF0F /* CropImageDemoVC.xib */,
+			);
+			path = CropImageDemo;
 			sourceTree = "<group>";
 		};
 		EB25F3C2228169DC002B1F23 /* CoreDataDemo */ = {
@@ -753,6 +768,7 @@
 				EBAAF2382328DF8B00D0FFD6 /* ExtensionViewController.swift */,
 				EB6BBA912358010600D1626D /* ExtensionCollectionView.swift */,
 				EBCBF960236833ED00A9EA50 /* ExtensionCGImagePropertyOrientation.swift */,
+				EBA47DDF23E918FC002A8718 /* ExtensionDouble.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -809,6 +825,7 @@
 				EB56D1222123BDFC00BE8BFC /* LocationDemo */,
 				EBA5A50C217EAB71000A31E2 /* FontDemo */,
 				EB2A766F2378F9A000166BEA /* DarkModeDemo */,
+				EB13498C23E7B62400C1FF0F /* CropImageDemo */,
 				EB697EAF212B98470089CACC /* MultiCellDemo */,
 				EB56D14E21242ABA00BE8BFC /* ShareExtensionDemo */,
 				EB64061B23681106007A7CB6 /* Core ML Demo */,
@@ -1083,6 +1100,7 @@
 			files = (
 				EBA5A525217F0F68000A31E2 /* Roboto-Thin.ttf in Resources */,
 				EB44A33021757DC6005AA612 /* FacebookWebDemoViewController.xib in Resources */,
+				EB13499523E81FF700C1FF0F /* CropImageDemoVC.xib in Resources */,
 				EBB5F9852186F98E00CB6C51 /* mobile01_20180727_6.jpg in Resources */,
 				EBD16BFA20C12F92006FA1E8 /* LaunchScreen.storyboard in Resources */,
 				EB6001092276E41B00843615 /* WebServiceDemoVC.xib in Resources */,
@@ -1222,6 +1240,7 @@
 				EB44A32F21757DC6005AA612 /* FacebookWebDemoViewController.swift in Sources */,
 				EBAAF2392328DF8B00D0FFD6 /* ExtensionViewController.swift in Sources */,
 				EBB3459A2177262100E24A15 /* ExtensionColor.swift in Sources */,
+				EB13499423E81FF700C1FF0F /* CropImageDemoVC.swift in Sources */,
 				EB776D312276F57C000F39CB /* WebApiManager.swift in Sources */,
 				EB818C5C21364A5A00286D4C /* UploadService.swift in Sources */,
 				EB3EF9EC23AB17CC007F07AB /* Agent.swift in Sources */,
@@ -1262,6 +1281,7 @@
 				EB2C9955227BD2A80081CC19 /* ExtensionDictionary.swift in Sources */,
 				EBD8BC85212D0D1500E73A6A /* FriendTableCell.swift in Sources */,
 				EB36D57F2327797E005015C8 /* WatermarkView.swift in Sources */,
+				EBA47DE023E918FC002A8718 /* ExtensionDouble.swift in Sources */,
 				EB177BE521AE3CCC00921060 /* UIPagerTabView.swift in Sources */,
 				EB36D58D2327881B005015C8 /* WatermarkDemoViewController.swift in Sources */,
 				EB1BFD40219E991100B12F68 /* ExtensionCGFloat.swift in Sources */,
