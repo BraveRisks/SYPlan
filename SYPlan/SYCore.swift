@@ -46,7 +46,6 @@ enum ShortcutItem {
         }
     }
 }
- 
 
 /// 紀錄Crash發生處
 func crashLog(with msg: String = "", file: String = #file, line: Int = #line) {

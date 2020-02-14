@@ -158,7 +158,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UIApplication.shared.registerForRemoteNotifications()
         }
         
-        
         // 檢查是否從 Quick Action 啟動App
         if let shortcutItem = launchOptions?[UIApplication.LaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
             self.shortcutItem = shortcutItem
@@ -166,7 +165,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
-        window?.rootViewController = TabViewController()
+        window?.rootViewController = TabBarController()
         window?.makeKeyAndVisible()
 
         return true
@@ -188,7 +187,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 處理Quick Actions 事件
         guard let item = shortcutItem else { return }
         
-        let tabVC = window?.rootViewController as? TabViewController
+        let tabVC = window?.rootViewController as? TabBarController
         switch item.type {
         case "QRCode":
             tabVC?.setTabIndex(on: 0, content: .qrCode)

@@ -10,15 +10,17 @@ import UIKit
 import StoreKit
 import Toaster
 
-class OtherDemoVC: UIViewController {
-    
+class OtherDemoVC: BaseVC {
+
     private var tableView: UITableView?
     
     private let datas: [String] = [
         "📢 Local Notification",
         "⭐️ App Store Reviews",
         "⭐️ App Store Infomation Reviews",
-        "🌀 Automatic Add Count By UserDefault"
+        "🌀 Automatic Add Count By UserDefault",
+        "👾 Get UINavigationController Info",
+        "🤡 Open PDF on WKWebView"
     ]
     
     override func viewDidLoad() {
@@ -26,7 +28,16 @@ class OtherDemoVC: UIViewController {
         setup()
     }
     
+    /// 覆寫BaseVC的`back`方法
+    /// - Parameter barButton: see more UIBarButtonItem
+    override func back(_ barButton: UIBarButtonItem) {
+        barButton.image = UIImage(named: "ic_arrow_up")
+    }
+    
     private func setup() {
+        // 自定義`leftBarButtonItem`時，原始的邊界返回會失效
+        navigationItem.leftBarButtonItem = backItem
+        
         view.backgroundColor = .white
         
         tableView = UITableView()
@@ -72,7 +83,7 @@ class OtherDemoVC: UIViewController {
         }
     }
     
-    // 顯示App評分Dialog
+    /// 顯示App評分Dialog
     private func requestStoreReview() {
         if #available(iOS 10.3, *) {
             SKStoreReviewController.requestReview()
@@ -90,7 +101,7 @@ class OtherDemoVC: UIViewController {
         }
     }
     
-    // 預覽App商店畫面，必須用實機測試
+    /// 預覽App商店畫面，必須用實機測試
     private func requestAppStoreInfomation() {
         #if targetEnvironment(simulator)
         let toast = Toast(text: "模擬器不支援該功能！", delay: 0.0, duration: Delay.short)
@@ -135,6 +146,16 @@ class OtherDemoVC: UIViewController {
         
         present(ac, animated: true, completion: nil)
     }
+    
+    private func getNACInfo() {
+        guard let nac = navigationController as? NavigationDemoSwipeController else { return }
+        nac.getNavigationControllerInfo()
+    }
+    
+    private func openPDF() {
+        let vc = PDFVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension OtherDemoVC: UITableViewDataSource, UITableViewDelegate {
@@ -166,6 +187,10 @@ extension OtherDemoVC: UITableViewDataSource, UITableViewDelegate {
             requestAppStoreInfomation()
         case 3:
             testAutomaticAddCount()
+        case 4:
+            getNACInfo()
+        case 5:
+            openPDF()
         default: break
         }
     }

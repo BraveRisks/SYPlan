@@ -35,6 +35,7 @@ class UIFBWebView: UIView {
             mTitleBtn.setTitle(url, for: .normal)
             if url == nil { return }
             mWebView.load(URLRequest(url: URL(string: url!)!))
+            
             // WKWebView progress KVO
             // http://pkuflint.me/2018/understanding-kvo-in-swift/
             estimatedProgressObserver = mWebView.observe(\.estimatedProgress, options: [.new, .old], changeHandler: { [weak self] (webView, value) in
