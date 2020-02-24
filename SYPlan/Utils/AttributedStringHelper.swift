@@ -10,7 +10,7 @@ import UIKit
 
 /// 幫助使用者快速產生AttributedString
 /// ````
-/// How to use：
+/// How to use ?
 /// let text = "BMW G02 X4 xDrive30i 美國試駕，邁進跑旅新領域"
 ///
 /// let paragraph = NSMutableParagraphStyle()

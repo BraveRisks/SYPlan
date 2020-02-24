@@ -45,7 +45,8 @@
 		EB44A33E21759188005AA612 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB44A33C21759188005AA612 /* ArticleTableViewCell.xib */; };
 		EB44A34021759804005AA612 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB44A33F21759804005AA612 /* WebViewController.swift */; };
 		EB4C5560228D68B900C72B7A /* HttpSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4C555F228D68B900C72B7A /* HttpSession.swift */; };
-		EB53C7C52301347C00BBB3EA /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB53C7C42301347C00BBB3EA /* LoadView.swift */; };
+		EB5280CA23FF7ED0001EDBA3 /* IBConstructible.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5280C923FF7ED0001EDBA3 /* IBConstructible.swift */; };
+		EB53C7C52301347C00BBB3EA /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB53C7C42301347C00BBB3EA /* LoadingView.swift */; };
 		EB56D1242123BF6E00BE8BFC /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56D1232123BF6E00BE8BFC /* LocationViewController.swift */; };
 		EB56D14021240EB400BE8BFC /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56D13F21240EB400BE8BFC /* ShareViewController.swift */; };
 		EB56D14321240EB400BE8BFC /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB56D14121240EB400BE8BFC /* MainInterface.storyboard */; };
@@ -105,6 +106,10 @@
 		EBBEC7B6223A38920006EBF2 /* SYCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBEC7B5223A38920006EBF2 /* SYCore.swift */; };
 		EBC28C1F212FD82A000B87EA /* UploadDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC28C1E212FD82A000B87EA /* UploadDemoController.swift */; };
 		EBC28C22212FDF35000B87EA /* ExtensionURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC28C21212FDF35000B87EA /* ExtensionURL.swift */; };
+		EBC4CF8F24036047009B7AC9 /* SaveImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC4CF8D24036047009B7AC9 /* SaveImageVC.swift */; };
+		EBC4CF9024036047009B7AC9 /* SaveImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBC4CF8E24036047009B7AC9 /* SaveImageVC.xib */; };
+		EBC4CF932403A0AD009B7AC9 /* SaveImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC4CF912403A0AD009B7AC9 /* SaveImageCell.swift */; };
+		EBC4CF942403A0AD009B7AC9 /* SaveImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBC4CF922403A0AD009B7AC9 /* SaveImageCell.xib */; };
 		EBCBF9582368218300A9EA50 /* CatsAndDogs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EBCBF9572368218300A9EA50 /* CatsAndDogs.mlmodel */; };
 		EBCBF95D236822EF00A9EA50 /* CoreMLVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCBF95C236822EF00A9EA50 /* CoreMLVC.swift */; };
 		EBCBF961236833ED00A9EA50 /* ExtensionCGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCBF960236833ED00A9EA50 /* ExtensionCGImagePropertyOrientation.swift */; };
@@ -226,7 +231,8 @@
 		EB44A33C21759188005AA612 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
 		EB44A33F21759804005AA612 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		EB4C555F228D68B900C72B7A /* HttpSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpSession.swift; sourceTree = "<group>"; };
-		EB53C7C42301347C00BBB3EA /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
+		EB5280C923FF7ED0001EDBA3 /* IBConstructible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBConstructible.swift; sourceTree = "<group>"; };
+		EB53C7C42301347C00BBB3EA /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		EB56D1232123BF6E00BE8BFC /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		EB56D13D21240EB400BE8BFC /* SYPlanShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SYPlanShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB56D13F21240EB400BE8BFC /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
@@ -290,6 +296,10 @@
 		EBBEC7B5223A38920006EBF2 /* SYCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SYCore.swift; sourceTree = "<group>"; };
 		EBC28C1E212FD82A000B87EA /* UploadDemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDemoController.swift; sourceTree = "<group>"; };
 		EBC28C21212FDF35000B87EA /* ExtensionURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionURL.swift; sourceTree = "<group>"; };
+		EBC4CF8D24036047009B7AC9 /* SaveImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveImageVC.swift; sourceTree = "<group>"; };
+		EBC4CF8E24036047009B7AC9 /* SaveImageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveImageVC.xib; sourceTree = "<group>"; };
+		EBC4CF912403A0AD009B7AC9 /* SaveImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveImageCell.swift; sourceTree = "<group>"; };
+		EBC4CF922403A0AD009B7AC9 /* SaveImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveImageCell.xib; sourceTree = "<group>"; };
 		EBCBF9572368218300A9EA50 /* CatsAndDogs.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = CatsAndDogs.mlmodel; sourceTree = "<group>"; };
 		EBCBF95C236822EF00A9EA50 /* CoreMLVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLVC.swift; sourceTree = "<group>"; };
 		EBCBF960236833ED00A9EA50 /* ExtensionCGImagePropertyOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCGImagePropertyOrientation.swift; sourceTree = "<group>"; };
@@ -539,6 +549,14 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		EB5280C823FF7E72001EDBA3 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EB5280C923FF7ED0001EDBA3 /* IBConstructible.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		EB56D1222123BDFC00BE8BFC /* LocationDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -774,16 +792,27 @@
 				EBB5F9822186A70400CB6C51 /* ExtensionLayer.swift */,
 				EB1BFD3F219E991100B12F68 /* ExtensionCGFloat.swift */,
 				EB82D7CD21AB9A5D007C0E3C /* ExtensionView.swift */,
+				EBAAF2382328DF8B00D0FFD6 /* ExtensionViewController.swift */,
 				EB2B54B121C72FC700CBE037 /* ExtensionString.swift */,
 				EBFA75AF22657461009DCB4F /* ExtensionDate.swift */,
 				EB2C9954227BD2A80081CC19 /* ExtensionDictionary.swift */,
 				EB8090A922D73467008220B7 /* ExtensionBundle.swift */,
-				EBAAF2382328DF8B00D0FFD6 /* ExtensionViewController.swift */,
 				EB6BBA912358010600D1626D /* ExtensionCollectionView.swift */,
 				EBCBF960236833ED00A9EA50 /* ExtensionCGImagePropertyOrientation.swift */,
 				EBA47DDF23E918FC002A8718 /* ExtensionDouble.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		EBC8BD8A23FF88B500DB0D8F /* SaveImageDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EBC4CF8D24036047009B7AC9 /* SaveImageVC.swift */,
+				EBC4CF8E24036047009B7AC9 /* SaveImageVC.xib */,
+				EBC4CF912403A0AD009B7AC9 /* SaveImageCell.swift */,
+				EBC4CF922403A0AD009B7AC9 /* SaveImageCell.xib */,
+			);
+			path = SaveImageDemo;
 			sourceTree = "<group>";
 		};
 		EBD16BE320C12F91006FA1E8 = {
@@ -817,8 +846,9 @@
 			children = (
 				EBA5A514217F0D1F000A31E2 /* Font */,
 				EB877DB8210975C20075788C /* Utils */,
-				EBFC9D46213E1EE500C30635 /* Widget */,
+				EB5280C823FF7E72001EDBA3 /* Protocol */,
 				EBC28C20212FDF1E000B87EA /* Extension */,
+				EBFC9D46213E1EE500C30635 /* Widget */,
 				EBA47DE123E971CF002A8718 /* Base */,
 				EBFD7B6C21829AD7002845E1 /* TabBarControllerDemo */,
 				EB82C1A722CEF7AA00463F59 /* NavigationControllerSwipeDemo */,
@@ -840,6 +870,7 @@
 				EBA5A50C217EAB71000A31E2 /* FontDemo */,
 				EB2A766F2378F9A000166BEA /* DarkModeDemo */,
 				EB13498C23E7B62400C1FF0F /* CropImageDemo */,
+				EBC8BD8A23FF88B500DB0D8F /* SaveImageDemo */,
 				EB697EAF212B98470089CACC /* MultiCellDemo */,
 				EB56D14E21242ABA00BE8BFC /* ShareExtensionDemo */,
 				EB64061B23681106007A7CB6 /* Core ML Demo */,
@@ -891,7 +922,7 @@
 			children = (
 				EB177BE421AE3CCC00921060 /* UIPagerTabView.swift */,
 				EBF8F22D22939DA10097D402 /* UIFitTextView.swift */,
-				EB53C7C42301347C00BBB3EA /* LoadView.swift */,
+				EB53C7C42301347C00BBB3EA /* LoadingView.swift */,
 				EB347D4422E70B6600677032 /* ScanBorderView.swift */,
 				EB36D57E2327797E005015C8 /* WatermarkView.swift */,
 			);
@@ -1131,7 +1162,9 @@
 				EBD16BF720C12F92006FA1E8 /* Assets.xcassets in Resources */,
 				EB8090A722D6DF48008220B7 /* UnifiedNativeAdView.xib in Resources */,
 				EBD8BC86212D0D1500E73A6A /* FriendTableCell.xib in Resources */,
+				EBC4CF9024036047009B7AC9 /* SaveImageVC.xib in Resources */,
 				EBD16BF520C12F91006FA1E8 /* Main.storyboard in Resources */,
+				EBC4CF942403A0AD009B7AC9 /* SaveImageCell.xib in Resources */,
 				EB5E7CEE22DC771800CF6A37 /* GoogleService-Info.plist in Resources */,
 				EBA5A52A217F121F000A31E2 /* Mali-Bold.ttf in Resources */,
 				EBD8BC7E212D0BD800E73A6A /* AboutTableCell.xib in Resources */,
@@ -1235,6 +1268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB5280CA23FF7ED0001EDBA3 /* IBConstructible.swift in Sources */,
 				EB3EF9EA23AB1320007F07AB /* ApiManager.swift in Sources */,
 				EB4296D52369777500021579 /* OtherDemoVC.swift in Sources */,
 				EB818C5F21364AD700286D4C /* UploadTask.swift in Sources */,
@@ -1272,7 +1306,7 @@
 				EB6001082276E41B00843615 /* WebServiceDemoVC.swift in Sources */,
 				EB76F8B92202772700C278D7 /* DownloadDemoController.swift in Sources */,
 				EBFA75B022657461009DCB4F /* ExtensionDate.swift in Sources */,
-				EB53C7C52301347C00BBB3EA /* LoadView.swift in Sources */,
+				EB53C7C52301347C00BBB3EA /* LoadingView.swift in Sources */,
 				EB25F3CC22817696002B1F23 /* Person.xcdatamodeld in Sources */,
 				EB76F8B72202772700C278D7 /* Track.swift in Sources */,
 				EB8090A422D6D2DD008220B7 /* GoogleAdDemoViewController.swift in Sources */,
@@ -1322,8 +1356,10 @@
 				EBBEC7B6223A38920006EBF2 /* SYCore.swift in Sources */,
 				EB2A76722378F9CF00166BEA /* DarkModeVC.swift in Sources */,
 				EBF0B3032252EC0E00E2712E /* PDFManager.swift in Sources */,
+				EBC4CF932403A0AD009B7AC9 /* SaveImageCell.swift in Sources */,
 				EB76F8B62202772700C278D7 /* TrackTableViewCell.swift in Sources */,
 				EBB43AC823F4E1D3003C8772 /* PDFVC.swift in Sources */,
+				EBC4CF8F24036047009B7AC9 /* SaveImageVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1415,7 +1451,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sinyi.SYPlan.SYPlanShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "400 Sinyi SYPlanShare Dev";
+				PROVISIONING_PROFILE_SPECIFIER = "400 Sinyi SYPlan Share Dev";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1878,7 +1914,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sinyi.SYPlan.NotificationContent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "400 Sinyi SYPlan NotificationContent Dev";
+				PROVISIONING_PROFILE_SPECIFIER = "400 Sinyi SYPlan NotificationCont Dev";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

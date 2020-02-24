@@ -39,7 +39,7 @@ class ContainerViewController: UIViewController {
             case .ui:
                 return [.fbWeb, .customCollectionViewLayout, .coreImage,
                         .animationNumber, .qrCode, .waterMark, .font,
-                        .drakMode, .cropImage]
+                        .drakMode, .cropImage, .saveImage]
             case .network:
                 return [.upload, .download, .webService, .apiRefresh]
             case .other:
@@ -95,6 +95,8 @@ class ContainerViewController: UIViewController {
             case apiRefresh = "Api Refresh"
             
             case cropImage = "Crop Image"
+            
+            case saveImage = "Save Image"
         }
     }
     
@@ -313,6 +315,11 @@ extension ContainerViewController: UICollectionViewDataSource, UICollectionViewD
             navigationController?.pushViewController(vc, animated: true)
         case .cropImage:
             let vc = CropImageDemoVC(nibName: "CropImageDemoVC", bundle: nil)
+            vc.title = content.rawValue
+            vc.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(vc, animated: true)
+        case .saveImage:
+            let vc = SaveImageVC(nibName: "SaveImageVC", bundle: nil)
             vc.title = content.rawValue
             vc.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(vc, animated: true)

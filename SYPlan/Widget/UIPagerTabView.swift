@@ -14,7 +14,7 @@ protocol UIPagerTabViewDelegate: class {
 
 /// UIPagerTabView(Tab指示器)
 /// ```
-/// How to use：
+/// How to use ?
 /// let pagerTabView = UIPagerTabView(frame: .zero)
 /// pagerTabView.items = ["Swift", "Kotlin", "JavaScript"]
 /// pagerTabView.translatesAutoresizingMaskIntoConstraints = false
@@ -35,6 +35,7 @@ class UIPagerTabView: UIView {
     
     /// Indicator width
     private var mLineViewWidthConstraint: NSLayoutConstraint!
+    
     /// Indicator height
     private var mLineViewHeightConstraint: NSLayoutConstraint!
     

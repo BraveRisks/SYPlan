@@ -94,6 +94,7 @@ class MultiCellViewController: UIViewController {
         // 設置請求表頭
         let min = 60
         configuration.httpAdditionalHeaders = ["cache-control": "max-age=\(min * 5)"]
+        
         // 設置緩存
         let capacity = 1024 * 1024 * 10
         configuration.urlCache = URLCache(memoryCapacity: capacity / 10, diskCapacity: capacity, diskPath: nil)

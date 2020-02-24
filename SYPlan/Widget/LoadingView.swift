@@ -1,5 +1,5 @@
 //
-//  LoadView.swift
+//  LoadingView.swift
 //  SYPlan
 //
 //  Created by Ray on 2019/8/12.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoadView: UIView {
+class LoadingView: UIView {
     
     private var indicatorView: UIView?
     

@@ -81,6 +81,7 @@ class WatermarkView: UIView {
                     rect.origin = CGPoint(x: 0.0, y: -44.0)
                     self.drawHierarchy(in: rect, afterScreenUpdates: true)
                 }
+                
                 completionHandler(image)
                 print("!! end \(Date().milliStamp)")
             } else {
@@ -88,6 +89,7 @@ class WatermarkView: UIView {
                 self.layer.render(in: UIGraphicsGetCurrentContext()!)
                 let image = UIGraphicsGetImageFromCurrentImageContext()
                 UIGraphicsEndImageContext()
+                
                 completionHandler(image)
                 print("!! end \(Date().milliStamp)")
             }
