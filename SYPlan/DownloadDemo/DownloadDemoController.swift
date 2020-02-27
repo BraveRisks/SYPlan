@@ -30,6 +30,7 @@ class DownloadDemoController: UIViewController {
     
     // Get local file path: download task stores tune here; AV player plays it.
     let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    
     func localFilePath(for url: URL) -> URL {
         return documentsPath.appendingPathComponent(url.lastPathComponent)
     }
@@ -83,6 +84,7 @@ class DownloadDemoController: UIViewController {
         }
     }
 }
+
 extension DownloadDemoController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -106,6 +108,7 @@ extension DownloadDemoController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
 }
+
 extension DownloadDemoController: TrackTableViewCellDelegate {
     func pauseTapped(_ cell: TrackTableViewCell) {
         if let indexPath = mTableView.indexPath(for: cell) {
@@ -143,10 +146,12 @@ extension DownloadDemoController: TrackTableViewCellDelegate {
         mTableView.reloadRows(at: [IndexPath(row: row, section: 0)], with: .none)
     }
 }
+
 extension DownloadDemoController: URLSessionDownloadDelegate {
     // Stores downloaded file
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
         guard let sourceURL = downloadTask.originalRequest?.url else { return }
+        
         let download = downloadService.activeDownloads[sourceURL]
         downloadService.activeDownloads[sourceURL] = nil
 
@@ -155,6 +160,7 @@ extension DownloadDemoController: URLSessionDownloadDelegate {
 
         let fileManager = FileManager.default
         try? fileManager.removeItem(at: destinationURL)
+        
         do {
             try fileManager.copyItem(at: location, to: destinationURL)
             download?.track.downloaded = true
@@ -179,7 +185,8 @@ extension DownloadDemoController: URLSessionDownloadDelegate {
         
         download.progress = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite)
 
-        let totalSize = ByteCountFormatter.string(fromByteCount: totalBytesExpectedToWrite, countStyle: .file)
+        let totalSize = ByteCountFormatter.string(fromByteCount: totalBytesExpectedToWrite,
+                                                  countStyle: .file)
 
         DispatchQueue.main.async {
             if let trackCell = self.mTableView.cellForRow(at: IndexPath(row: download.track.index, section: 0)) as? TrackTableViewCell {
@@ -188,6 +195,7 @@ extension DownloadDemoController: URLSessionDownloadDelegate {
         }
     }
 }
+
 extension DownloadDemoController: URLSessionDelegate {
     // Standard background session handler
     func urlSessionDidFinishEvents(forBackgroundURLSession session: URLSession) {

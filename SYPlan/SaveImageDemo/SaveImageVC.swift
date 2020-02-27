@@ -220,11 +220,24 @@ extension SaveImageVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // step 1
+        //print("tableView cellForRowAt cell")
+        
         let index = indexPath.row
         let cell = tableView.dequeueCell(SaveImageCell.self, indexPath: indexPath)
         
         cell.item = datas[index]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        // step 2
+        //print("tableView willDisplay cell")
+    }
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        // step 3
+        //print("tableView didEndDisplaying cell")
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

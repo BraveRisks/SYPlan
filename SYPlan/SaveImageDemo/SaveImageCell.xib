@@ -20,21 +20,22 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p84-JH-eie">
                         <rect key="frame" x="16" y="8" width="74" height="64"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="64" id="RAS-Kx-7st"/>
                             <constraint firstAttribute="width" constant="74" id="lv6-hm-OOH"/>
-                            <constraint firstAttribute="width" secondItem="p84-JH-eie" secondAttribute="height" multiplier="78:67" id="nY1-dD-vMX"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="rMq-Mr-YUs"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vRB-wh-01z">
-                        <rect key="frame" x="150" y="25" width="160" height="30"/>
+                        <rect key="frame" x="130" y="25" width="180" height="30"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="766-aC-9hx">
-                                <rect key="frame" x="0.0" y="0.0" width="46.5" height="30"/>
+                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="30"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hRg-Mo-KJc">
-                                <rect key="frame" x="56.5" y="0.0" width="47" height="30"/>
+                                <rect key="frame" x="63.5" y="0.0" width="53" height="30"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JBg-yz-suU">
-                                <rect key="frame" x="113.5" y="0.0" width="46.5" height="30"/>
+                                <rect key="frame" x="126.5" y="0.0" width="53.5" height="30"/>
                             </imageView>
                         </subviews>
                         <constraints>
@@ -51,7 +52,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="SKJ-7X-Cxl" secondAttribute="bottom" id="8II-3d-2BC"/>
-                    <constraint firstItem="vRB-wh-01z" firstAttribute="leading" secondItem="p84-JH-eie" secondAttribute="trailing" constant="60" id="A9d-gv-F1n"/>
+                    <constraint firstItem="vRB-wh-01z" firstAttribute="leading" secondItem="p84-JH-eie" secondAttribute="trailing" constant="40" id="A9d-gv-F1n"/>
                     <constraint firstItem="SKJ-7X-Cxl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IEm-00-Vbv"/>
                     <constraint firstItem="p84-JH-eie" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Lgc-yy-xfd"/>
                     <constraint firstItem="vRB-wh-01z" firstAttribute="centerY" secondItem="p84-JH-eie" secondAttribute="centerY" id="d2W-x2-A5o"/>
@@ -63,7 +64,6 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="fileImageView" destination="hRg-Mo-KJc" id="aaH-dZ-UUb"/>
-                <outlet property="imageView" destination="p84-JH-eie" id="eff-7n-egn"/>
                 <outlet property="otherImageView" destination="JBg-yz-suU" id="YE1-Go-HNN"/>
                 <outlet property="showImageView" destination="p84-JH-eie" id="bOe-s2-hCR"/>
                 <outlet property="userDefaultsImageView" destination="766-aC-9hx" id="8AK-XE-eZ2"/>

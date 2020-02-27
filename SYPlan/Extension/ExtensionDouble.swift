@@ -10,6 +10,11 @@ import Foundation
 
 extension Double {
     
+    /// 轉成字串
+    var string: String {
+        return String(self)
+    }
+    
     /// 取小數點第n位 default roundingMode：.down
     /// ```
     /// How to use：

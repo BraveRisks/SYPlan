@@ -41,7 +41,8 @@ class ContainerViewController: UIViewController {
                         .animationNumber, .qrCode, .waterMark, .font,
                         .drakMode, .cropImage, .saveImage]
             case .network:
-                return [.upload, .download, .webService, .apiRefresh]
+                return [.upload, .download, .webService, .apiRefresh,
+                        .imageLoader]
             case .other:
                 return [.fbLogin, .regular, .coreData,
                         .realm, .googleAds, .other]
@@ -97,6 +98,8 @@ class ContainerViewController: UIViewController {
             case cropImage = "Crop Image"
             
             case saveImage = "Save Image"
+            
+            case imageLoader = "Image Loader"
         }
     }
     
@@ -320,6 +323,11 @@ extension ContainerViewController: UICollectionViewDataSource, UICollectionViewD
             navigationController?.pushViewController(vc, animated: true)
         case .saveImage:
             let vc = SaveImageVC(nibName: "SaveImageVC", bundle: nil)
+            vc.title = content.rawValue
+            vc.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(vc, animated: true)
+        case .imageLoader:
+            let vc = ImageLoaderDemoVC()
             vc.title = content.rawValue
             vc.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(vc, animated: true)

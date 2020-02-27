@@ -29,7 +29,7 @@ class SaveImageCell: UITableViewCell {
     }
     
     private func setup() {
-        showImageView.contentMode = .scaleAspectFill
+        showImageView.contentMode = .scaleAspectFit
     }
     
     private func setData() {

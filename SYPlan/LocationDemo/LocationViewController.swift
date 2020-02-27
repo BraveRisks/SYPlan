@@ -37,16 +37,20 @@ class LocationViewController: UIViewController {
         
         NSLayoutConstraint(item: mTableView!, attribute: .top,
                            relatedBy: .equal,
-                           toItem: view, attribute: .top, multiplier: 1.0, constant: 0.0).isActive = true
+                           toItem: view, attribute: .top,
+                           multiplier: 1.0, constant: 0.0).isActive = true
         NSLayoutConstraint(item: mTableView!, attribute: .leading,
                            relatedBy: .equal,
-                           toItem: view, attribute: .leading, multiplier: 1.0, constant: 0.0).isActive = true
+                           toItem: view, attribute: .leading,
+                           multiplier: 1.0, constant: 0.0).isActive = true
         NSLayoutConstraint(item: mTableView!, attribute: .trailing,
                            relatedBy: .equal,
-                           toItem: view, attribute: .trailing, multiplier: 1.0, constant: 0.0).isActive = true
+                           toItem: view, attribute: .trailing,
+                           multiplier: 1.0, constant: 0.0).isActive = true
         NSLayoutConstraint(item: mTableView!, attribute: .bottom,
                            relatedBy: .equal,
-                           toItem: view, attribute: .bottom, multiplier: 1.0, constant: 0.0).isActive = true
+                           toItem: view, attribute: .bottom,
+                           multiplier: 1.0, constant: 0.0).isActive = true
         
         df.dateFormat = "yyyyMMdd HH:mm:ss"
     }
@@ -59,6 +63,7 @@ class LocationViewController: UIViewController {
         }
         
         locationManager = CLLocationManager()
+        
         // 設定位置的準確性
         // 1. kCLLocationAccuracyBestForNavigation
         // 2. kCLLocationAccuracyBest
@@ -67,10 +72,12 @@ class LocationViewController: UIViewController {
         // 5. kCLLocationAccuracyKilometery
         // 6. kCLLocationAccuracyThreeKilometers
         locationManager?.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        
         // 設定最小的更新距離 單位：米(m)
         locationManager?.distanceFilter = kCLDistanceFilterNone
         locationManager?.delegate = self
         locationManager?.requestWhenInUseAuthorization()
+        
         // 授權順序
         // 1. notDetermined
         // 2. denied or authorizedAlways or authorizedWhenInUse

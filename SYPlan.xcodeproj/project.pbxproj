@@ -15,6 +15,8 @@
 		EB1184862188625D00753334 /* PinterestCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1184842188625D00753334 /* PinterestCollectionCell.xib */; };
 		EB13499423E81FF700C1FF0F /* CropImageDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB13499223E81FF700C1FF0F /* CropImageDemoVC.swift */; };
 		EB13499523E81FF700C1FF0F /* CropImageDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB13499323E81FF700C1FF0F /* CropImageDemoVC.xib */; };
+		EB139FF92405F9D500ED1770 /* ImageLoaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB139FF72405F9D500ED1770 /* ImageLoaderCell.swift */; };
+		EB139FFA2405F9D500ED1770 /* ImageLoaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB139FF82405F9D500ED1770 /* ImageLoaderCell.xib */; };
 		EB15562221378CAE007C6BF8 /* UploadResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB15562121378CAE007C6BF8 /* UploadResult.swift */; };
 		EB177BE521AE3CCC00921060 /* UIPagerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB177BE421AE3CCC00921060 /* UIPagerTabView.swift */; };
 		EB1BFD40219E991100B12F68 /* ExtensionCGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BFD3F219E991100B12F68 /* ExtensionCGFloat.swift */; };
@@ -100,6 +102,9 @@
 		EBAD6D3E22CDDBC500538A7B /* FacebookLoginDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAD6D3C22CDDBC500538A7B /* FacebookLoginDemoViewController.xib */; };
 		EBB3459A2177262100E24A15 /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB345992177262100E24A15 /* ExtensionColor.swift */; };
 		EBB43AC823F4E1D3003C8772 /* PDFVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB43AC723F4E1D3003C8772 /* PDFVC.swift */; };
+		EBB4A5C52405183B00EFFB50 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4A5C42405183B00EFFB50 /* ImageLoader.swift */; };
+		EBB4A5C724051C4B00EFFB50 /* ExtensionOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4A5C624051C4B00EFFB50 /* ExtensionOptional.swift */; };
+		EBB4A5C92405240B00EFFB50 /* ImageLoaderDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4A5C82405240B00EFFB50 /* ImageLoaderDemoVC.swift */; };
 		EBB5F9832186A70400CB6C51 /* ExtensionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB5F9822186A70400CB6C51 /* ExtensionLayer.swift */; };
 		EBB5F9852186F98E00CB6C51 /* mobile01_20180727_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EBB5F9842186F98E00CB6C51 /* mobile01_20180727_6.jpg */; };
 		EBBE9D15235722AC00BB1D61 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBE9D14235722AC00BB1D61 /* ContainerViewController.swift */; };
@@ -202,6 +207,8 @@
 		EB1184842188625D00753334 /* PinterestCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PinterestCollectionCell.xib; sourceTree = "<group>"; };
 		EB13499223E81FF700C1FF0F /* CropImageDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropImageDemoVC.swift; sourceTree = "<group>"; };
 		EB13499323E81FF700C1FF0F /* CropImageDemoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CropImageDemoVC.xib; sourceTree = "<group>"; };
+		EB139FF72405F9D500ED1770 /* ImageLoaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderCell.swift; sourceTree = "<group>"; };
+		EB139FF82405F9D500ED1770 /* ImageLoaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageLoaderCell.xib; sourceTree = "<group>"; };
 		EB15562121378CAE007C6BF8 /* UploadResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadResult.swift; sourceTree = "<group>"; };
 		EB177BE421AE3CCC00921060 /* UIPagerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPagerTabView.swift; sourceTree = "<group>"; };
 		EB1BFD3F219E991100B12F68 /* ExtensionCGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCGFloat.swift; sourceTree = "<group>"; };
@@ -290,6 +297,9 @@
 		EBAD6D3C22CDDBC500538A7B /* FacebookLoginDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FacebookLoginDemoViewController.xib; sourceTree = "<group>"; };
 		EBB345992177262100E24A15 /* ExtensionColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
 		EBB43AC723F4E1D3003C8772 /* PDFVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFVC.swift; sourceTree = "<group>"; };
+		EBB4A5C42405183B00EFFB50 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		EBB4A5C624051C4B00EFFB50 /* ExtensionOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionOptional.swift; sourceTree = "<group>"; };
+		EBB4A5C82405240B00EFFB50 /* ImageLoaderDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderDemoVC.swift; sourceTree = "<group>"; };
 		EBB5F9822186A70400CB6C51 /* ExtensionLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionLayer.swift; sourceTree = "<group>"; };
 		EBB5F9842186F98E00CB6C51 /* mobile01_20180727_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mobile01_20180727_6.jpg; path = Assets.xcassets/photos/photo_19.imageset/mobile01_20180727_6.jpg; sourceTree = "<group>"; };
 		EBBE9D14235722AC00BB1D61 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -772,6 +782,17 @@
 			path = FacebookLoginDemo;
 			sourceTree = "<group>";
 		};
+		EBB4A5C32405180C00EFFB50 /* ImageLoaderDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EBB4A5C42405183B00EFFB50 /* ImageLoader.swift */,
+				EBB4A5C82405240B00EFFB50 /* ImageLoaderDemoVC.swift */,
+				EB139FF72405F9D500ED1770 /* ImageLoaderCell.swift */,
+				EB139FF82405F9D500ED1770 /* ImageLoaderCell.xib */,
+			);
+			path = ImageLoaderDemo;
+			sourceTree = "<group>";
+		};
 		EBC28C1B212FD532000B87EA /* UploadDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -800,6 +821,7 @@
 				EB6BBA912358010600D1626D /* ExtensionCollectionView.swift */,
 				EBCBF960236833ED00A9EA50 /* ExtensionCGImagePropertyOrientation.swift */,
 				EBA47DDF23E918FC002A8718 /* ExtensionDouble.swift */,
+				EBB4A5C624051C4B00EFFB50 /* ExtensionOptional.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -871,6 +893,7 @@
 				EB2A766F2378F9A000166BEA /* DarkModeDemo */,
 				EB13498C23E7B62400C1FF0F /* CropImageDemo */,
 				EBC8BD8A23FF88B500DB0D8F /* SaveImageDemo */,
+				EBB4A5C32405180C00EFFB50 /* ImageLoaderDemo */,
 				EB697EAF212B98470089CACC /* MultiCellDemo */,
 				EB56D14E21242ABA00BE8BFC /* ShareExtensionDemo */,
 				EB64061B23681106007A7CB6 /* Core ML Demo */,
@@ -1163,6 +1186,7 @@
 				EB8090A722D6DF48008220B7 /* UnifiedNativeAdView.xib in Resources */,
 				EBD8BC86212D0D1500E73A6A /* FriendTableCell.xib in Resources */,
 				EBC4CF9024036047009B7AC9 /* SaveImageVC.xib in Resources */,
+				EB139FFA2405F9D500ED1770 /* ImageLoaderCell.xib in Resources */,
 				EBD16BF520C12F91006FA1E8 /* Main.storyboard in Resources */,
 				EBC4CF942403A0AD009B7AC9 /* SaveImageCell.xib in Resources */,
 				EB5E7CEE22DC771800CF6A37 /* GoogleService-Info.plist in Resources */,
@@ -1331,6 +1355,7 @@
 				EB36D57F2327797E005015C8 /* WatermarkView.swift in Sources */,
 				EBA47DE023E918FC002A8718 /* ExtensionDouble.swift in Sources */,
 				EB177BE521AE3CCC00921060 /* UIPagerTabView.swift in Sources */,
+				EBB4A5C724051C4B00EFFB50 /* ExtensionOptional.swift in Sources */,
 				EB36D58D2327881B005015C8 /* WatermarkDemoViewController.swift in Sources */,
 				EB1BFD40219E991100B12F68 /* ExtensionCGFloat.swift in Sources */,
 				EB877DBA210975CF0075788C /* AttributedStringHelper.swift in Sources */,
@@ -1340,6 +1365,8 @@
 				EB76F8BA2202772700C278D7 /* QueryService.swift in Sources */,
 				EBD16BF020C12F91006FA1E8 /* AppDelegate.swift in Sources */,
 				EB3EF9E823AB12F6007F07AB /* OriginURLSession.swift in Sources */,
+				EBB4A5C92405240B00EFFB50 /* ImageLoaderDemoVC.swift in Sources */,
+				EB139FF92405F9D500ED1770 /* ImageLoaderCell.swift in Sources */,
 				EBC28C1F212FD82A000B87EA /* UploadDemoController.swift in Sources */,
 				EB8090AA22D73467008220B7 /* ExtensionBundle.swift in Sources */,
 				EB07B4B6228573B200F7B7B2 /* RealmPerson.swift in Sources */,
@@ -1357,6 +1384,7 @@
 				EB2A76722378F9CF00166BEA /* DarkModeVC.swift in Sources */,
 				EBF0B3032252EC0E00E2712E /* PDFManager.swift in Sources */,
 				EBC4CF932403A0AD009B7AC9 /* SaveImageCell.swift in Sources */,
+				EBB4A5C52405183B00EFFB50 /* ImageLoader.swift in Sources */,
 				EB76F8B62202772700C278D7 /* TrackTableViewCell.swift in Sources */,
 				EBB43AC823F4E1D3003C8772 /* PDFVC.swift in Sources */,
 				EBC4CF8F24036047009B7AC9 /* SaveImageVC.swift in Sources */,

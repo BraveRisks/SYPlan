@@ -43,6 +43,7 @@ class QueryService {
     private func parseData(_ data: Data) {
         var response: JSONDictionary?
         tracks.removeAll()
+        
         do {
             response = try JSONSerialization.jsonObject(with: data, options: []) as? JSONDictionary
         } catch let parseError as NSError {
