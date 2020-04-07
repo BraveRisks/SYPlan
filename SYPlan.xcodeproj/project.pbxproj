@@ -115,6 +115,9 @@
 		EBC4CF9024036047009B7AC9 /* SaveImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBC4CF8E24036047009B7AC9 /* SaveImageVC.xib */; };
 		EBC4CF932403A0AD009B7AC9 /* SaveImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC4CF912403A0AD009B7AC9 /* SaveImageCell.swift */; };
 		EBC4CF942403A0AD009B7AC9 /* SaveImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBC4CF922403A0AD009B7AC9 /* SaveImageCell.xib */; };
+		EBC9B5E92424AD2F00AAC335 /* LinkDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC9B5E82424AD2F00AAC335 /* LinkDemoVC.swift */; };
+		EBC9B5EC2424ADF700AAC335 /* LinkDemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC9B5EA2424ADF700AAC335 /* LinkDemoCell.swift */; };
+		EBC9B5ED2424ADF700AAC335 /* LinkDemoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBC9B5EB2424ADF700AAC335 /* LinkDemoCell.xib */; };
 		EBCBF9582368218300A9EA50 /* CatsAndDogs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EBCBF9572368218300A9EA50 /* CatsAndDogs.mlmodel */; };
 		EBCBF95D236822EF00A9EA50 /* CoreMLVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCBF95C236822EF00A9EA50 /* CoreMLVC.swift */; };
 		EBCBF961236833ED00A9EA50 /* ExtensionCGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCBF960236833ED00A9EA50 /* ExtensionCGImagePropertyOrientation.swift */; };
@@ -310,6 +313,9 @@
 		EBC4CF8E24036047009B7AC9 /* SaveImageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveImageVC.xib; sourceTree = "<group>"; };
 		EBC4CF912403A0AD009B7AC9 /* SaveImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveImageCell.swift; sourceTree = "<group>"; };
 		EBC4CF922403A0AD009B7AC9 /* SaveImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveImageCell.xib; sourceTree = "<group>"; };
+		EBC9B5E82424AD2F00AAC335 /* LinkDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkDemoVC.swift; sourceTree = "<group>"; };
+		EBC9B5EA2424ADF700AAC335 /* LinkDemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkDemoCell.swift; sourceTree = "<group>"; };
+		EBC9B5EB2424ADF700AAC335 /* LinkDemoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LinkDemoCell.xib; sourceTree = "<group>"; };
 		EBCBF9572368218300A9EA50 /* CatsAndDogs.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = CatsAndDogs.mlmodel; sourceTree = "<group>"; };
 		EBCBF95C236822EF00A9EA50 /* CoreMLVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLVC.swift; sourceTree = "<group>"; };
 		EBCBF960236833ED00A9EA50 /* ExtensionCGImagePropertyOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCGImagePropertyOrientation.swift; sourceTree = "<group>"; };
@@ -837,6 +843,16 @@
 			path = SaveImageDemo;
 			sourceTree = "<group>";
 		};
+		EBC9B5E72424ABE500AAC335 /* LinkDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EBC9B5E82424AD2F00AAC335 /* LinkDemoVC.swift */,
+				EBC9B5EA2424ADF700AAC335 /* LinkDemoCell.swift */,
+				EBC9B5EB2424ADF700AAC335 /* LinkDemoCell.xib */,
+			);
+			path = LinkDemo;
+			sourceTree = "<group>";
+		};
 		EBD16BE320C12F91006FA1E8 = {
 			isa = PBXGroup;
 			children = (
@@ -894,6 +910,7 @@
 				EB13498C23E7B62400C1FF0F /* CropImageDemo */,
 				EBC8BD8A23FF88B500DB0D8F /* SaveImageDemo */,
 				EBB4A5C32405180C00EFFB50 /* ImageLoaderDemo */,
+				EBC9B5E72424ABE500AAC335 /* LinkDemo */,
 				EB697EAF212B98470089CACC /* MultiCellDemo */,
 				EB56D14E21242ABA00BE8BFC /* ShareExtensionDemo */,
 				EB64061B23681106007A7CB6 /* Core ML Demo */,
@@ -1187,6 +1204,7 @@
 				EBD8BC86212D0D1500E73A6A /* FriendTableCell.xib in Resources */,
 				EBC4CF9024036047009B7AC9 /* SaveImageVC.xib in Resources */,
 				EB139FFA2405F9D500ED1770 /* ImageLoaderCell.xib in Resources */,
+				EBC9B5ED2424ADF700AAC335 /* LinkDemoCell.xib in Resources */,
 				EBD16BF520C12F91006FA1E8 /* Main.storyboard in Resources */,
 				EBC4CF942403A0AD009B7AC9 /* SaveImageCell.xib in Resources */,
 				EB5E7CEE22DC771800CF6A37 /* GoogleService-Info.plist in Resources */,
@@ -1308,6 +1326,7 @@
 				EB44A33D21759188005AA612 /* ArticleTableViewCell.swift in Sources */,
 				EB44A34021759804005AA612 /* WebViewController.swift in Sources */,
 				EBEFF6862278432900E1E696 /* Reachability.swift in Sources */,
+				EBC9B5E92424AD2F00AAC335 /* LinkDemoVC.swift in Sources */,
 				EBD16BF220C12F91006FA1E8 /* ViewController.swift in Sources */,
 				EB44A32F21757DC6005AA612 /* FacebookWebDemoViewController.swift in Sources */,
 				EBAAF2392328DF8B00D0FFD6 /* ExtensionViewController.swift in Sources */,
@@ -1357,6 +1376,7 @@
 				EB177BE521AE3CCC00921060 /* UIPagerTabView.swift in Sources */,
 				EBB4A5C724051C4B00EFFB50 /* ExtensionOptional.swift in Sources */,
 				EB36D58D2327881B005015C8 /* WatermarkDemoViewController.swift in Sources */,
+				EBC9B5EC2424ADF700AAC335 /* LinkDemoCell.swift in Sources */,
 				EB1BFD40219E991100B12F68 /* ExtensionCGFloat.swift in Sources */,
 				EB877DBA210975CF0075788C /* AttributedStringHelper.swift in Sources */,
 				EBCBF961236833ED00A9EA50 /* ExtensionCGImagePropertyOrientation.swift in Sources */,

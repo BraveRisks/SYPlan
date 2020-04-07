@@ -24,7 +24,7 @@ import UIKit
 ///    .withBackgroundColor(.red)
 ///    .withKern(2.0)
 ///    .withUnderlineColor(.black)
-///    .withUnderlineStyle(.styleSingle)
+///    .withUnderlineStyle(.single)
 ///    .and(length: 20)
 ///    .withFont(UIFont.systemFont(ofSize: 16.0))
 ///    .withForegroundColor(.yellow)

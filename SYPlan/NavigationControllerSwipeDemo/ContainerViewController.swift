@@ -45,7 +45,8 @@ class ContainerViewController: UIViewController {
                         .imageLoader]
             case .other:
                 return [.fbLogin, .regular, .coreData,
-                        .realm, .googleAds, .other]
+                        .realm, .googleAds, .other,
+                        .linkURL]
             case .apple:
                 return [. coreMLImage, .coreMLText]
             }
@@ -100,6 +101,8 @@ class ContainerViewController: UIViewController {
             case saveImage = "Save Image"
             
             case imageLoader = "Image Loader"
+            
+            case linkURL = "Link URL"
         }
     }
     
@@ -328,6 +331,11 @@ extension ContainerViewController: UICollectionViewDataSource, UICollectionViewD
             navigationController?.pushViewController(vc, animated: true)
         case .imageLoader:
             let vc = ImageLoaderDemoVC()
+            vc.title = content.rawValue
+            vc.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(vc, animated: true)
+        case .linkURL:
+            let vc = LinkDemoVC()
             vc.title = content.rawValue
             vc.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(vc, animated: true)
