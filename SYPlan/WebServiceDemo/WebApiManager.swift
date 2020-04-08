@@ -139,12 +139,12 @@ public struct WebHttpHeader {
     
     /// xml，Content-Type:text/xml; charset=utf-8
     static var xml: HttpHeader {
-        get { return HttpHeader(field: "Content-Type", value: "text/xml; charset=utf-8") }
+        return .xml
     }
     
     /// json，Content-Type:text/xml
     static var json: HttpHeader {
-        get { return HttpHeader(field: "Content-Type", value: "application/json") }
+        return .json
     }
 }
 

@@ -10,38 +10,12 @@ import UIKit
 
 extension String {
     
-    /// 計算文字的高度
-    ///
-    /// - Parameters:
-    ///   - width: 限制寬度的大小
-    ///   - font: 字型的樣式
-    /// - Returns: 計算後的高度
-    func height(with width: CGFloat, font: UIFont) -> CGFloat {
-        let attrString = NSMutableAttributedString(string: self)
-        attrString.addAttribute(.font, value: font, range: NSRange(location: 0, length: self.utf16.count))
-        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
-        let boundingBox = attrString.boundingRect(with: constraintRect,
-                                            options: [.usesLineFragmentOrigin, .usesFontLeading],
-                                            context: nil)
-        return ceil(boundingBox.height)
+    /// 轉換為NSString
+    var nsString: NSString {
+        return self as NSString
     }
     
-    /// 計算文字的寬度
-    ///
-    /// - Parameters:
-    ///   - height: 限制高度的大小
-    ///   - font: 字型的樣式
-    /// - Returns: 計算後的寬度
-    func width(with height: CGFloat, font: UIFont) -> CGFloat {
-        let attrString = NSMutableAttributedString(string: self)
-        attrString.addAttribute(.font, value: font, range: NSRange(location: 0, length: self.utf16.count))
-        let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
-        let boundingBox = attrString.boundingRect(with: constraintRect,
-                                                  options: [.usesLineFragmentOrigin, .usesFontLeading],
-                                                  context: nil)
-        return ceil(boundingBox.width)
-    }
-    
+    /// 檢查是否為有效的台灣手機格式
     var isValidPhone: Bool {
         get {
             let pattern = "09\\d{8}$|\\+?8869\\d{8}$"
@@ -51,6 +25,7 @@ extension String {
         }
     }
     
+    /// 檢查是否為有效的Email格式
     var isValidEmail: Bool {
         get {
             let pattern = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
@@ -77,6 +52,38 @@ extension String {
             let any = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
             return any as? Dictionary<String, Any> ?? [:]
         }
+    }
+    
+    /// 計算文字的高度
+    ///
+    /// - Parameters:
+    ///   - maxWidth: 限制寬度的大小
+    ///   - font: 字型的樣式
+    /// - Returns: 計算後的高度
+    func height(maxWidth: CGFloat, font: UIFont) -> CGFloat {
+        let attrString = NSMutableAttributedString(string: self)
+        attrString.addAttribute(.font, value: font, range: NSRange(location: 0, length: self.utf16.count))
+        let constraintRect = CGSize(width: maxWidth, height: .greatestFiniteMagnitude)
+        let boundingBox = attrString.boundingRect(with: constraintRect,
+                                            options: [.usesLineFragmentOrigin, .usesFontLeading],
+                                            context: nil)
+        return ceil(boundingBox.height)
+    }
+    
+    /// 計算文字的寬度
+    ///
+    /// - Parameters:
+    ///   - maxHeight: 限制高度的大小
+    ///   - font: 字型的樣式
+    /// - Returns: 計算後的寬度
+    func width(maxHeight: CGFloat, font: UIFont) -> CGFloat {
+        let attrString = NSMutableAttributedString(string: self)
+        attrString.addAttribute(.font, value: font, range: NSRange(location: 0, length: self.utf16.count))
+        let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: maxHeight)
+        let boundingBox = attrString.boundingRect(with: constraintRect,
+                                                  options: [.usesLineFragmentOrigin, .usesFontLeading],
+                                                  context: nil)
+        return ceil(boundingBox.width)
     }
     
     /// Create `Data` from hexadecimal string representation

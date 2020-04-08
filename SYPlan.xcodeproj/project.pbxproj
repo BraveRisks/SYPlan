@@ -10,6 +10,7 @@
 		3CDBBA9BA55E92477E9151F8 /* Pods_SYPlan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A550019FCF861A7D015A8A /* Pods_SYPlan.framework */; };
 		EB07B4B422856F4F00F7B7B2 /* RealmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07B4B322856F4F00F7B7B2 /* RealmViewController.swift */; };
 		EB07B4B6228573B200F7B7B2 /* RealmPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07B4B5228573B200F7B7B2 /* RealmPerson.swift */; };
+		EB1172B7243DABF1003D8AAD /* StringSizeCacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1172B6243DABF1003D8AAD /* StringSizeCacheHelper.swift */; };
 		EB11848121885EE200753334 /* PinterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB11848021885EE200753334 /* PinterestViewController.swift */; };
 		EB1184852188625D00753334 /* PinterestCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1184832188625D00753334 /* PinterestCollectionCell.swift */; };
 		EB1184862188625D00753334 /* PinterestCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1184842188625D00753334 /* PinterestCollectionCell.xib */; };
@@ -205,6 +206,7 @@
 		CD61933C79C5CF8EDF1FD0B9 /* Pods-SYPlanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYPlanUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SYPlanUITests/Pods-SYPlanUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EB07B4B322856F4F00F7B7B2 /* RealmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmViewController.swift; sourceTree = "<group>"; };
 		EB07B4B5228573B200F7B7B2 /* RealmPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPerson.swift; sourceTree = "<group>"; };
+		EB1172B6243DABF1003D8AAD /* StringSizeCacheHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSizeCacheHelper.swift; sourceTree = "<group>"; };
 		EB11848021885EE200753334 /* PinterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestViewController.swift; sourceTree = "<group>"; };
 		EB1184832188625D00753334 /* PinterestCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestCollectionCell.swift; sourceTree = "<group>"; };
 		EB1184842188625D00753334 /* PinterestCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PinterestCollectionCell.xib; sourceTree = "<group>"; };
@@ -718,6 +720,7 @@
 			isa = PBXGroup;
 			children = (
 				EB877DB9210975CF0075788C /* AttributedStringHelper.swift */,
+				EB1172B6243DABF1003D8AAD /* StringSizeCacheHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1338,6 +1341,7 @@
 				EB3ABF6A218850CE00460295 /* PinterestLayout.swift in Sources */,
 				EB818C582136446300286D4C /* UploadTableCell.swift in Sources */,
 				EB347D4522E70B6600677032 /* ScanBorderView.swift in Sources */,
+				EB1172B7243DABF1003D8AAD /* StringSizeCacheHelper.swift in Sources */,
 				EBFA75B22265BA1F009DCB4F /* ImageFilterManager.swift in Sources */,
 				EBD8BC79212D0A6300E73A6A /* ProfileTableCell.swift in Sources */,
 				EB15562221378CAE007C6BF8 /* UploadResult.swift in Sources */,

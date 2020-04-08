@@ -77,42 +77,54 @@ enum ApiError: Error {
 }
 
 /// HTTP header
-public struct HttpHeader {
-    var field: String
-    var value: String
+enum HttpHeader {
     
-    /// xml，Content-Type:text/xml; charset=utf-8
-    static var xml: HttpHeader {
-        return HttpHeader(field: "Content-Type", value: "text/xml; charset=utf-8")
+    case xml
+    
+    case json
+    
+    case authorization
+    
+    var field: String {
+        switch self {
+        case .xml, .json:
+            return "Content-Type"
+        case .authorization:
+            return "Authorization"
+        }
     }
     
-    /// json，Content-Type:text/xml
-    static var json: HttpHeader {
-        return HttpHeader(field: "Content-Type", value: "application/json")
+    var value: String {
+        switch self {
+        case .xml:
+            return "text/xml; charset=utf-8"
+        case .json:
+            return "application/json"
+        case .authorization:
+            return "Bearer \(gKey)"
+        }
     }
-    
-    /// Authorization，Bearer token
-    static var authorization: HttpHeader {
-        return HttpHeader(field: "Authorization", value: "Bearer \(gKey)")
-    }
+}
+
+/// HTTP Connect method
+///
+/// - get: GET
+/// - post: POST
+enum HttpMethod: String {
+    case get = "GET"
+    case post = "POST"
 }
 
 /// Http Request
 public class ApiRequest: Hashable, CustomStringConvertible, Equatable {
     
-    /// HTTP Connect method
-    ///
-    /// - get: GET
-    /// - post: POST
-    enum HttpMethod: String {
-        case get = "GET"
-        case post = "POST"
-    }
-    
     var method: HttpMethod
-    private(set) var headers: [HttpHeader]
+    
     var path: ApiPath
+    
     var parameters: JSONDictionary?
+    
+    private(set) var headers: [HttpHeader]
     
     public var description: String {
         let msg = """
@@ -130,10 +142,10 @@ public class ApiRequest: Hashable, CustomStringConvertible, Equatable {
     class var tokenParameters: JSONDictionary {
         let parameters =  [
             "UserID"   : "384861",
-            "PWD"      : "mnbvcxz",
+            "PWD"      : "lkjhgfdsa",
             "DevType"  : "2",
             "OSVer"    : "13.2.2",
-            "ApVer"    : "1.0.29",
+            "ApVer"    : "1.0.32",
             "MobileId" : "iPhone 11 Pro",
             "APName"   : "TA2",
             "DevNewHID": "554543bc7d8e409db3d6a600343ec06a"
@@ -145,10 +157,24 @@ public class ApiRequest: Hashable, CustomStringConvertible, Equatable {
         self.method = method
         self.path = path
         self.parameters = parameters
-        headers = [HttpHeader.json]
+        headers = [.json]
+        
+        // 如果不是重取Token，就帶入共用參數及Token
+        if path != .taGetAuthToken {
+            // add token
+            addHeader(.authorization)
+            
+            // add common parameters
+            self.parameters?["UserID"] = "225315"
+            self.parameters?["DevType"] = "2"
+            self.parameters?["ApName"] = "TA2"
+            self.parameters?["APName"] = "TA2"
+            self.parameters?["UserLat"] = 25.032663
+            self.parameters?["UserLng"] = 121.565810
+        }
     }
     
-    public func addHeader(_ header: HttpHeader) {
+    func addHeader(_ header: HttpHeader) {
         headers.append(header)
     }
     
@@ -157,7 +183,7 @@ public class ApiRequest: Hashable, CustomStringConvertible, Equatable {
     public func updateHeaders(includeToken: Bool = false) {
         headers.removeAll()
         headers.append(HttpHeader.json)
-        if includeToken { headers.append(HttpHeader.authorization) }
+        if includeToken { headers.append(.authorization) }
     }
     
     public func hash(into hasher: inout Hasher) {
@@ -184,20 +210,6 @@ struct ApiManager {
     private init() {}
     
     public static func request(from req: ApiRequest, completion: Completion?) {
-        // 如果不是重取Token，就帶入共用參數及Token
-        if req.path != .taGetAuthToken {
-            // add token
-            req.addHeader(HttpHeader.authorization)
-            
-            // add common parameters
-            req.parameters?["UserID"] = "225315"
-            req.parameters?["DevType"] = "2"
-            req.parameters?["ApName"] = "TA2"
-            req.parameters?["APName"] = "TA2"
-            req.parameters?["UserLat"] = 25.032663
-            req.parameters?["UserLng"] = 121.565810
-        }
-        
         OriginURLSession.share.fetch(from: req) { (result) in
             switch result {
             case .success(let dictionay):

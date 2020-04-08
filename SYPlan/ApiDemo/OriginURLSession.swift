@@ -229,6 +229,7 @@ class OriginURLSession: NSObject {
         }
         
         isGettingToken = true
+        
         let req = ApiRequest(method: .post, path: .taGetAuthToken,
                              parameters: ApiRequest.tokenParameters)
         fetch(from: req) { (result) in

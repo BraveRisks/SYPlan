@@ -10,6 +10,11 @@ import UIKit
 
 extension CGFloat {
     
+    /// 轉換為NSNumber
+    var nsNumber: NSNumber {
+        return self as NSNumber
+    }
+    
     /// 角度轉換為弧度
     func radians() -> CGFloat {
         return self * .pi / 180.0
