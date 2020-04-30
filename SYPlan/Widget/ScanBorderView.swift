@@ -43,17 +43,17 @@ class ScanBorderView: UIView {
     }
     
     /// 邊框顏色，default = .red
-    var borderColor: UIColor = .red {
+    var rectBorderColor: UIColor = .red {
         didSet { setNeedsDisplay() }
     }
     
     /// 邊框長度，default = 20.0
-    var borderLength: CGFloat = 20.0 {
+    var rectBorderLength: CGFloat = 20.0 {
         didSet { setNeedsDisplay() }
     }
     
     /// 邊框框度，default = 6.0
-    var borderWidth: CGFloat = 6.0 {
+    var rectBorderWidth: CGFloat = 6.0 {
         didSet { setNeedsDisplay() }
     }
     
@@ -141,27 +141,27 @@ class ScanBorderView: UIView {
         let oriEX = borderFrame.maxX
         let oriEY = borderFrame.maxY
         let borderPath = UIBezierPath()
-        borderPath.lineWidth = borderWidth
+        borderPath.lineWidth = rectBorderWidth
         borderPath.lineJoinStyle = .miter
         
         // 左上
-        borderPath.move(to: CGPoint(x: oriSX, y: oriSY + borderLength))
+        borderPath.move(to: CGPoint(x: oriSX, y: oriSY + rectBorderLength))
         borderPath.addLine(to: CGPoint(x: oriSX, y: oriSY))
-        borderPath.addLine(to: CGPoint(x: oriSX + borderLength, y: oriSY))
+        borderPath.addLine(to: CGPoint(x: oriSX + rectBorderLength, y: oriSY))
         // 右上
-        borderPath.move(to: CGPoint(x: oriEX - borderLength, y: oriSY))
+        borderPath.move(to: CGPoint(x: oriEX - rectBorderLength, y: oriSY))
         borderPath.addLine(to: CGPoint(x: oriEX, y: oriSY))
-        borderPath.addLine(to: CGPoint(x: oriEX, y: oriSY + borderLength))
+        borderPath.addLine(to: CGPoint(x: oriEX, y: oriSY + rectBorderLength))
         // 左下
-        borderPath.move(to: CGPoint(x: oriSX, y: oriEY - borderLength))
+        borderPath.move(to: CGPoint(x: oriSX, y: oriEY - rectBorderLength))
         borderPath.addLine(to: CGPoint(x: oriSX, y: oriEY))
-        borderPath.addLine(to: CGPoint(x: oriSX + borderLength, y: oriEY))
+        borderPath.addLine(to: CGPoint(x: oriSX + rectBorderLength, y: oriEY))
         // 右下
-        borderPath.move(to: CGPoint(x: oriEX, y: oriEY - borderLength))
+        borderPath.move(to: CGPoint(x: oriEX, y: oriEY - rectBorderLength))
         borderPath.addLine(to: CGPoint(x: oriEX, y: oriEY))
-        borderPath.addLine(to: CGPoint(x: oriEX - borderLength, y: oriEY))
+        borderPath.addLine(to: CGPoint(x: oriEX - rectBorderLength, y: oriEY))
         
-        borderColor.setStroke()
+        rectBorderColor.setStroke()
         borderPath.stroke()
     }
 }

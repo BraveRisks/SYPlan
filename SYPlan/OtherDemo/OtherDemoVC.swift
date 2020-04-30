@@ -38,6 +38,17 @@ class OtherDemoVC: BaseVC {
         // 自定義`leftBarButtonItem`時，原始的邊界返回會失效
         navigationItem.leftBarButtonItem = backItem
         
+        let barAdd = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil)
+        let barCompose = UIBarButtonItem(barButtonSystemItem: .compose, target: nil, action: nil)
+        navigationItem.rightBarButtonItems = [barAdd, barCompose]
+        
+        let headerView = UIView(frame: CGRect(origin: .zero,
+                                              size: CGSize(width: UIScreen.width, height: 30.0)))
+        headerView.backgroundColor = .white
+        headerView.cornerRadius = 5.0
+        
+        navigationItem.titleView = headerView
+        
         view.backgroundColor = .white
         
         tableView = UITableView()

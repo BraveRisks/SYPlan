@@ -215,13 +215,6 @@ class OriginURLSession: NSObject {
     }
     
     private func handleInvalidToken(oriReq: ApiRequest, oriCompletion: Completion?) {
-        // AutoChangePassword
-        // 如果無法取到KeyChain的密碼，就將`rootViewController`更改為`LoginVC`
-        /*guard let _ = KeyChainManager.share.get(with: .pass) else {
-            oriCompletion?(.failure(ApiError.passwordError(msg: LString("Text:PasswordError"))))
-            return
-        }*/
-        
         // 如果正在取得Token就返回
         if isGettingToken {
             apiWaitPool.append((req: oriReq, completion: oriCompletion))

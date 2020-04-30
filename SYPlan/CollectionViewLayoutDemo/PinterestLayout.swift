@@ -73,6 +73,7 @@ class PinterestLayout: UICollectionViewLayout {
                 visibleLayoutAttributes.append(attributes)
             }
         }
+        
         return visibleLayoutAttributes
     }
     

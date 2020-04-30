@@ -39,7 +39,7 @@ class PinterestViewController: UIViewController {
         view.backgroundColor = .white
 
         for i in 0 ..< 20 {
-            datas.append(Pinterest(image: "photo_\(i+1)", title: "美麗的女孩兒-\(i+1)"))
+            datas.append(Pinterest(image: "photo_\(i + 1)", title: "美麗的女孩兒-\(i + 1)"))
         }
         
         mCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: mPinterestLayout)

@@ -10,7 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    private let notification = UIApplication.userDidTakeScreenshotNotification
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(afterTakeScreenshot(_:)),
+                                               name: notification,
+                                               object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self,
+                                                  name: notification,
+                                                  object: nil)
+    }
+    
+    @objc private func afterTakeScreenshot(_ notification: Notification) {
+        print("AfterTakeScreenshot")
     }
 }

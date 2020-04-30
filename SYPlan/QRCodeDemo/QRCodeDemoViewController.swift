@@ -40,6 +40,7 @@ class QRCodeDemoViewController: UIViewController {
     
     private func setup() {
         navigationItem.title = "QRCode 掃描"
+        view.backgroundColor = .white
         
         // 檢查是否有攝影裝置
         guard let viedeoDeivce = AVCaptureDevice.default(for: .video) else {

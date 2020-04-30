@@ -116,7 +116,7 @@ enum HttpMethod: String {
 }
 
 /// Http Request
-public class ApiRequest: Hashable, CustomStringConvertible, Equatable {
+public class ApiRequest: Hashable, Equatable, CustomStringConvertible {
     
     var method: HttpMethod
     
@@ -145,7 +145,7 @@ public class ApiRequest: Hashable, CustomStringConvertible, Equatable {
             "PWD"      : "lkjhgfdsa",
             "DevType"  : "2",
             "OSVer"    : "13.2.2",
-            "ApVer"    : "1.0.32",
+            "ApVer"    : "1.0.33",
             "MobileId" : "iPhone 11 Pro",
             "APName"   : "TA2",
             "DevNewHID": "554543bc7d8e409db3d6a600343ec06a"
