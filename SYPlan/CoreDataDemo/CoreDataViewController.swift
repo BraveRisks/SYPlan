@@ -50,7 +50,7 @@ class CoreDataViewController: UIViewController {
         let deleteAllItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self,
                                             action: #selector(deleteAll(_:)))
         navigationItem.leftBarButtonItem = deleteAllItem
-        
+
         tableView = UITableView(frame: .zero, style: .plain)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.estimatedRowHeight = 44.0
@@ -95,7 +95,9 @@ class CoreDataViewController: UIViewController {
     }
     
     @objc private func addName(_ barBtn: UIBarButtonItem) {
-        let alert = UIAlertController(title: "New Name", message: "Add a new name", preferredStyle: .alert)
+        let alert = UIAlertController(title: "New Name",
+                                      message: "Add a new name",
+                                      preferredStyle: .alert)
         let save = UIAlertAction(title: "儲存", style: .default) { [unowned self] (action) in
             guard let textField = alert.textFields?.first,
                 let name = textField.text else {
@@ -138,7 +140,7 @@ class CoreDataViewController: UIViewController {
     @available(iOS 10.0, *)
     private func save(with name: String) {
         guard let bgContext = backgroundContext else { return }
-        
+
         let entity = NSEntityDescription.entity(forEntityName: "Person", in: bgContext)!
         let person = NSManagedObject(entity: entity, insertInto: bgContext)
         

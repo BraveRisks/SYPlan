@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 
+/// Reference: https://developers.google.com/admob/ios/native/advanced?authuser=0
 class GoogleAdDemoViewController: UIViewController {
     
     @IBOutlet weak var placeholderAdView: UIView!
@@ -38,15 +39,25 @@ class GoogleAdDemoViewController: UIViewController {
         nativeAdView = adView
         nativeAdView.translatesAutoresizingMaskIntoConstraints = false
         placeholderAdView.addSubview(nativeAdView)
-        nativeAdView.topAnchor.constraint(equalTo: placeholderAdView.topAnchor).isActive = true
-        nativeAdView.leadingAnchor.constraint(equalTo: placeholderAdView.leadingAnchor).isActive = true
-        nativeAdView.trailingAnchor.constraint(equalTo: placeholderAdView.trailingAnchor).isActive = true
-        nativeAdView.bottomAnchor.constraint(equalTo: placeholderAdView.bottomAnchor).isActive = true
+        nativeAdView.topAnchor
+                    .constraint(equalTo: placeholderAdView.topAnchor)
+                    .isActive = true
+        nativeAdView.leadingAnchor
+                    .constraint(equalTo: placeholderAdView.leadingAnchor)
+                    .isActive = true
+        nativeAdView.trailingAnchor
+                    .constraint(equalTo: placeholderAdView.trailingAnchor)
+                    .isActive = true
+        nativeAdView.bottomAnchor
+                    .constraint(equalTo: placeholderAdView.bottomAnchor)
+                    .isActive = true
         
         refreshButton.layer.cornerRadius = 5.0
         refreshButton.layer.borderWidth = 1.0
         refreshButton.layer.borderColor = UIColor.white.cgColor
-        refreshButton.addTarget(self, action: #selector(requestAD), for: .touchUpInside)
+        refreshButton.addTarget(self,
+                                action: #selector(requestAD),
+                                for: .touchUpInside)
 
         requestAD()
         
@@ -61,7 +72,8 @@ class GoogleAdDemoViewController: UIViewController {
         
         adLoader = GADAdLoader(adUnitID: "ca-app-pub-3940256099942544/3986624511",
                                rootViewController: self,
-                               adTypes: [.unifiedNative], options: [multipleAdOptions])
+                               adTypes: [.unifiedNative],
+                               options: [multipleAdOptions])
         adLoader.delegate = self
         
         let request = GADRequest()

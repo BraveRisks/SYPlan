@@ -60,7 +60,6 @@
 		EB56D15121242AE800BE8BFC /* ShareExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56D14F21242AE800BE8BFC /* ShareExtensionViewController.swift */; };
 		EB56D15221242AE800BE8BFC /* ShareExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB56D15021242AE800BE8BFC /* ShareExtensionViewController.xib */; };
 		EB5E7CE922DC06F300CF6A37 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E7CE822DC06F300CF6A37 /* AdSupport.framework */; };
-		EB5E7CEE22DC771800CF6A37 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB5E7CED22DC771800CF6A37 /* GoogleService-Info.plist */; };
 		EB6001082276E41B00843615 /* WebServiceDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6001062276E41B00843615 /* WebServiceDemoVC.swift */; };
 		EB6001092276E41B00843615 /* WebServiceDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6001072276E41B00843615 /* WebServiceDemoVC.xib */; };
 		EB697EB2212B98840089CACC /* MultiCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB697EB1212B98840089CACC /* MultiCellViewController.swift */; };
@@ -110,6 +109,7 @@
 		EBB4A5C92405240B00EFFB50 /* ImageLoaderDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4A5C82405240B00EFFB50 /* ImageLoaderDemoVC.swift */; };
 		EBB5F9832186A70400CB6C51 /* ExtensionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB5F9822186A70400CB6C51 /* ExtensionLayer.swift */; };
 		EBB5F9852186F98E00CB6C51 /* mobile01_20180727_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EBB5F9842186F98E00CB6C51 /* mobile01_20180727_6.jpg */; };
+		EBBD11C9248505B000ECCD3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBBD11C8248505B000ECCD3F /* GoogleService-Info.plist */; };
 		EBBE9D15235722AC00BB1D61 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBE9D14235722AC00BB1D61 /* ContainerViewController.swift */; };
 		EBBEC7B6223A38920006EBF2 /* SYCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBEC7B5223A38920006EBF2 /* SYCore.swift */; };
 		EBC28C1F212FD82A000B87EA /* UploadDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC28C1E212FD82A000B87EA /* UploadDemoController.swift */; };
@@ -259,7 +259,6 @@
 		EB56D14F21242AE800BE8BFC /* ShareExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareExtensionViewController.swift; sourceTree = "<group>"; };
 		EB56D15021242AE800BE8BFC /* ShareExtensionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShareExtensionViewController.xib; sourceTree = "<group>"; };
 		EB5E7CE822DC06F300CF6A37 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		EB5E7CED22DC771800CF6A37 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB6001062276E41B00843615 /* WebServiceDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceDemoVC.swift; sourceTree = "<group>"; };
 		EB6001072276E41B00843615 /* WebServiceDemoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebServiceDemoVC.xib; sourceTree = "<group>"; };
 		EB649AA720E1DB3100D5FF7E /* SYPlan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SYPlan.entitlements; sourceTree = "<group>"; };
@@ -311,6 +310,7 @@
 		EBB4A5C82405240B00EFFB50 /* ImageLoaderDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderDemoVC.swift; sourceTree = "<group>"; };
 		EBB5F9822186A70400CB6C51 /* ExtensionLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionLayer.swift; sourceTree = "<group>"; };
 		EBB5F9842186F98E00CB6C51 /* mobile01_20180727_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mobile01_20180727_6.jpg; path = Assets.xcassets/photos/photo_19.imageset/mobile01_20180727_6.jpg; sourceTree = "<group>"; };
+		EBBD11C8248505B000ECCD3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EBBE9D14235722AC00BB1D61 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		EBBEC7B5223A38920006EBF2 /* SYCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SYCore.swift; sourceTree = "<group>"; };
 		EBC28C1E212FD82A000B87EA /* UploadDemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDemoController.swift; sourceTree = "<group>"; };
@@ -932,7 +932,7 @@
 				EBD16BF320C12F91006FA1E8 /* Main.storyboard */,
 				EBD16BF820C12F92006FA1E8 /* LaunchScreen.storyboard */,
 				EBD16BFB20C12F92006FA1E8 /* Info.plist */,
-				EB5E7CED22DC771800CF6A37 /* GoogleService-Info.plist */,
+				EBBD11C8248505B000ECCD3F /* GoogleService-Info.plist */,
 				EBFD7B6F2182B58D002845E1 /* mobile01_20180727_4.jpg */,
 				EBB5F9842186F98E00CB6C51 /* mobile01_20180727_6.jpg */,
 				EB649AA720E1DB3100D5FF7E /* SYPlan.entitlements */,
@@ -1052,7 +1052,7 @@
 				EBD16BEA20C12F91006FA1E8 /* Resources */,
 				EB56D1372123FA3E00BE8BFC /* Embed App Extensions */,
 				BC132B45F24E88B54DC0AF61 /* [CP] Embed Pods Frameworks */,
-				EB0857DB20C8B782007B2AB8 /* ShellScript */,
+				EB0857DB20C8B782007B2AB8 /* Firebase Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -1207,6 +1207,7 @@
 				EBFD7B702182B58D002845E1 /* mobile01_20180727_4.jpg in Resources */,
 				EBD8BC7A212D0A6300E73A6A /* ProfileTableCell.xib in Resources */,
 				EBD8BC82212D0C5C00E73A6A /* EmailTableCell.xib in Resources */,
+				EBBD11C9248505B000ECCD3F /* GoogleService-Info.plist in Resources */,
 				EBA5A52C217F178F000A31E2 /* NotoSansCJKtc-DemiLight.otf in Resources */,
 				EBD16BF720C12F92006FA1E8 /* Assets.xcassets in Resources */,
 				EB8090A722D6DF48008220B7 /* UnifiedNativeAdView.xib in Resources */,
@@ -1216,7 +1217,6 @@
 				EBC9B5ED2424ADF700AAC335 /* LinkDemoCell.xib in Resources */,
 				EBD16BF520C12F91006FA1E8 /* Main.storyboard in Resources */,
 				EBC4CF942403A0AD009B7AC9 /* SaveImageCell.xib in Resources */,
-				EB5E7CEE22DC771800CF6A37 /* GoogleService-Info.plist in Resources */,
 				EBA5A52A217F121F000A31E2 /* Mali-Bold.ttf in Resources */,
 				EBD8BC7E212D0BD800E73A6A /* AboutTableCell.xib in Resources */,
 				EB8090A522D6D2DD008220B7 /* GoogleAdDemoViewController.xib in Resources */,
@@ -1279,19 +1279,21 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SYPlan/Pods-SYPlan-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EB0857DB20C8B782007B2AB8 /* ShellScript */ = {
+		EB0857DB20C8B782007B2AB8 /* Firebase Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
 			);
+			name = "Firebase Crashlytics";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

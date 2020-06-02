@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Crashlytics
+import FirebaseCrashlytics
 
 enum ShortcutItem {
     
@@ -54,5 +54,5 @@ func crashLog(with msg: String = "", file: String = #file, line: Int = #line) {
     1️⃣ class 👉🏻 \(name) - 第\(line)行
     2️⃣ message 👉🏻 \(msg)
     """
-    CLSLogv("%@", getVaList([log]))
+    Crashlytics.crashlytics().log(log)
 }

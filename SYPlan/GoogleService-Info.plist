@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>299510731923-9utoo21qgbqttcpt8telsojlb3unmgq9.apps.googleusercontent.com</string>
+	<string>125133970521-qgm7a154bbfsr8tms8no2hi00nqie94j.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.299510731923-9utoo21qgbqttcpt8telsojlb3unmgq9</string>
-	<key>ANDROID_CLIENT_ID</key>
-	<string>299510731923-j4gqgv37rtkbhqeov16rfud5sg5nig9r.apps.googleusercontent.com</string>
+	<string>com.googleusercontent.apps.125133970521-qgm7a154bbfsr8tms8no2hi00nqie94j</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDc6mrFrH3QTinc0eFifqwMubuBxK9eSSo</string>
+	<string>AIzaSyCfUNRFGXxuZb1cH8VqUZYU3U_JowOuNds</string>
 	<key>GCM_SENDER_ID</key>
-	<string>299510731923</string>
+	<string>125133970521</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.sinyi.SYPlan</string>
 	<key>PROJECT_ID</key>
-	<string>sinyi-ta-app</string>
+	<string>syplan</string>
 	<key>STORAGE_BUCKET</key>
-	<string>sinyi-ta-app.appspot.com</string>
+	<string>syplan.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:299510731923:ios:792e87dc74a2c4d5</string>
+	<string>1:125133970521:ios:135755edda1bfe3a24a548</string>
 	<key>DATABASE_URL</key>
-	<string>https://sinyi-ta-app.firebaseio.com</string>
+	<string>https://syplan.firebaseio.com</string>
 </dict>
 </plist>

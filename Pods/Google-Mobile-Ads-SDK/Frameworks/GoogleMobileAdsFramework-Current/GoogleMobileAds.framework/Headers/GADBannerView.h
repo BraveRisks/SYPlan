@@ -69,8 +69,8 @@
 
 #pragma mark Response
 
-/// Information about the ad response that returned the current ad. Nil while an ad request is in
-/// progress or if the latest ad request failed.
+/// Information about the ad response that returned the current ad or an error. Nil until the first
+/// ad request succeeds or fails.
 @property(nonatomic, readonly, nullable) GADResponseInfo *responseInfo;
 
 /// Called when ad is estimated to have earned money. Available for whitelisted accounts only.

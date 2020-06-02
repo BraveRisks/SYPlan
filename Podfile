@@ -18,14 +18,11 @@ target 'SYPlan' do
   #end
 
   # https://firebase.google.com/docs/crashlytics/get-started
-  pod 'Fabric', '~> 1.10.2'
-  pod 'Crashlytics', '~> 3.14.0'
+  pod 'Firebase/Crashlytics'
+  pod 'Firebase/Analytics'
   
   # https://firebase.google.com/docs/admob/ios/quick-start?authuser=0
-  pod 'Firebase'
-  pod 'Firebase/Core'
-  pod 'Firebase/AdMob'
-  pod 'Firebase/Analytics'
+  pod 'Google-Mobile-Ads-SDK'
 
   # https://github.com/onevcat/Kingfisher
   #pod 'Kingfisher', '~> 5.0'
@@ -37,10 +34,10 @@ target 'SYPlan' do
   pod 'PDFGenerator', '~> 3.1.0'
 
   # https://github.com/realm/realm-cocoa/
-  pod 'RealmSwift', '~> 4.1.1'
+  pod 'RealmSwift', '~> 5.0.1'
   
   # https://github.com/devxoul/Toaster
-  pod 'Toaster'
+  pod 'Toaster', '~> 2.2.0'
   
   # https://developers.facebook.com/docs/facebook-login/ios/
   pod 'FacebookCore'

@@ -41,8 +41,8 @@ typedef void (^GADRewardedAdLoadCompletionHandler)(GADRequestError *_Nullable er
 /// Indicates whether the rewarded ad is ready to be presented.
 @property(nonatomic, readonly, getter=isReady) BOOL ready;
 
-/// Information about the ad response that returned the current ad. Nil while an ad request is in
-/// progress or if the latest ad request failed.
+/// Information about the ad response that returned the current ad or an error. Nil until the first
+/// ad request succeeds or fails.
 @property(nonatomic, readonly, nullable) GADResponseInfo *responseInfo;
 
 /// The reward earned by the user for interacting with a rewarded ad. Is nil until the ad has
