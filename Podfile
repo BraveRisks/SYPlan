@@ -12,11 +12,6 @@ target 'SYPlan' do
     # Pods for testing
   #end
 
-  #target 'SYPlanUITests' do
-    #inherit! :search_paths
-    # Pods for testing
-  #end
-
   # https://firebase.google.com/docs/crashlytics/get-started
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Analytics'
@@ -40,7 +35,10 @@ target 'SYPlan' do
   pod 'Toaster', '~> 2.2.0'
   
   # https://developers.facebook.com/docs/facebook-login/ios/
+  # For analytics
   pod 'FacebookCore'
+  
+  # For login
   pod 'FacebookLogin'
   
   # https://github.com/QMUI/LookinServer

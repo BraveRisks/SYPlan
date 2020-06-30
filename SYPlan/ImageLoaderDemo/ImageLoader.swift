@@ -56,15 +56,16 @@ struct ImageLoader {
                     return
                 }
                 
-                self.cache.setObject(data as NSData, forKey: path as NSString)
-                
                 guard let image = UIImage(data: data) else {
                     DispatchQueue.main.sync { completion(nil, path) }
                     return
                 }
                 
                 //print("ImageLoader use request for \(path)")
-                DispatchQueue.main.sync { completion(image, path) }
+                DispatchQueue.main.sync {
+                    self.cache.setObject(data as NSData, forKey: path as NSString)
+                    completion(image, path)
+                }
             }
 
             task.resume()

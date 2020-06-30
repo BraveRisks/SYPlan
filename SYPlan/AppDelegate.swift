@@ -45,10 +45,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         container.loadPersistentStores(completionHandler: { (storeDesc, error) in
             if let err = error as NSError? {
-                fatalError("Unresolved error \(err) 👉🏻 \(err.userInfo)")
+                fatalError("Unresolved error \(err) = \(err.userInfo)")
             }
             // storeDesc 👉🏻 CoreData路徑
-            print("loadPersistentStores 👉🏻 \(storeDesc)")
+            print("loadPersistentStores = \(storeDesc)")
         })
         return container
     }()
@@ -57,7 +57,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("Life circle application didFinishLaunchingWithOptions")
         
         // Firebase
-        FirebaseApp.configure()
+        let filePath = Bundle.main.path(forResource: "GoogleService-Info",
+                                        ofType: "plist")!
+        
+        guard let options = FirebaseOptions(contentsOfFile: filePath) else {
+            fatalError("Couldn't load firebase config .plist from \(filePath)")
+        }
+        
+        FirebaseApp.configure(options: options)
         
         /*
          Google Ad
@@ -129,11 +136,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
         })
         var config = Realm.Configuration.defaultConfiguration
-        config.fileURL = config.fileURL!.deletingLastPathComponent().appendingPathComponent("SYPlan.realm")
+        config.fileURL = config.fileURL!
+                               .deletingLastPathComponent()
+                               .appendingPathComponent("SYPlan.realm")
         Realm.Configuration.defaultConfiguration = config
         
-        print("Realm URL 👉🏻 \(String(describing: config.fileURL))")
-        print("Realm schemaVersion 👉🏻 \(String(describing: config.schemaVersion))")
+        print("Realm URL = \(String(describing: config.fileURL))")
+        print("Realm schemaVersion = \(String(describing: config.schemaVersion))")
         
         // Notifacation
         if #available(iOS 10.0, *) {
@@ -148,12 +157,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
             // Notification add action
-            let installAction = UNNotificationAction(identifier: "install", title: "安裝", options: .foreground)
-            let nexttimeAction = UNNotificationAction(identifier: "nexttime", title: "下次再安裝", options: [])
-            let category = UNNotificationCategory(identifier: "category", actions: [installAction, nexttimeAction], intentIdentifiers: [], options: [])
+            let install = UNNotificationAction(identifier: "install",
+                                               title: "安裝",
+                                               options: .foreground)
+            
+            let nexttime = UNNotificationAction(identifier: "nexttime",
+                                                title: "下次再安裝",
+                                                options: [])
+            
+            let category = UNNotificationCategory(identifier: "category",
+                                                  actions: [install, nexttime],
+                                                  intentIdentifiers: [],
+                                                  options: [])
             UNUserNotificationCenter.current().setNotificationCategories([category])
         } else {
-            UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge, .sound, .alert], categories: nil))
+           let settings = UIUserNotificationSettings(types: [.badge, .sound, .alert],
+                                                     categories: nil)
+            UIApplication.shared.registerUserNotificationSettings(settings)
+            
             // 註冊遠端通知
             UIApplication.shared.registerForRemoteNotifications()
         }
@@ -209,9 +230,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 設定 Home Screen Quick Actions
         if #available(iOS 9.1, *) {
             let items: [ShortcutItem] = [.qrCode, .web, .download]
-            application.shortcutItems = items.map({ (item) -> UIApplicationShortcutItem in
-                return item.item
-            })
+            application.shortcutItems = items.map({ $0.item })
         }
         
         print("Life circle application willResignActive")
@@ -264,11 +283,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // Facebook
-        let handle = ApplicationDelegate
-                        .shared
-                        .application(app, open: url,
-                                     sourceApplication: UIApplication.OpenURLOptionsKey.sourceApplication.rawValue,
-                                     annotation: UIApplication.OpenURLOptionsKey.annotation)
+        let handle = ApplicationDelegate.shared
+                                        .application(app,
+                                                     open: url,
+                                                     sourceApplication: UIApplication.OpenURLOptionsKey.sourceApplication.rawValue,
+                                                     annotation: UIApplication.OpenURLOptionsKey.annotation)
         return handle
     }
     

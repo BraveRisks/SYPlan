@@ -27,8 +27,8 @@ class ImageLoaderCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
-        super.prepareForReuse()
         pictureImageView.image = nil
+        super.prepareForReuse()
     }
     
     private func setup() {

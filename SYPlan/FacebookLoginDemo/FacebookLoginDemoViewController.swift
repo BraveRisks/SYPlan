@@ -36,7 +36,7 @@ class FacebookLoginDemoViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        guard let _ = AccessToken.current else { return }
+        guard let token = AccessToken.current, !token.isExpired else { return }
         requestProfile()
     }
     
@@ -94,7 +94,9 @@ class FacebookLoginDemoViewController: UIViewController {
                 print("Facebook Login error 👉🏻 \(error.localizedDescription)")
             case .cancelled:
                 print("Facebook Login cancelled.")
-            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+            case .success(let grantedPermissions,
+                          let declinedPermissions,
+                          let accessToken):
                 self.requestProfile()
                 print("Facebook Login success. \(accessToken.tokenString)")
             }

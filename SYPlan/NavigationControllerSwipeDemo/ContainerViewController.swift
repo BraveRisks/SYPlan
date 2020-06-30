@@ -39,7 +39,7 @@ class ContainerViewController: UIViewController {
             case .ui:
                 return [.fbWeb, .customCollectionViewLayout, .coreImage,
                         .animationNumber, .qrCode, .waterMark, .font,
-                        .drakMode, .cropImage, .saveImage]
+                        .cropImage, .saveImage]
             case .network:
                 return [.upload, .download, .webService, .apiRefresh,
                         .imageLoader]
@@ -91,9 +91,7 @@ class ContainerViewController: UIViewController {
             case other = "Other Demo"
             
             case font = "Font Style"
-            
-            case drakMode = "Dark Mode"
-            
+                        
             case apiRefresh = "Api Refresh"
             
             case cropImage = "Crop Image"
@@ -309,11 +307,6 @@ extension ContainerViewController: UICollectionViewDataSource, UICollectionViewD
             vc.title = content.rawValue
             vc.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(vc, animated: true)
-        case .drakMode:
-            let vc = DarkModeVC(nibName: "DarkModeVC", bundle: nil)
-            vc.title = content.rawValue
-            vc.hidesBottomBarWhenPushed = true
-            navigationController?.pushViewController(vc, animated: true)
         case .apiRefresh:
             let vc = ApiDemoVC()
             vc.title = content.rawValue
@@ -359,23 +352,31 @@ extension ContainerViewController: UICollectionViewDataSource, UICollectionViewD
             // 當為nil時，則顯示Item的樣式，並且無法上滑、下滑離開，只能點擊半透明地方離開
             return PinterestViewController()
         }) { (elements) -> UIMenu? in
-            let share = UIAction(title: "分享", image: UIImage(systemName: "square.and.arrow.up")) { action in
+            let share = UIAction(title: "分享",
+                                 image: UIImage(systemName: "square.and.arrow.up"))
+            { action in
                 print("ContextMenu 分享")
             }
 
-            let rename = UIAction(title: "複製", image: UIImage(systemName: "doc.on.doc")) {
+            let rename = UIAction(title: "複製",
+                                  image: UIImage(systemName: "doc.on.doc"))
+            {
               action in
                 print("ContextMenu 複製")
             }
 
-            let delete = UIAction(title: "刪除", image: UIImage(systemName: "trash"),
-                                  attributes: .destructive) { action in
+            let delete = UIAction(title: "刪除",
+                                  image: UIImage(systemName: "trash"),
+                                  attributes: .destructive)
+            { action in
                 print("ContextMenu 刪除")
             }
 
             // Create a UIMenu with all the actions as children
-            return UIMenu(title: "選單", image: nil,
-                          identifier: nil, options: .displayInline,
+            return UIMenu(title: "選單",
+                          image: nil,
+                          identifier: nil,
+                          options: .displayInline,
                           children: [share, rename, delete])
         }
         
