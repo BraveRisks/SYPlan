@@ -109,6 +109,7 @@ class LocationViewController: UIViewController {
         present(ac, animated: true, completion: nil)
     }
 }
+
 extension LocationViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         // 取得定位授權權限狀況
@@ -143,6 +144,7 @@ extension LocationViewController: CLLocationManagerDelegate {
         }
     }
 }
+
 extension LocationViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

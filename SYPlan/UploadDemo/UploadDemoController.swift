@@ -140,7 +140,7 @@ extension UploadDemoController: EasyAlbumDelegate {
     }
 }
 
-extension UploadDemoController: URLSessionDelegate, URLSessionDataDelegate {    
+extension UploadDemoController: URLSessionDelegate, URLSessionDataDelegate {
     func urlSession(_ session: URLSession, task: URLSessionTask, didSendBodyData bytesSent: Int64, totalBytesSent: Int64, totalBytesExpectedToSend: Int64) {
 
         if let uploadTask = uploadService.activeUpload[task] {

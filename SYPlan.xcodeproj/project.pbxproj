@@ -25,6 +25,10 @@
 		EB25F3C922816DF2002B1F23 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB25F3C822816DF2002B1F23 /* CoreDataViewController.swift */; };
 		EB25F3CC22817696002B1F23 /* Person.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB25F3CA22817696002B1F23 /* Person.xcdatamodeld */; };
 		EB26A3582387825E0090E25D /* AttributedStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB877DB9210975CF0075788C /* AttributedStringHelper.swift */; };
+		EB2A640624AAE5280049962E /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2A640524AAE5280049962E /* NotificationCenter.framework */; };
+		EB2A640924AAE5280049962E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2A640824AAE5280049962E /* TodayViewController.swift */; };
+		EB2A640C24AAE5280049962E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2A640A24AAE5280049962E /* MainInterface.storyboard */; };
+		EB2A641024AAE5280049962E /* TodayWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EB2A640424AAE5280049962E /* TodayWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EB2B54B221C72FC700CBE037 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2B54B121C72FC700CBE037 /* ExtensionString.swift */; };
 		EB2C9955227BD2A80081CC19 /* ExtensionDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C9954227BD2A80081CC19 /* ExtensionDictionary.swift */; };
 		EB347D4122E706FE00677032 /* QRCodeDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB347D4022E706FE00677032 /* QRCodeDemoViewController.swift */; };
@@ -46,6 +50,7 @@
 		EB44A33D21759188005AA612 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB44A33B21759188005AA612 /* ArticleTableViewCell.swift */; };
 		EB44A33E21759188005AA612 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB44A33C21759188005AA612 /* ArticleTableViewCell.xib */; };
 		EB44A34021759804005AA612 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB44A33F21759804005AA612 /* WebViewController.swift */; };
+		EB44B96824AB198800327B83 /* Sinyi, Taipei.gpx in Resources */ = {isa = PBXBuildFile; fileRef = EB44B96724AB198800327B83 /* Sinyi, Taipei.gpx */; };
 		EB45EB292440067A00628CF9 /* ExtensionUIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB45EB282440067A00628CF9 /* ExtensionUIScreen.swift */; };
 		EB45EB2B2440078700628CF9 /* ExtensionUIVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB45EB2A2440078700628CF9 /* ExtensionUIVIew.swift */; };
 		EB4C5560228D68B900C72B7A /* HttpSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4C555F228D68B900C72B7A /* HttpSession.swift */; };
@@ -145,6 +150,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EB2A640E24AAE5280049962E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBD16BE420C12F91006FA1E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB2A640324AAE5280049962E;
+			remoteInfo = TodayWidget;
+		};
 		EB56D14521240EB400BE8BFC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EBD16BE420C12F91006FA1E8 /* Project object */;
@@ -177,6 +189,7 @@
 			files = (
 				EB56D14721240EB400BE8BFC /* SYPlanShare.appex in Embed App Extensions */,
 				EBFD7B93218315FB002845E1 /* NotificationContent.appex in Embed App Extensions */,
+				EB2A641024AAE5280049962E /* TodayWidget.appex in Embed App Extensions */,
 				EBFD7B7C21830750002845E1 /* NotificationService.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -209,6 +222,11 @@
 		EB1BFD3F219E991100B12F68 /* ExtensionCGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCGFloat.swift; sourceTree = "<group>"; };
 		EB25F3C822816DF2002B1F23 /* CoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
 		EB25F3CB22817696002B1F23 /* Person.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Person.xcdatamodel; sourceTree = "<group>"; };
+		EB2A640424AAE5280049962E /* TodayWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB2A640524AAE5280049962E /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		EB2A640824AAE5280049962E /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		EB2A640B24AAE5280049962E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		EB2A640D24AAE5280049962E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB2B54B121C72FC700CBE037 /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		EB2C9954227BD2A80081CC19 /* ExtensionDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDictionary.swift; sourceTree = "<group>"; };
 		EB347D4022E706FE00677032 /* QRCodeDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeDemoViewController.swift; sourceTree = "<group>"; };
@@ -230,6 +248,7 @@
 		EB44A33B21759188005AA612 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		EB44A33C21759188005AA612 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
 		EB44A33F21759804005AA612 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		EB44B96724AB198800327B83 /* Sinyi, Taipei.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Sinyi, Taipei.gpx"; sourceTree = "<group>"; };
 		EB45EB282440067A00628CF9 /* ExtensionUIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIScreen.swift; sourceTree = "<group>"; };
 		EB45EB2A2440078700628CF9 /* ExtensionUIVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIVIew.swift; sourceTree = "<group>"; };
 		EB4C555F228D68B900C72B7A /* HttpSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpSession.swift; sourceTree = "<group>"; };
@@ -337,6 +356,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EB2A640124AAE5280049962E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB2A640624AAE5280049962E /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EB56D13A21240EB400BE8BFC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -400,6 +427,7 @@
 				6ACE1CAFEAC198BF2C4DFB36 /* Pods_SYPlanUITests.framework */,
 				EBFD7B86218315FB002845E1 /* UserNotifications.framework */,
 				EBFD7B88218315FB002845E1 /* UserNotificationsUI.framework */,
+				EB2A640524AAE5280049962E /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -488,6 +516,16 @@
 				EB64061B23681106007A7CB6 /* Core ML Demo */,
 			);
 			name = "New Feature Page";
+			sourceTree = "<group>";
+		};
+		EB2A640724AAE5280049962E /* TodayWidget */ = {
+			isa = PBXGroup;
+			children = (
+				EB2A640824AAE5280049962E /* TodayViewController.swift */,
+				EB2A640A24AAE5280049962E /* MainInterface.storyboard */,
+				EB2A640D24AAE5280049962E /* Info.plist */,
+			);
+			path = TodayWidget;
 			sourceTree = "<group>";
 		};
 		EB347D3E22E7058900677032 /* QRCodeDemo */ = {
@@ -859,6 +897,7 @@
 				EB56D13E21240EB400BE8BFC /* SYPlanShare */,
 				EBFD7B7621830750002845E1 /* NotificationService */,
 				EBFD7B8A218315FB002845E1 /* NotificationContent */,
+				EB2A640724AAE5280049962E /* TodayWidget */,
 				EBD16BED20C12F91006FA1E8 /* Products */,
 				CB61F9F4A5D14F88AB87FA53 /* Pods */,
 				E129D21EA8A3030F929E2B2F /* Frameworks */,
@@ -873,6 +912,7 @@
 				EBFD7B7521830750002845E1 /* NotificationService.appex */,
 				EBFD7B85218315FB002845E1 /* NotificationContent.appex */,
 				EBAD6D3022CDD05A00538A7B /* SYPlanTests.xctest */,
+				EB2A640424AAE5280049962E /* TodayWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -904,6 +944,7 @@
 				EB1546A524A9C421001D5009 /* GoogleService-Info.plist */,
 				EBFD7B6F2182B58D002845E1 /* mobile01_20180727_4.jpg */,
 				EBB5F9842186F98E00CB6C51 /* mobile01_20180727_6.jpg */,
+				EB44B96724AB198800327B83 /* Sinyi, Taipei.gpx */,
 				EB649AA720E1DB3100D5FF7E /* SYPlan.entitlements */,
 			);
 			path = SYPlan;
@@ -961,6 +1002,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EB2A640324AAE5280049962E /* TodayWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB2A641124AAE5280049962E /* Build configuration list for PBXNativeTarget "TodayWidget" */;
+			buildPhases = (
+				EB2A640024AAE5280049962E /* Sources */,
+				EB2A640124AAE5280049962E /* Frameworks */,
+				EB2A640224AAE5280049962E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TodayWidget;
+			productName = TodayWidget;
+			productReference = EB2A640424AAE5280049962E /* TodayWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		EB56D13C21240EB400BE8BFC /* SYPlanShare */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB56D14821240EB400BE8BFC /* Build configuration list for PBXNativeTarget "SYPlanShare" */;
@@ -1013,6 +1071,7 @@
 				EB56D14621240EB400BE8BFC /* PBXTargetDependency */,
 				EBFD7B7B21830750002845E1 /* PBXTargetDependency */,
 				EBFD7B92218315FB002845E1 /* PBXTargetDependency */,
+				EB2A640F24AAE5280049962E /* PBXTargetDependency */,
 			);
 			name = SYPlan;
 			productName = SYPlan;
@@ -1059,10 +1118,13 @@
 		EBD16BE420C12F91006FA1E8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Sinyi Realty Inc";
 				TargetAttributes = {
+					EB2A640324AAE5280049962E = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
 					EB56D13C21240EB400BE8BFC = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1030;
@@ -1121,11 +1183,20 @@
 				EB56D13C21240EB400BE8BFC /* SYPlanShare */,
 				EBFD7B7421830750002845E1 /* NotificationService */,
 				EBFD7B84218315FB002845E1 /* NotificationContent */,
+				EB2A640324AAE5280049962E /* TodayWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EB2A640224AAE5280049962E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB2A640C24AAE5280049962E /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EB56D13B21240EB400BE8BFC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1154,6 +1225,7 @@
 				EB7FB3CC22D5CA6D0018B879 /* CADisplayLinkDemoViewController.xib in Resources */,
 				EBAD6D3E22CDDBC500538A7B /* FacebookLoginDemoViewController.xib in Resources */,
 				EB44A33E21759188005AA612 /* ArticleTableViewCell.xib in Resources */,
+				EB44B96824AB198800327B83 /* Sinyi, Taipei.gpx in Resources */,
 				EB56D15221242AE800BE8BFC /* ShareExtensionViewController.xib in Resources */,
 				EB818C592136446300286D4C /* UploadTableCell.xib in Resources */,
 				EB44A33A21758E20005AA612 /* articles.json in Resources */,
@@ -1246,6 +1318,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EB2A640024AAE5280049962E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB2A640924AAE5280049962E /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EB56D13921240EB400BE8BFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1384,6 +1464,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EB2A640F24AAE5280049962E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB2A640324AAE5280049962E /* TodayWidget */;
+			targetProxy = EB2A640E24AAE5280049962E /* PBXContainerItemProxy */;
+		};
 		EB56D14621240EB400BE8BFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EB56D13C21240EB400BE8BFC /* SYPlanShare */;
@@ -1402,6 +1487,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		EB2A640A24AAE5280049962E /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB2A640B24AAE5280049962E /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		EB56D14121240EB400BE8BFC /* MainInterface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1437,6 +1530,77 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EB2A641224AAE5280049962E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = W7VR44AH4Q;
+				INFOPLIST_FILE = TodayWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sinyi.SYPlan.TodayWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "400 SYPlan TodayWidget Dev";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EB2A641324AAE5280049962E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = TodayWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sinyi.SYPlan.TodayWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "400 SYPlan TodayWidget Dev";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EB2A641424AAE5280049962E /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = TodayWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sinyi.SYPlan.TodayWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "400 SYPlan TodayWidget Dev";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = AdHoc;
+		};
 		EB56D14921240EB400BE8BFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1559,9 +1723,10 @@
 					"@executable_path/Frameworks",
 				);
 				LLVM_LTO = YES;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sinyi.SYPlan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "400 Sinyi SYPlan Dev";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1607,7 +1772,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sinyi.SYPlanTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1629,7 +1793,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sinyi.SYPlanTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1651,7 +1814,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sinyi.SYPlanTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1795,6 +1957,7 @@
 					"@executable_path/Frameworks",
 				);
 				LLVM_LTO = YES;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sinyi.SYPlan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "400 Sinyi SYPlan Dev";
@@ -1825,9 +1988,10 @@
 					"@executable_path/Frameworks",
 				);
 				LLVM_LTO = YES;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sinyi.SYPlan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "400 Sinyi SYPlan Dev";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1970,6 +2134,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EB2A641124AAE5280049962E /* Build configuration list for PBXNativeTarget "TodayWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB2A641224AAE5280049962E /* Debug */,
+				EB2A641324AAE5280049962E /* Release */,
+				EB2A641424AAE5280049962E /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		EB56D14821240EB400BE8BFC /* Build configuration list for PBXNativeTarget "SYPlanShare" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

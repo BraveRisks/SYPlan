@@ -142,10 +142,10 @@ public class ApiRequest: Hashable, Equatable, CustomStringConvertible {
     class var tokenParameters: JSONDictionary {
         let parameters =  [
             "UserID"   : "384861",
-            "PWD"      : "lkjhgfdsa",
+            "PWD"      : "poiuytrewq",
             "DevType"  : "2",
             "OSVer"    : "13.2.2",
-            "ApVer"    : "1.0.33",
+            "ApVer"    : "1.0.34",
             "MobileId" : "iPhone 11 Pro",
             "APName"   : "TA2",
             "DevNewHID": "554543bc7d8e409db3d6a600343ec06a"

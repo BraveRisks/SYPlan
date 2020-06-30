@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="TodayWidget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="台北" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
+                                <rect key="frame" x="20" y="15" width="44" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="STh-da-RKV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="22"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4w-Q3-zEo">
+                                <rect key="frame" x="20" y="43" width="116.5" height="59"/>
+                                <string key="text">多雲
+濕度：70％
+大氣壓力：60 hPa</string>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
+                                <color key="textColor" white="0.0" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30˚" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WN5-81-KP4">
+                                <rect key="frame" x="236" y="15" width="64" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="osw-u5-fLI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33˚ / 37˚" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0Y-Da-23D">
+                                <rect key="frame" x="236" y="59" width="63.5" height="20"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="q4w-Q3-zEo" firstAttribute="leading" secondItem="GcN-lo-r42" secondAttribute="leading" id="7FP-bh-cdL"/>
+                            <constraint firstAttribute="trailing" secondItem="WN5-81-KP4" secondAttribute="trailing" constant="20" id="Ayd-nM-gLy"/>
+                            <constraint firstItem="b0Y-Da-23D" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="q4w-Q3-zEo" secondAttribute="trailing" id="CkA-9R-0h9"/>
+                            <constraint firstItem="b0Y-Da-23D" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WN5-81-KP4" secondAttribute="leading" id="KjC-Qv-tEU"/>
+                            <constraint firstItem="q4w-Q3-zEo" firstAttribute="top" secondItem="GcN-lo-r42" secondAttribute="bottom" constant="6" id="YhQ-Vc-xDG"/>
+                            <constraint firstItem="WN5-81-KP4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GcN-lo-r42" secondAttribute="trailing" id="dTg-FG-y6O"/>
+                            <constraint firstItem="b0Y-Da-23D" firstAttribute="top" secondItem="WN5-81-KP4" secondAttribute="bottom" constant="6" id="fBx-y4-NyD"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="15" id="j1V-gf-cw8"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="b0Y-Da-23D" secondAttribute="trailing" constant="20.5" id="nsg-BO-mMt"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="20" id="skg-Ui-Ndf"/>
+                            <constraint firstItem="WN5-81-KP4" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="15" id="uSA-ZA-GlI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="110"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="GcN-lo-r42" id="LHD-UF-l82"/>
+                        <outlet property="descriptionLabel" destination="q4w-Q3-zEo" id="Kzz-Vz-bc1"/>
+                        <outlet property="tempLabel" destination="WN5-81-KP4" id="Yc7-ac-L9c"/>
+                        <outlet property="tempMinMaxLabel" destination="b0Y-Da-23D" id="84j-JM-v4X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+</document>

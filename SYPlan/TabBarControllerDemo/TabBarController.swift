@@ -63,6 +63,11 @@ class TabBarController: UITabBarController {
             vc.title = content.rawValue
             vc.hidesBottomBarWhenPushed = true
             nac.pushViewController(vc, animated: true)
+        case .regular:
+            let vc = RegularExpressionViewController()
+            vc.title = content.rawValue
+            vc.hidesBottomBarWhenPushed = true
+            nac.pushViewController(vc, animated: true)
         default: break
         }        
     }

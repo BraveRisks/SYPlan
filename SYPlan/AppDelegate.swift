@@ -257,7 +257,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          DeepLink absoluteURL --> deep://deeplink/index
          DeepLink path --> /index
          DeepLink host --> "deeplink.com"
-            
          DeepLink query --> "index=1" or "index=1&limit=5"
          
          DeepLink absoluteString --> syplan://chat?memberId=999
@@ -274,20 +273,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("DeepLink query --> \(String(describing: url.query))")
         print("DeepLink queryParameters --> \(String(describing: url.queryParameters))")
         
-        if let parameters = url.queryParameters {
-            let _ = parameters["memberId"]
-            //let ns = NSLayoutConstraintDemoViewController()
-            //ns.memberId = Int(memberId ?? "0") ?? 0
-            //window?.rootViewController?.present(ns, animated: true, completion: nil)
-            //window?.rootViewController = ns
+        if let host = url.host,
+            host == "routes",
+            let parameters = url.queryParameters,
+            let page = parameters["page"],
+            page == "regular" {
+            
+            let tabVC = window?.rootViewController as? TabBarController
+            tabVC?.setTabIndex(on: 2, content: .regular)
         }
         
         // Facebook
-        let handle = ApplicationDelegate.shared
-                                        .application(app,
-                                                     open: url,
-                                                     sourceApplication: UIApplication.OpenURLOptionsKey.sourceApplication.rawValue,
-                                                     annotation: UIApplication.OpenURLOptionsKey.annotation)
+        let source = UIApplication.OpenURLOptionsKey.sourceApplication.rawValue
+        let annotation = UIApplication.OpenURLOptionsKey.annotation
+        let handle = ApplicationDelegate.shared.application(app,
+                                                            open: url,
+                                                            sourceApplication: source,
+                                                            annotation: annotation)
         return handle
     }
     
