@@ -228,10 +228,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
         
         // 設定 Home Screen Quick Actions
-        if #available(iOS 9.1, *) {
-            let items: [ShortcutItem] = [.qrCode, .web, .download]
-            application.shortcutItems = items.map({ $0.item })
-        }
+        let items: [ShortcutItem] = [.qrCode, .web, .download]
+        application.shortcutItems = items.map({ $0.item })
         
         print("Life circle application willResignActive")
     }
@@ -326,8 +324,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 @available(iOS 10.0, *)
 extension AppDelegate: UNUserNotificationCenterDelegate {
-    // 而當 App 本來就在前景，收到推播時則會觸發 userNotificationCenter(:willPresent:withCompletionHandler:)
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+    // 當 App 本來就在前景，收到推播時則會觸發 userNotificationCenter(:willPresent:withCompletionHandler:)
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         
         let content = notification.request.content
         if let link = content.userInfo["link"] as? String {
@@ -338,7 +338,9 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     }
     
     // 當使用者點選推播打開`App`時，將觸發 userNotificationCenter(:didReceive:withCompletionHandler:)
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
         
         let content = response.notification.request.content
         if let link = content.userInfo["link"] as? String {

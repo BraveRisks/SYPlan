@@ -85,12 +85,11 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     private func setCurrentContent(with weather: Weather) {
         cityLabel.text = weather.city
         
-        if let infos = weather.infos,
-            !infos.isEmpty,
+        if let info = weather.infos?.last,
             let main = weather.main {
             
             descriptionLabel.text = """
-            \(infos[0].description)
+            \(info.description)
             濕度：\(main.humidity)％
             大氣壓力：\(main.pressure) hPa
             """

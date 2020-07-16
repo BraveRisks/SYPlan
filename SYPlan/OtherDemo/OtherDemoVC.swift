@@ -9,6 +9,7 @@
 import UIKit
 import StoreKit
 import Toaster
+import AdSupport
 
 class OtherDemoVC: BaseVC {
 
@@ -20,7 +21,10 @@ class OtherDemoVC: BaseVC {
         "⭐️ App Store Infomation Reviews",
         "🌀 Automatic Add Count By UserDefault",
         "👾 Get UINavigationController Info",
-        "🤡 Open PDF on WKWebView"
+        "🤡 Open PDF on WKWebView",
+        "🤪 Get IDFA",
+        "🤩 Open alert controller 1",
+        "🤩 Open alert controller 2"
     ]
     
     override func viewDidLoad() {
@@ -82,13 +86,17 @@ class OtherDemoVC: BaseVC {
         // 橫 --> mobile01_20180727_4
         // 直 --> mobile01_20180727_6
         let imageURL = Bundle.main.url(forResource: "mobile01_20180727_4", withExtension: "jpg")
-        let attachment = try! UNNotificationAttachment(identifier: "", url: imageURL!, options: nil)
+        let attachment = try! UNNotificationAttachment(identifier: "",
+                                                       url: imageURL!,
+                                                       options: nil)
         content.attachments = [attachment]
         
         //UNCalendarNotificationTrigger(dateMatching: <#T##DateComponents#>, repeats: false)
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
         let uuid = UUID().uuidString
-        let request = UNNotificationRequest(identifier: uuid, content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: uuid,
+                                            content: content,
+                                            trigger: trigger)
         UNUserNotificationCenter.current().add(request) { (error) in
             print("Error --> \(String(describing: error?.localizedDescription))")
         }
@@ -100,8 +108,8 @@ class OtherDemoVC: BaseVC {
             SKStoreReviewController.requestReview()
         } else {
             guard let writeReviewURL = URL(string: "https://itunes.apple.com/app/id362879359?action=write-review")
-                else {
-                    fatalError("Expected a valid URL")
+            else {
+                fatalError("Expected a valid URL")
             }
             
             if #available(iOS 10.0, *) {
@@ -118,6 +126,7 @@ class OtherDemoVC: BaseVC {
         let toast = Toast(text: "模擬器不支援該功能！", delay: 0.0, duration: Delay.short)
         toast.show()
         #else
+        
         let vc = SKStoreProductViewController()
         vc.delegate = self
         vc.loadProduct(withParameters: [SKStoreProductParameterITunesItemIdentifier: 443904275]) { (result, err) in
@@ -136,36 +145,96 @@ class OtherDemoVC: BaseVC {
     private func testAutomaticAddCount() {
         let key = "AutomaticAddCount"
         
-        let ac = UIAlertController(title: nil, message: "動作", preferredStyle: .alert)
-        
-        ac.addAction(UIAlertAction(title: "清除", style: .cancel, handler: { (action) in
-            UserDefaults.standard.removeObject(forKey: key)
+        let ac = UIAlertController.defaultAlert(
+            title: nil,
+            message: "動作",
+            defaultText: "測試",
+            default: { (action) in
+                let `init` = UserDefaults.standard.integer(forKey: key)
+                UserDefaults.standard.set(`init` + 1, forKey: key)
             
-            let count = UserDefaults.standard.integer(forKey: key)
-            let toast = Toast(text: "Count = \(count)", delay: 0.0, duration: Delay.short)
-            toast.show()
-        }))
-        
-        ac.addAction(UIAlertAction(title: "測試", style: .default, handler: { (action) in
-            let `init` = UserDefaults.standard.integer(forKey: key)
-            UserDefaults.standard.set(`init` + 1, forKey: key)
+                let count = UserDefaults.standard.integer(forKey: key)
+                let toast = Toast(text: "Count = \(count)", delay: 0.0, duration: Delay.short)
+                toast.show()
+            },
+            cancelText: "清除") { (action) in
+                UserDefaults.standard.removeObject(forKey: key)
             
-            let count = UserDefaults.standard.integer(forKey: key)
-            let toast = Toast(text: "Count = \(count)", delay: 0.0, duration: Delay.short)
-            toast.show()
-        }))
+                let count = UserDefaults.standard.integer(forKey: key)
+                let toast = Toast(text: "Count = \(count)", delay: 0.0, duration: Delay.short)
+                toast.show()
+        }
         
         present(ac, animated: true, completion: nil)
     }
     
     private func getNACInfo() {
-        guard let nac = navigationController as? NavigationDemoSwipeController else { return }
+        guard let nac = navigationController as? NavigationDemoSwipeController
+        else { return }
+        
         nac.getNavigationControllerInfo()
     }
     
     private func openPDF() {
         let vc = PDFVC()
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func getIDFA() {
+        let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+        
+        let ac: UIAlertController = .defaultAlert(
+            title: "IDFA",
+            message: idfa,
+            defaultText: "複製",
+            default: { (action) in
+                let pasteboard = UIPasteboard.general
+                pasteboard.string = idfa
+            },
+            cancelText: "關閉"
+        )
+        
+        present(ac, animated: true, completion: nil)
+    }
+    
+    private func openAlertController(from index: Int) {
+        var title: String = "透過Top ViewController來present，StatusBar保持原來的Style"
+        var alertWindow = UIWindow()
+        
+        if index == 8 {
+            title = "透過建立UIWindow來present，但StatusBar會變成黑色Style"
+            
+            // Reference: https://stackoverflow.com/questions/57060606/uiwindow-not-showing-over-content-in-ios-13/57167378#57167378
+            if #available(iOS 13.0, *) {
+                let windowScene = UIApplication.shared
+                                               .connectedScenes
+                                               .filter { $0.activationState == .foregroundActive }
+                                               .first
+                if let windowScene = windowScene as? UIWindowScene {
+                    alertWindow = UIWindow(windowScene: windowScene)
+                }
+            }
+            
+            alertWindow.backgroundColor = nil
+            alertWindow.windowLevel = .alert
+            alertWindow.rootViewController = UIViewController()
+            alertWindow.isHidden = false
+        }
+        
+        let ac = UIAlertController.cancelAlert(
+            title: title,
+            message: nil,
+            cancelText: "關閉") { (action) in
+                // 用Action 的 handler 閉包去持有 alertWindow，創造一個臨時的循環持有。
+                // 在 alertController 被釋放後，這些閉包也會被釋放，跟著把 alertWindow 給釋放掉。
+                _ = alertWindow
+        }
+        
+        if index == 7 {
+            topVC?.present(ac, animated: true, completion: nil)
+        } else {
+            alertWindow.rootViewController?.present(ac, animated: true, completion: nil)
+        }
     }
 }
 
@@ -202,6 +271,10 @@ extension OtherDemoVC: UITableViewDataSource, UITableViewDelegate {
             getNACInfo()
         case 5:
             openPDF()
+        case 6:
+            getIDFA()
+        case 7, 8:
+            openAlertController(from: indexPath.row)
         default: break
         }
     }

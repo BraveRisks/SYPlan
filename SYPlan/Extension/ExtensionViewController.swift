@@ -10,6 +10,25 @@ import UIKit
 
 extension UIViewController {
     
+    // Reference: https://stackoverflow.com/questions/26667009/get-top-most-uiviewcontroller/50656239
+    /// 取得最上層的UIViewController, Maybe return nil
+    var topVC: UIViewController? {
+        var keyWindow: UIWindow?
+        
+        if #available(iOS 13.0, *) {
+            keyWindow = UIApplication.shared.windows.filter { $0.isKeyWindow }.first
+        } else {
+            keyWindow = UIApplication.shared.keyWindow
+        }
+        
+        if var vc = keyWindow?.rootViewController {
+            while let presentedVC = vc.presentingViewController { vc = presentedVC }
+            return vc
+        } else {
+            return nil
+        }
+    }
+    
     /// 添加浮水印
     /// When you use it, must be on `last` line in onViewDidLoad() method.
     func addWatermark() {
