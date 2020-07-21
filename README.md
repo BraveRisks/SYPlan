@@ -31,7 +31,7 @@
 - [Google Ads](https://github.com/BraveRisks/SYPlan/blob/master/SYPlan/GoogleAdNativeDemo/GoogleAdDemoViewController.swift)
 - [Other Demo](https://github.com/BraveRisks/SYPlan/blob/master/SYPlan/OtherDemo/OtherDemoVC.swift)
 - [Link URL](https://github.com/BraveRisks/SYPlan/blob/master/SYPlan/LinkDemo/LinkDemoVC.swift)
-
+- [OS Log](https://github.com/BraveRisks/SYPlan/blob/master/SYPlan/OSLogDemo/OSLogDemoVC.swift)
 ---
 
 #### 🍎 Apple
