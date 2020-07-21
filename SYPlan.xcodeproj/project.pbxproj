@@ -106,6 +106,7 @@
 		EBAD6D3922CDD0AC00538A7B /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2B54B121C72FC700CBE037 /* ExtensionString.swift */; };
 		EBAD6D3D22CDDBC500538A7B /* FacebookLoginDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAD6D3B22CDDBC500538A7B /* FacebookLoginDemoViewController.swift */; };
 		EBAD6D3E22CDDBC500538A7B /* FacebookLoginDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAD6D3C22CDDBC500538A7B /* FacebookLoginDemoViewController.xib */; };
+		EBAD80AA24C6BE1D000CF14D /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAD80A924C6BE1D000CF14D /* Log.swift */; };
 		EBB3459A2177262100E24A15 /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB345992177262100E24A15 /* ExtensionColor.swift */; };
 		EBB43AC823F4E1D3003C8772 /* PDFVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB43AC723F4E1D3003C8772 /* PDFVC.swift */; };
 		EBB4A5C52405183B00EFFB50 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4A5C42405183B00EFFB50 /* ImageLoader.swift */; };
@@ -132,6 +133,7 @@
 		EBD16BF520C12F91006FA1E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD16BF320C12F91006FA1E8 /* Main.storyboard */; };
 		EBD16BF720C12F92006FA1E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD16BF620C12F92006FA1E8 /* Assets.xcassets */; };
 		EBD16BFA20C12F92006FA1E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD16BF820C12F92006FA1E8 /* LaunchScreen.storyboard */; };
+		EBD4625A24C67E1400393677 /* OSLogDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4625924C67E1400393677 /* OSLogDemoVC.swift */; };
 		EBE6DA9422438BE700A34C93 /* CoreImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE6DA9322438BE700A34C93 /* CoreImageViewController.swift */; };
 		EBEFF6862278432900E1E696 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFF6852278432900E1E696 /* Reachability.swift */; };
 		EBF0B3032252EC0E00E2712E /* PDFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF0B3022252EC0E00E2712E /* PDFManager.swift */; };
@@ -309,6 +311,7 @@
 		EBAD6D3422CDD05A00538A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBAD6D3B22CDDBC500538A7B /* FacebookLoginDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginDemoViewController.swift; sourceTree = "<group>"; };
 		EBAD6D3C22CDDBC500538A7B /* FacebookLoginDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FacebookLoginDemoViewController.xib; sourceTree = "<group>"; };
+		EBAD80A924C6BE1D000CF14D /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		EBB345992177262100E24A15 /* ExtensionColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
 		EBB43AC723F4E1D3003C8772 /* PDFVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFVC.swift; sourceTree = "<group>"; };
 		EBB4A5C42405183B00EFFB50 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
@@ -337,6 +340,7 @@
 		EBD16BF620C12F92006FA1E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBD16BF920C12F92006FA1E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBD16BFB20C12F92006FA1E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBD4625924C67E1400393677 /* OSLogDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogDemoVC.swift; sourceTree = "<group>"; };
 		EBE6DA9322438BE700A34C93 /* CoreImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreImageViewController.swift; sourceTree = "<group>"; };
 		EBEFF6852278432900E1E696 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		EBF0B3022252EC0E00E2712E /* PDFManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFManager.swift; sourceTree = "<group>"; };
@@ -501,6 +505,7 @@
 		EB2A63FE24AAD62B0049962E /* Other Page */ = {
 			isa = PBXGroup;
 			children = (
+				EBD4625824C67DEE00393677 /* OSLogDemo */,
 				EBC9B5E72424ABE500AAC335 /* LinkDemo */,
 				EB4296D32369775C00021579 /* OtherDemo */,
 				EB8090A122D6C523008220B7 /* GoogleAdNativeDemo */,
@@ -754,6 +759,7 @@
 			children = (
 				EB877DB9210975CF0075788C /* AttributedStringHelper.swift */,
 				EB1172B6243DABF1003D8AAD /* StringSizeCacheHelper.swift */,
+				EBAD80A924C6BE1D000CF14D /* Log.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -951,6 +957,14 @@
 				EB649AA720E1DB3100D5FF7E /* SYPlan.entitlements */,
 			);
 			path = SYPlan;
+			sourceTree = "<group>";
+		};
+		EBD4625824C67DEE00393677 /* OSLogDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EBD4625924C67E1400393677 /* OSLogDemoVC.swift */,
+			);
+			path = OSLogDemo;
 			sourceTree = "<group>";
 		};
 		EBE6DA9222438BC600A34C93 /* CoreImageDemo */ = {
@@ -1390,8 +1404,10 @@
 				EBFA75B022657461009DCB4F /* ExtensionDate.swift in Sources */,
 				EB53C7C52301347C00BBB3EA /* LoadingView.swift in Sources */,
 				EB45EB292440067A00628CF9 /* ExtensionUIScreen.swift in Sources */,
+				EBAD80AA24C6BE1D000CF14D /* Log.swift in Sources */,
 				EB25F3CC22817696002B1F23 /* Person.xcdatamodeld in Sources */,
 				EB76F8B72202772700C278D7 /* Track.swift in Sources */,
+				EBD4625A24C67E1400393677 /* OSLogDemoVC.swift in Sources */,
 				EB8090A422D6D2DD008220B7 /* GoogleAdDemoViewController.swift in Sources */,
 				EB4C5560228D68B900C72B7A /* HttpSession.swift in Sources */,
 				EBC28C22212FDF35000B87EA /* ExtensionURL.swift in Sources */,

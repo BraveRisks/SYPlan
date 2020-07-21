@@ -102,3 +102,73 @@ extension UIView {
         }
     }
 }
+
+// MARK: Auto layout
+extension UIView {
+    
+    /// Auto layout of top anchor
+    /// - Parameters:
+    ///   - anchor: see more NSLayoutAnchor
+    ///   - constant: 偏移距離，default = 0.0
+    /// - Returns: NSLayoutConstraint
+    public func topAnchorEqual(to anchor: NSLayoutAnchor<NSLayoutYAxisAnchor>,
+                               constant: CGFloat = 0.0) -> NSLayoutConstraint {
+        return topAnchor.constraint(equalTo: anchor, constant: constant)
+    }
+    
+    /// Auto layout of bottom anchor
+    /// - Parameters:
+    ///   - anchor: see more NSLayoutAnchor
+    ///   - constant: 偏移距離，default = 0.0
+    /// - Returns: NSLayoutConstraint
+    public func bottomAnchorEqual(to anchor: NSLayoutAnchor<NSLayoutYAxisAnchor>,
+                                  constant: CGFloat = 0.0) -> NSLayoutConstraint {
+        return bottomAnchor.constraint(equalTo: anchor, constant: constant)
+    }
+    
+    /// Auto layout of leading anchor
+    /// - Parameters:
+    ///   - anchor: see more NSLayoutAnchor
+    ///   - constant: 偏移距離，default = 0.0
+    /// - Returns: NSLayoutConstraint
+    public func leadingAnchorEqual(to anchor: NSLayoutAnchor<NSLayoutXAxisAnchor>,
+                                   constant: CGFloat = 0.0) -> NSLayoutConstraint {
+        return leadingAnchor.constraint(equalTo: anchor, constant: constant)
+    }
+    
+    /// Auto layout of trailing anchor
+    /// - Parameters:
+    ///   - anchor: see more NSLayoutAnchor
+    ///   - constant: 偏移距離，default = 0.0
+    public func trailingAnchorEqual(to anchor: NSLayoutAnchor<NSLayoutXAxisAnchor>,
+                                    constant: CGFloat = 0.0) -> NSLayoutConstraint {
+        return trailingAnchor.constraint(equalTo: anchor, constant: constant)
+    }
+
+    /// Auto layout of height anchor
+    /// - Parameters:
+    ///   - anchor: see more NSLayoutDimension
+    ///   - constant: 偏移距離，default = 0.0
+    /// - Returns: NSLayoutConstraint
+    public func heightAnchorEqual(to anchor: NSLayoutDimension,
+                                  constant: CGFloat = 0.0) -> NSLayoutConstraint {
+        return heightAnchor.constraint(equalTo: anchor, constant: constant)
+    }
+    
+    /// Auto layout of height anchor
+    /// - Parameter constant: 偏移距離，default = 0.0
+    /// - Returns: NSLayoutConstraint
+    public func heightAnchorEqual(constant: CGFloat = 0.0) -> NSLayoutConstraint {
+        return heightAnchor.constraint(equalToConstant: constant)
+    }
+    
+    /// Auto layout of width anchor
+    /// - Parameters:
+    ///   - anchor: see more NSLayoutDimension
+    ///   - constant: 偏移距離，default = 0.0
+    /// - Returns: NSLayoutConstraint
+    public func widthAnchorEqual(to anchor: NSLayoutDimension,
+                                  constant: CGFloat = 0.0) -> NSLayoutConstraint {
+        return widthAnchor.constraint(equalTo: anchor, constant: constant)
+    }
+}

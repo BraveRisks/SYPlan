@@ -46,7 +46,7 @@ class ContainerViewController: UIViewController {
             case .other:
                 return [.fbLogin, .regular, .coreData,
                         .realm, .googleAds, .other,
-                        .linkURL]
+                        .linkURL, .osLog]
             case .apple:
                 return [. coreMLImage, .coreMLText]
             }
@@ -101,6 +101,8 @@ class ContainerViewController: UIViewController {
             case imageLoader = "Image Loader"
             
             case linkURL = "Link URL"
+            
+            case osLog = "OS Log"
         }
     }
     
@@ -329,6 +331,11 @@ extension ContainerViewController: UICollectionViewDataSource, UICollectionViewD
             navigationController?.pushViewController(vc, animated: true)
         case .linkURL:
             let vc = LinkDemoVC()
+            vc.title = content.rawValue
+            vc.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(vc, animated: true)
+        case .osLog:
+            let vc = OSLogDemoVC()
             vc.title = content.rawValue
             vc.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(vc, animated: true)
