@@ -117,6 +117,30 @@ class ContainerViewController: UIViewController {
         super.viewDidLoad()
         setup()
     }
+    
+    override func viewDidLayoutSubviews() {
+        /*
+         iPhone 6
+         StatusBar Height = 20.0
+         TabBarController Height = 49.0
+         NavigationController Height = 44.0
+         
+         iPhone 11 Pro
+         StatusBar Height = 44.0
+         TabBarController Height = 83.0
+         NavigationController Height = 44.0
+         
+         */
+        print("StatusBar Height = \(UIApplication.shared.statusBarFrame.height)")
+        
+        if let tabHeight = tabBarController?.tabBar.frame.height {
+            print("TabBarController Height = \(tabHeight)")
+        }
+        
+        if let navigationHeight = navigationController?.navigationBar.frame.height {
+            print("NavigationController Height = \(navigationHeight)")
+        }
+    }
 
     private func setup() {
         navigationItem.title = type.description
