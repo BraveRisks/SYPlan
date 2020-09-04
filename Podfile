@@ -29,7 +29,7 @@ target 'SYPlan' do
   pod 'PDFGenerator', '~> 3.1.0'
 
   # https://github.com/realm/realm-cocoa/
-  pod 'RealmSwift', '~> 5.0.1'
+  pod 'RealmSwift'#, '~> 5.0.1'
   
   # https://github.com/devxoul/Toaster
   pod 'Toaster', '~> 2.2.0'
@@ -40,6 +40,9 @@ target 'SYPlan' do
   
   # For login
   pod 'FacebookLogin'
+  
+  # https://developers.google.com/maps/documentation/ios-sdk/start
+  pod 'GoogleMaps'
   
   # https://github.com/QMUI/LookinServer
   pod 'LookinServer', :configurations => ['Debug']

@@ -39,7 +39,7 @@ class ContainerViewController: UIViewController {
             case .ui:
                 return [.fbWeb, .customCollectionViewLayout, .coreImage,
                         .animationNumber, .qrCode, .waterMark, .font,
-                        .cropImage, .saveImage]
+                        .cropImage, .saveImage, .googleMap]
             case .network:
                 return [.upload, .download, .webService, .apiRefresh,
                         .imageLoader]
@@ -103,6 +103,8 @@ class ContainerViewController: UIViewController {
             case linkURL = "Link URL"
             
             case osLog = "OS Log"
+        
+            case googleMap = "Google Map"
         }
     }
     
@@ -360,6 +362,11 @@ extension ContainerViewController: UICollectionViewDataSource, UICollectionViewD
             navigationController?.pushViewController(vc, animated: true)
         case .osLog:
             let vc = OSLogDemoVC()
+            vc.title = content.rawValue
+            vc.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(vc, animated: true)
+        case .googleMap:
+            let vc = GoogleMapDemoVC()
             vc.title = content.rawValue
             vc.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(vc, animated: true)

@@ -12,6 +12,7 @@ import UserNotifications
 import CoreData
 import RealmSwift
 import FBSDKCoreKit
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -78,6 +79,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GADMobileAds.sharedInstance().start { (status) in
             print("⚠️ GADMobileAds is \(status.adapterStatusesByClassName)")
         }
+        
+        // Google Map
+        GMSServices.provideAPIKey("AIzaSyA2nA6h8NQpXL5A3qTNnll24AiL3R5chbs")
         
         // Facebook
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)

@@ -90,7 +90,12 @@ class NavigationDemoSwipeController: UINavigationController {
 }
 
 extension NavigationDemoSwipeController: UIGestureRecognizerDelegate {
+    
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if children.count >= 2 {
+            return !(children[1] is GoogleMapDemoVC)
+        }
+        
         return children.count > 1
     }
 }

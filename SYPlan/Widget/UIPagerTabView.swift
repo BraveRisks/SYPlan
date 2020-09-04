@@ -30,6 +30,7 @@ protocol UIPagerTabViewDelegate: class {
 /// pagerTabView.setScrollView(with: Your UIScrollView)
 /// ```
 class UIPagerTabView: UIView {
+    
     private var mScrollView: UIScrollView!
     private var mLineView: UIView!
     
@@ -219,6 +220,7 @@ class UIPagerTabView: UIView {
 }
 
 extension UIPagerTabView: UIScrollViewDelegate {
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if isScrollByClick { return }
         

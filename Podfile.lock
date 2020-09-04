@@ -73,6 +73,11 @@ PODS:
   - GoogleDataTransportCCTSupport (3.0.0):
     - GoogleDataTransport (~> 6.0)
     - nanopb (~> 0.3.901)
+  - GoogleMaps (3.10.0):
+    - GoogleMaps/Maps (= 3.10.0)
+  - GoogleMaps/Base (3.10.0)
+  - GoogleMaps/Maps (3.10.0):
+    - GoogleMaps/Base
   - GoogleUtilities/AppDelegateSwizzler (6.6.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -114,10 +119,11 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Crashlytics
   - Google-Mobile-Ads-SDK
+  - GoogleMaps
   - LookinServer
   - PDFGenerator (~> 3.1.0)
-  - RealmSwift (~> 4.1.1)
-  - Toaster
+  - RealmSwift
+  - Toaster (~> 2.2.0)
 
 SPEC REPOS:
   trunk:
@@ -138,6 +144,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
+    - GoogleMaps
     - GoogleUtilities
     - LookinServer
     - nanopb
@@ -165,6 +172,7 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 2253e99c1f22638cf234c059144660c338ad76c3
   GoogleDataTransport: 061fe7d9b476710e3cd8ea51e8e07d8b67c2b420
   GoogleDataTransportCCTSupport: 0f39025e8cf51f168711bd3fb773938d7e62ddb5
+  GoogleMaps: 8c080862ff2748ece9929471b30feb56a6c5079d
   GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
   LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
@@ -174,6 +182,6 @@ SPEC CHECKSUMS:
   RealmSwift: 9e2657b33764f80e4a4dffd6d440e24715782052
   Toaster: c1a81b376edcc2470157b4d1ee1e9341d3b96455
 
-PODFILE CHECKSUM: 0b091a0cd6a538ffd4851dab568e19d536d6ba6f
+PODFILE CHECKSUM: fc35688154e1701eb3bea95002e831f0338bd852
 
 COCOAPODS: 1.8.4

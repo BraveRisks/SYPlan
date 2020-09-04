@@ -36,6 +36,7 @@
 		EB347D4522E70B6600677032 /* ScanBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB347D4422E70B6600677032 /* ScanBorderView.swift */; };
 		EB36D57F2327797E005015C8 /* WatermarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB36D57E2327797E005015C8 /* WatermarkView.swift */; };
 		EB36D58D2327881B005015C8 /* WatermarkDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB36D58C2327881B005015C8 /* WatermarkDemoViewController.swift */; };
+		EB38B90324FF69A5001F9C0D /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB38B90224FF69A5001F9C0D /* DrawView.swift */; };
 		EB3ABF6A218850CE00460295 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3ABF69218850CE00460295 /* PinterestLayout.swift */; };
 		EB3EF9E623AB1153007F07AB /* ApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EF9E523AB1153007F07AB /* ApiPath.swift */; };
 		EB3EF9E823AB12F6007F07AB /* OriginURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EF9E723AB12F6007F07AB /* OriginURLSession.swift */; };
@@ -95,6 +96,7 @@
 		EB82D7CE21AB9A5D007C0E3C /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB82D7CD21AB9A5D007C0E3C /* ExtensionView.swift */; };
 		EB877DB62109686E0075788C /* RegularExpressionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB877DB42109686E0075788C /* RegularExpressionViewController.swift */; };
 		EB877DBA210975CF0075788C /* AttributedStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB877DB9210975CF0075788C /* AttributedStringHelper.swift */; };
+		EB9E5CBB24F89C7C0074A203 /* GoogleMapDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9E5CBA24F89C7C0074A203 /* GoogleMapDemoVC.swift */; };
 		EBA47DE023E918FC002A8718 /* ExtensionDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA47DDF23E918FC002A8718 /* ExtensionDouble.swift */; };
 		EBA47DE323E971DE002A8718 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA47DE223E971DE002A8718 /* BaseVC.swift */; };
 		EBA5A50E217EAB99000A31E2 /* FontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA5A50D217EAB99000A31E2 /* FontViewController.swift */; };
@@ -237,6 +239,7 @@
 		EB347D4422E70B6600677032 /* ScanBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanBorderView.swift; sourceTree = "<group>"; };
 		EB36D57E2327797E005015C8 /* WatermarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatermarkView.swift; sourceTree = "<group>"; };
 		EB36D58C2327881B005015C8 /* WatermarkDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatermarkDemoViewController.swift; sourceTree = "<group>"; };
+		EB38B90224FF69A5001F9C0D /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 		EB3ABF69218850CE00460295 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		EB3EF9E523AB1153007F07AB /* ApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPath.swift; sourceTree = "<group>"; };
 		EB3EF9E723AB12F6007F07AB /* OriginURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginURLSession.swift; sourceTree = "<group>"; };
@@ -299,6 +302,7 @@
 		EB82D7CD21AB9A5D007C0E3C /* ExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
 		EB877DB42109686E0075788C /* RegularExpressionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionViewController.swift; sourceTree = "<group>"; };
 		EB877DB9210975CF0075788C /* AttributedStringHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringHelper.swift; sourceTree = "<group>"; };
+		EB9E5CBA24F89C7C0074A203 /* GoogleMapDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapDemoVC.swift; sourceTree = "<group>"; };
 		EBA47DDF23E918FC002A8718 /* ExtensionDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDouble.swift; sourceTree = "<group>"; };
 		EBA47DE223E971DE002A8718 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		EBA5A50D217EAB99000A31E2 /* FontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontViewController.swift; sourceTree = "<group>"; };
@@ -486,6 +490,7 @@
 				EBE6DA9222438BC600A34C93 /* CoreImageDemo */,
 				EB3ABF68218832F300460295 /* CollectionViewLayoutDemo */,
 				EB44A32C21757D8A005AA612 /* FacebookWebDemo */,
+				EB9E5CB724F89C220074A203 /* GoogleMapDemo */,
 			);
 			name = "UI Page";
 			sourceTree = "<group>";
@@ -762,6 +767,15 @@
 				EBAD80A924C6BE1D000CF14D /* Log.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		EB9E5CB724F89C220074A203 /* GoogleMapDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EB9E5CBA24F89C7C0074A203 /* GoogleMapDemoVC.swift */,
+				EB38B90224FF69A5001F9C0D /* DrawView.swift */,
+			);
+			path = GoogleMapDemo;
 			sourceTree = "<group>";
 		};
 		EBA47DE123E971CF002A8718 /* Base */ = {
@@ -1081,6 +1095,7 @@
 				EB56D1372123FA3E00BE8BFC /* Embed App Extensions */,
 				BC132B45F24E88B54DC0AF61 /* [CP] Embed Pods Frameworks */,
 				EB0857DB20C8B782007B2AB8 /* Firebase Crashlytics */,
+				D423C353A30FEA026ABDB65A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1316,6 +1331,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SYPlan/Pods-SYPlan-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D423C353A30FEA026ABDB65A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SYPlan/Pods-SYPlan-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SYPlan/Pods-SYPlan-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SYPlan/Pods-SYPlan-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EB0857DB20C8B782007B2AB8 /* Firebase Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1427,6 +1459,7 @@
 				EB2C9955227BD2A80081CC19 /* ExtensionDictionary.swift in Sources */,
 				EB36D57F2327797E005015C8 /* WatermarkView.swift in Sources */,
 				EBA47DE023E918FC002A8718 /* ExtensionDouble.swift in Sources */,
+				EB9E5CBB24F89C7C0074A203 /* GoogleMapDemoVC.swift in Sources */,
 				EB177BE521AE3CCC00921060 /* UIPagerTabView.swift in Sources */,
 				EBB4A5C724051C4B00EFFB50 /* ExtensionOptional.swift in Sources */,
 				EB36D58D2327881B005015C8 /* WatermarkDemoViewController.swift in Sources */,
@@ -1437,6 +1470,7 @@
 				EBF8F22E22939DA10097D402 /* UIFitTextView.swift in Sources */,
 				EBA47DE323E971DE002A8718 /* BaseVC.swift in Sources */,
 				EB76F8BA2202772700C278D7 /* QueryService.swift in Sources */,
+				EB38B90324FF69A5001F9C0D /* DrawView.swift in Sources */,
 				EBD16BF020C12F91006FA1E8 /* AppDelegate.swift in Sources */,
 				EB3EF9E823AB12F6007F07AB /* OriginURLSession.swift in Sources */,
 				EBB4A5C92405240B00EFFB50 /* ImageLoaderDemoVC.swift in Sources */,
@@ -1553,7 +1587,7 @@
 		EB2A641224AAE5280049962E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Cornelia Chuang (35F9XS64H7)";
 				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = W7VR44AH4Q;
@@ -1578,7 +1612,7 @@
 		EB2A641324AAE5280049962E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Cornelia Chuang (35F9XS64H7)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TodayWidget/Info.plist;
@@ -1601,7 +1635,7 @@
 		EB2A641424AAE5280049962E /* AdHoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Cornelia Chuang (35F9XS64H7)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TodayWidget/Info.plist;
@@ -1624,7 +1658,7 @@
 		EB56D14921240EB400BE8BFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Cornelia Chuang (35F9XS64H7)";
 				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = W7VR44AH4Q;
@@ -1647,7 +1681,7 @@
 		EB56D14A21240EB400BE8BFC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Cornelia Chuang (35F9XS64H7)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SYPlanShare/Info.plist;
@@ -1728,7 +1762,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SYPlan/SYPlan.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Cornelia Chuang (35F9XS64H7)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = W7VR44AH4Q;
 				ENABLE_BITCODE = NO;
@@ -1746,7 +1780,7 @@
 				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sinyi.SYPlan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "400 Sinyi SYPlan Dev";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1755,7 +1789,7 @@
 		EBA5A513217F0AE3000A31E2 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Cornelia Chuang (35F9XS64H7)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SYPlanShare/Info.plist;
@@ -1962,7 +1996,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SYPlan/SYPlan.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Cornelia Chuang (35F9XS64H7)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = W7VR44AH4Q;
 				ENABLE_BITCODE = NO;
@@ -1993,7 +2027,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SYPlan/SYPlan.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Cornelia Chuang (35F9XS64H7)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = W7VR44AH4Q;
 				ENABLE_BITCODE = NO;
@@ -2011,7 +2045,7 @@
 				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sinyi.SYPlan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "400 Sinyi SYPlan Dev";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2020,7 +2054,7 @@
 		EBFD7B7E21830750002845E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Cornelia Chuang (35F9XS64H7)";
 				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = W7VR44AH4Q;
@@ -2043,7 +2077,7 @@
 		EBFD7B7F21830750002845E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Cornelia Chuang (35F9XS64H7)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NotificationService/Info.plist;
@@ -2065,7 +2099,7 @@
 		EBFD7B8021830750002845E1 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Cornelia Chuang (35F9XS64H7)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NotificationService/Info.plist;
@@ -2087,7 +2121,7 @@
 		EBFD7B95218315FB002845E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Cornelia Chuang (35F9XS64H7)";
 				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = W7VR44AH4Q;
@@ -2110,7 +2144,7 @@
 		EBFD7B96218315FB002845E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Cornelia Chuang (35F9XS64H7)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NotificationContent/Info.plist;
@@ -2132,7 +2166,7 @@
 		EBFD7B97218315FB002845E1 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Cornelia Chuang (35F9XS64H7)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NotificationContent/Info.plist;
