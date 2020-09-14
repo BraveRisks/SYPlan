@@ -68,6 +68,15 @@
 		EB5E7CE922DC06F300CF6A37 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E7CE822DC06F300CF6A37 /* AdSupport.framework */; };
 		EB6001082276E41B00843615 /* WebServiceDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6001062276E41B00843615 /* WebServiceDemoVC.swift */; };
 		EB6001092276E41B00843615 /* WebServiceDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6001072276E41B00843615 /* WebServiceDemoVC.xib */; };
+		EB653E8E250F516800DF90F4 /* DateDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB653E86250F516600DF90F4 /* DateDemo.swift */; };
+		EB653E8F250F516800DF90F4 /* DispatchQueueDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB653E87250F516700DF90F4 /* DispatchQueueDemo.swift */; };
+		EB653E90250F516800DF90F4 /* AssociatedtypeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB653E88250F516700DF90F4 /* AssociatedtypeDemo.swift */; };
+		EB653E91250F516800DF90F4 /* NSPredicateDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB653E89250F516700DF90F4 /* NSPredicateDemo.swift */; };
+		EB653E92250F516800DF90F4 /* CodableDemo1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB653E8A250F516700DF90F4 /* CodableDemo1.swift */; };
+		EB653E93250F516800DF90F4 /* KKBox-exam-solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB653E8B250F516700DF90F4 /* KKBox-exam-solution.swift */; };
+		EB653E94250F516800DF90F4 /* CodableDemo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB653E8C250F516700DF90F4 /* CodableDemo2.swift */; };
+		EB653E95250F516800DF90F4 /* CodableDemo3.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB653E8D250F516700DF90F4 /* CodableDemo3.swift */; };
+		EB653E98250F518200DF90F4 /* ExtensionSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB653E96250F518100DF90F4 /* ExtensionSequence.swift */; };
 		EB6A9A1D23695ECC00B14576 /* CoreMLTextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A9A1C23695ECC00B14576 /* CoreMLTextVC.swift */; };
 		EB6A9A1F23695EEA00B14576 /* SpamDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EB6A9A1E23695EEA00B14576 /* SpamDetector.mlmodel */; };
 		EB6BBA922358010600D1626D /* ExtensionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6BBA912358010600D1626D /* ExtensionCollectionView.swift */; };
@@ -274,6 +283,15 @@
 		EB6001062276E41B00843615 /* WebServiceDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceDemoVC.swift; sourceTree = "<group>"; };
 		EB6001072276E41B00843615 /* WebServiceDemoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebServiceDemoVC.xib; sourceTree = "<group>"; };
 		EB649AA720E1DB3100D5FF7E /* SYPlan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SYPlan.entitlements; sourceTree = "<group>"; };
+		EB653E86250F516600DF90F4 /* DateDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateDemo.swift; sourceTree = "<group>"; };
+		EB653E87250F516700DF90F4 /* DispatchQueueDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueDemo.swift; sourceTree = "<group>"; };
+		EB653E88250F516700DF90F4 /* AssociatedtypeDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssociatedtypeDemo.swift; sourceTree = "<group>"; };
+		EB653E89250F516700DF90F4 /* NSPredicateDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPredicateDemo.swift; sourceTree = "<group>"; };
+		EB653E8A250F516700DF90F4 /* CodableDemo1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableDemo1.swift; sourceTree = "<group>"; };
+		EB653E8B250F516700DF90F4 /* KKBox-exam-solution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KKBox-exam-solution.swift"; sourceTree = "<group>"; };
+		EB653E8C250F516700DF90F4 /* CodableDemo2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableDemo2.swift; sourceTree = "<group>"; };
+		EB653E8D250F516700DF90F4 /* CodableDemo3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableDemo3.swift; sourceTree = "<group>"; };
+		EB653E96250F518100DF90F4 /* ExtensionSequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionSequence.swift; sourceTree = "<group>"; };
 		EB6A9A1C23695ECC00B14576 /* CoreMLTextVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLTextVC.swift; sourceTree = "<group>"; };
 		EB6A9A1E23695EEA00B14576 /* SpamDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SpamDetector.mlmodel; sourceTree = "<group>"; };
 		EB6BBA912358010600D1626D /* ExtensionCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCollectionView.swift; sourceTree = "<group>"; };
@@ -696,6 +714,21 @@
 			path = "Core ML Demo";
 			sourceTree = "<group>";
 		};
+		EB653E85250F513C00DF90F4 /* SYPlaygroundDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EB653E88250F516700DF90F4 /* AssociatedtypeDemo.swift */,
+				EB653E8A250F516700DF90F4 /* CodableDemo1.swift */,
+				EB653E8C250F516700DF90F4 /* CodableDemo2.swift */,
+				EB653E8D250F516700DF90F4 /* CodableDemo3.swift */,
+				EB653E86250F516600DF90F4 /* DateDemo.swift */,
+				EB653E87250F516700DF90F4 /* DispatchQueueDemo.swift */,
+				EB653E8B250F516700DF90F4 /* KKBox-exam-solution.swift */,
+				EB653E89250F516700DF90F4 /* NSPredicateDemo.swift */,
+			);
+			path = SYPlaygroundDemo;
+			sourceTree = "<group>";
+		};
 		EB6960B922D5BA3900E54047 /* AnimationNumberDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -869,9 +902,9 @@
 		EBC28C20212FDF1E000B87EA /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				EB02605224BC47340086CD5A /* ExtensionUIAlertController.swift */,
 				EBB345992177262100E24A15 /* ExtensionColor.swift */,
 				EBC28C21212FDF35000B87EA /* ExtensionURL.swift */,
+				EB02605224BC47340086CD5A /* ExtensionUIAlertController.swift */,
 				EB818C602136836900286D4C /* ExtensionUIImage.swift */,
 				EBB5F9822186A70400CB6C51 /* ExtensionLayer.swift */,
 				EB1BFD3F219E991100B12F68 /* ExtensionCGFloat.swift */,
@@ -887,6 +920,7 @@
 				EBB4A5C624051C4B00EFFB50 /* ExtensionOptional.swift */,
 				EB45EB282440067A00628CF9 /* ExtensionUIScreen.swift */,
 				EB45EB2A2440078700628CF9 /* ExtensionUIVIew.swift */,
+				EB653E96250F518100DF90F4 /* ExtensionSequence.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -917,6 +951,7 @@
 			children = (
 				EBD16BEE20C12F91006FA1E8 /* SYPlan */,
 				EBAD6D3122CDD05A00538A7B /* SYPlanTests */,
+				EB653E85250F513C00DF90F4 /* SYPlaygroundDemo */,
 				EB56D13E21240EB400BE8BFC /* SYPlanShare */,
 				EBFD7B7621830750002845E1 /* NotificationService */,
 				EBFD7B8A218315FB002845E1 /* NotificationContent */,
@@ -1399,6 +1434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB5280CA23FF7ED0001EDBA3 /* IBConstructible.swift in Sources */,
+				EB653E8E250F516800DF90F4 /* DateDemo.swift in Sources */,
 				EB3EF9EA23AB1320007F07AB /* ApiManager.swift in Sources */,
 				EB4296D52369777500021579 /* OtherDemoVC.swift in Sources */,
 				EB818C5F21364AD700286D4C /* UploadTask.swift in Sources */,
@@ -1432,6 +1468,7 @@
 				EB70928F21786DBF00231521 /* UIFBWebView.swift in Sources */,
 				EB818C612136836900286D4C /* ExtensionUIImage.swift in Sources */,
 				EB6001082276E41B00843615 /* WebServiceDemoVC.swift in Sources */,
+				EB653E92250F516800DF90F4 /* CodableDemo1.swift in Sources */,
 				EB76F8B92202772700C278D7 /* DownloadDemoController.swift in Sources */,
 				EBFA75B022657461009DCB4F /* ExtensionDate.swift in Sources */,
 				EB53C7C52301347C00BBB3EA /* LoadingView.swift in Sources */,
@@ -1441,9 +1478,11 @@
 				EB76F8B72202772700C278D7 /* Track.swift in Sources */,
 				EBD4625A24C67E1400393677 /* OSLogDemoVC.swift in Sources */,
 				EB8090A422D6D2DD008220B7 /* GoogleAdDemoViewController.swift in Sources */,
+				EB653E93250F516800DF90F4 /* KKBox-exam-solution.swift in Sources */,
 				EB4C5560228D68B900C72B7A /* HttpSession.swift in Sources */,
 				EBC28C22212FDF35000B87EA /* ExtensionURL.swift in Sources */,
 				EB76F8B52202772700C278D7 /* Download.swift in Sources */,
+				EB653E98250F518200DF90F4 /* ExtensionSequence.swift in Sources */,
 				EB02605324BC47340086CD5A /* ExtensionUIAlertController.swift in Sources */,
 				EB877DB62109686E0075788C /* RegularExpressionViewController.swift in Sources */,
 				EB56D1242123BF6E00BE8BFC /* LocationViewController.swift in Sources */,
@@ -1465,12 +1504,14 @@
 				EB36D58D2327881B005015C8 /* WatermarkDemoViewController.swift in Sources */,
 				EBC9B5EC2424ADF700AAC335 /* LinkDemoCell.swift in Sources */,
 				EB1BFD40219E991100B12F68 /* ExtensionCGFloat.swift in Sources */,
+				EB653E8F250F516800DF90F4 /* DispatchQueueDemo.swift in Sources */,
 				EB877DBA210975CF0075788C /* AttributedStringHelper.swift in Sources */,
 				EBCBF961236833ED00A9EA50 /* ExtensionCGImagePropertyOrientation.swift in Sources */,
 				EBF8F22E22939DA10097D402 /* UIFitTextView.swift in Sources */,
 				EBA47DE323E971DE002A8718 /* BaseVC.swift in Sources */,
 				EB76F8BA2202772700C278D7 /* QueryService.swift in Sources */,
 				EB38B90324FF69A5001F9C0D /* DrawView.swift in Sources */,
+				EB653E95250F516800DF90F4 /* CodableDemo3.swift in Sources */,
 				EBD16BF020C12F91006FA1E8 /* AppDelegate.swift in Sources */,
 				EB3EF9E823AB12F6007F07AB /* OriginURLSession.swift in Sources */,
 				EBB4A5C92405240B00EFFB50 /* ImageLoaderDemoVC.swift in Sources */,
@@ -1484,10 +1525,12 @@
 				EB6BBA922358010600D1626D /* ExtensionCollectionView.swift in Sources */,
 				EB6A9A1F23695EEA00B14576 /* SpamDetector.mlmodel in Sources */,
 				EBA5A50E217EAB99000A31E2 /* FontViewController.swift in Sources */,
+				EB653E94250F516800DF90F4 /* CodableDemo2.swift in Sources */,
 				EB7FB3C822D5C5D90018B879 /* UIAnimationLabel.swift in Sources */,
 				EB82C1A922CEF7FE00463F59 /* NavigationDemoSwipeController.swift in Sources */,
 				EB3EF9E623AB1153007F07AB /* ApiPath.swift in Sources */,
 				EBCBF95D236822EF00A9EA50 /* CoreMLVC.swift in Sources */,
+				EB653E90250F516800DF90F4 /* AssociatedtypeDemo.swift in Sources */,
 				EBBEC7B6223A38920006EBF2 /* SYCore.swift in Sources */,
 				EB45EB2B2440078700628CF9 /* ExtensionUIVIew.swift in Sources */,
 				EBF0B3032252EC0E00E2712E /* PDFManager.swift in Sources */,
@@ -1496,6 +1539,7 @@
 				EB76F8B62202772700C278D7 /* TrackTableViewCell.swift in Sources */,
 				EBB43AC823F4E1D3003C8772 /* PDFVC.swift in Sources */,
 				EBC4CF8F24036047009B7AC9 /* SaveImageVC.swift in Sources */,
+				EB653E91250F516800DF90F4 /* NSPredicateDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
