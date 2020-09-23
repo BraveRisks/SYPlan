@@ -151,7 +151,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Notifacation
         if #available(iOS 10.0, *) {
             UNUserNotificationCenter.current().delegate = self
-            UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .sound, .alert]) { (success, error) in
+            
+            var options: UNAuthorizationOptions = [.badge, .sound, .alert]
+            
+            // provisional：不會跳出推播通知權限請求，而是會在通知中心來讓使用者決定是否繼續接收通知
+            if #available(iOS 12.0, *) {
+                options = [.badge, .sound, .alert, .provisional]
+            }
+            
+            UNUserNotificationCenter.current().requestAuthorization(options: options)
+            { (success, error) in
                 if error == nil {
                     // 註冊遠端通知
                     DispatchQueue.main.async {

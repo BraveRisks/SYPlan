@@ -6,13 +6,18 @@
 //  Copyright © 2020 Sinyi Realty Inc. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension Double {
     
     /// 轉成字串
     var string: String {
         return String(self)
+    }
+    
+    /// 角度轉弧度
+    var radians: CGFloat {
+        return CGFloat(self / 180.0) * CGFloat.pi
     }
     
     /// 取小數點第n位 default roundingMode：.down

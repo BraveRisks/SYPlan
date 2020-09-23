@@ -32,7 +32,8 @@ target 'SYPlan' do
   pod 'RealmSwift'#, '~> 5.0.1'
   
   # https://github.com/devxoul/Toaster
-  pod 'Toaster', '~> 2.2.0'
+  pod 'Toaster', :git => 'https://github.com/devxoul/Toaster.git', :branch => 'master'
+  #pod 'Toaster', '~> 2.2.0'
   
   # https://developers.facebook.com/docs/facebook-login/ios/
   # For analytics

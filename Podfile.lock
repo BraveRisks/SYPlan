@@ -110,7 +110,7 @@ PODS:
   - Realm/Headers (4.1.1)
   - RealmSwift (4.1.1):
     - Realm (= 4.1.1)
-  - Toaster (2.2.0)
+  - Toaster (2.3.0)
 
 DEPENDENCIES:
   - EasyAlbum (~> 2.2.0)
@@ -123,7 +123,7 @@ DEPENDENCIES:
   - LookinServer
   - PDFGenerator (~> 3.1.0)
   - RealmSwift
-  - Toaster (~> 2.2.0)
+  - Toaster (from `https://github.com/devxoul/Toaster.git`, branch `master`)
 
 SPEC REPOS:
   trunk:
@@ -152,7 +152,16 @@ SPEC REPOS:
     - PromisesObjC
     - Realm
     - RealmSwift
-    - Toaster
+
+EXTERNAL SOURCES:
+  Toaster:
+    :branch: master
+    :git: https://github.com/devxoul/Toaster.git
+
+CHECKOUT OPTIONS:
+  Toaster:
+    :commit: aec54fc48d3d36279424103de0784c23862d19df
+    :git: https://github.com/devxoul/Toaster.git
 
 SPEC CHECKSUMS:
   EasyAlbum: d6c2838350076f4a4e8e2687a7230e0832fd46a5
@@ -180,8 +189,8 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Realm: 25f0a8244cbb1c2271c922963ea8666fc2d8104d
   RealmSwift: 9e2657b33764f80e4a4dffd6d440e24715782052
-  Toaster: c1a81b376edcc2470157b4d1ee1e9341d3b96455
+  Toaster: 33d27524fb6829cdb6b247c924beab0cfa001b3e
 
-PODFILE CHECKSUM: fc35688154e1701eb3bea95002e831f0338bd852
+PODFILE CHECKSUM: d27e8d3c3d47cc147c1578f243d05f25f80a18c6
 
 COCOAPODS: 1.8.4

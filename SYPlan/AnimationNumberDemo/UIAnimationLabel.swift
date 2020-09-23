@@ -4,11 +4,12 @@
 //
 //  Created by Ray on 2019/7/10.
 //  Copyright © 2019 Sinyi. All rights reserved.
-//  仿數字跳動動畫
-//  Reference: https://zhuanlan.zhihu.com/p/34348398 ; https://juejin.im/entry/58c0dc25ac502e0062bf1545
+//
 
 import UIKit
 
+/// 仿數字跳動動畫
+/// Reference: https://zhuanlan.zhihu.com/p/34348398 ; https://juejin.im/entry/58c0dc25ac502e0062bf1545
 class UIAnimationLabel: UILabel {
     
     /// 起始值，default = 0

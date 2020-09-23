@@ -39,7 +39,7 @@ class ContainerViewController: UIViewController {
             case .ui:
                 return [.fbWeb, .customCollectionViewLayout, .coreImage,
                         .animationNumber, .qrCode, .waterMark, .font,
-                        .cropImage, .saveImage, .googleMap]
+                        .cropImage, .saveImage, .googleMap, .flash]
             case .network:
                 return [.upload, .download, .webService, .apiRefresh,
                         .imageLoader]
@@ -105,6 +105,8 @@ class ContainerViewController: UIViewController {
             case osLog = "OS Log"
         
             case googleMap = "Google Map"
+            
+            case flash = "Flash View"
         }
     }
     
@@ -391,6 +393,11 @@ extension ContainerViewController: UICollectionViewDataSource, UICollectionViewD
             navigationController?.pushViewController(vc, animated: true)
         case .googleMap:
             let vc = GoogleMapDemoVC()
+            vc.title = content.rawValue
+            vc.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(vc, animated: true)
+        case .flash:
+            let vc = FlashDemoVC()
             vc.title = content.rawValue
             vc.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(vc, animated: true)

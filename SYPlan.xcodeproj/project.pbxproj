@@ -89,6 +89,8 @@
 		EB76F8BA2202772700C278D7 /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB76F8B32202772700C278D7 /* QueryService.swift */; };
 		EB76F8BB2202772700C278D7 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB76F8B42202772700C278D7 /* DownloadService.swift */; };
 		EB776D312276F57C000F39CB /* WebApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB776D302276F57C000F39CB /* WebApiManager.swift */; };
+		EB7BBCE72519CE3700115639 /* FlashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7BBCE62519CE3700115639 /* FlashView.swift */; };
+		EB7BBCF12519D2B400115639 /* FlashDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7BBCF02519D2B400115639 /* FlashDemoVC.swift */; };
 		EB7FB3C822D5C5D90018B879 /* UIAnimationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB3C722D5C5D90018B879 /* UIAnimationLabel.swift */; };
 		EB7FB3CB22D5CA6D0018B879 /* CADisplayLinkDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB3C922D5CA6D0018B879 /* CADisplayLinkDemoViewController.swift */; };
 		EB7FB3CC22D5CA6D0018B879 /* CADisplayLinkDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB7FB3CA22D5CA6D0018B879 /* CADisplayLinkDemoViewController.xib */; };
@@ -304,6 +306,8 @@
 		EB76F8B32202772700C278D7 /* QueryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
 		EB76F8B42202772700C278D7 /* DownloadService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
 		EB776D302276F57C000F39CB /* WebApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApiManager.swift; sourceTree = "<group>"; };
+		EB7BBCE62519CE3700115639 /* FlashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashView.swift; sourceTree = "<group>"; };
+		EB7BBCF02519D2B400115639 /* FlashDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashDemoVC.swift; sourceTree = "<group>"; };
 		EB7FB3C722D5C5D90018B879 /* UIAnimationLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAnimationLabel.swift; sourceTree = "<group>"; };
 		EB7FB3C922D5CA6D0018B879 /* CADisplayLinkDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CADisplayLinkDemoViewController.swift; sourceTree = "<group>"; };
 		EB7FB3CA22D5CA6D0018B879 /* CADisplayLinkDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CADisplayLinkDemoViewController.xib; sourceTree = "<group>"; };
@@ -499,6 +503,7 @@
 		EB2A63FC24AAD55E0049962E /* UI Page */ = {
 			isa = PBXGroup;
 			children = (
+				EB7BBCEE2519D28F00115639 /* FlashViewDemo */,
 				EBC8BD8A23FF88B500DB0D8F /* SaveImageDemo */,
 				EB13498C23E7B62400C1FF0F /* CropImageDemo */,
 				EBA5A50C217EAB71000A31E2 /* FontDemo */,
@@ -737,6 +742,14 @@
 				EB7FB3CA22D5CA6D0018B879 /* CADisplayLinkDemoViewController.xib */,
 			);
 			path = AnimationNumberDemo;
+			sourceTree = "<group>";
+		};
+		EB7BBCEE2519D28F00115639 /* FlashViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EB7BBCF02519D2B400115639 /* FlashDemoVC.swift */,
+			);
+			path = FlashViewDemo;
 			sourceTree = "<group>";
 		};
 		EB8090A122D6C523008220B7 /* GoogleAdNativeDemo */ = {
@@ -1034,6 +1047,7 @@
 				EB53C7C42301347C00BBB3EA /* LoadingView.swift */,
 				EB347D4422E70B6600677032 /* ScanBorderView.swift */,
 				EB36D57E2327797E005015C8 /* WatermarkView.swift */,
+				EB7BBCE62519CE3700115639 /* FlashView.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -1439,6 +1453,7 @@
 				EB4296D52369777500021579 /* OtherDemoVC.swift in Sources */,
 				EB818C5F21364AD700286D4C /* UploadTask.swift in Sources */,
 				EB44A336217583FE005AA612 /* ArticleViewModel.swift in Sources */,
+				EB7BBCF12519D2B400115639 /* FlashDemoVC.swift in Sources */,
 				EB6A9A1D23695ECC00B14576 /* CoreMLTextVC.swift in Sources */,
 				EBBE9D15235722AC00BB1D61 /* ContainerViewController.swift in Sources */,
 				EBE6DA9422438BE700A34C93 /* CoreImageViewController.swift in Sources */,
@@ -1448,6 +1463,7 @@
 				EB44A33D21759188005AA612 /* ArticleTableViewCell.swift in Sources */,
 				EB44A34021759804005AA612 /* WebViewController.swift in Sources */,
 				EBEFF6862278432900E1E696 /* Reachability.swift in Sources */,
+				EB7BBCE72519CE3700115639 /* FlashView.swift in Sources */,
 				EBC9B5E92424AD2F00AAC335 /* LinkDemoVC.swift in Sources */,
 				EBD16BF220C12F91006FA1E8 /* ViewController.swift in Sources */,
 				EB44A32F21757DC6005AA612 /* FacebookWebDemoViewController.swift in Sources */,
