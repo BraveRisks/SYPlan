@@ -35,7 +35,7 @@ class SYPlanTests: XCTestCase {
         XCTAssert("0976346095".isValidPhone, "該號碼符合手機格式")
         XCTAssert("886976346095".isValidPhone, "該號碼符合手機格式")
         XCTAssert("+886976346095".isValidPhone, "該號碼符合手機格式")
-        XCTAssert("+8869763460951111".isValidPhone, "該號碼符合手機格式")
+        XCTAssertFalse("+8869763460951111".isValidPhone, "該號碼不符合手機格式")
     }
 
 }

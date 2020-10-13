@@ -155,9 +155,12 @@ namespace sync {
 //     `<progress server version>`. It is intended to be used in the future in
 //     conjunction with the cooked history.
 //
+//  30 New error code, 222 "Client file has expired", was added. New parameter
+//     `<is subserver>` added to BIND message.
+//
 constexpr int get_current_protocol_version() noexcept
 {
-    return 29;
+    return 30;
 }
 
 
@@ -294,8 +297,6 @@ struct SyncProgress {
 
     /// The last client version integrated by the server.
     UploadCursor upload = {0, 0};
-
-    std::int_fast64_t downloadable_bytes = 0;
 };
 
 
@@ -366,12 +367,10 @@ enum class ProtocolError {
     client_file_blacklisted      = 219, // Client file has been blacklisted (IDENT)
     user_blacklisted             = 220, // User has been blacklisted (BIND)
     transact_before_upload       = 221, // Serialized transaction before upload completion
+    client_file_expired          = 222, // Client file has expired
 };
 
-inline constexpr bool is_session_level_error(ProtocolError error)
-{
-    return int(error) >= 200 && int(error) <= 299;
-}
+constexpr bool is_session_level_error(ProtocolError);
 
 /// Returns null if the specified protocol error code is not defined by
 /// ProtocolError.
@@ -427,6 +426,11 @@ inline bool are_mutually_consistent(UploadCursor a, UploadCursor b) noexcept
     if (a.client_version > b.client_version)
         return (a.last_integrated_server_version >= b.last_integrated_server_version);
     return (a.last_integrated_server_version == b.last_integrated_server_version);
+}
+
+constexpr bool is_session_level_error(ProtocolError error)
+{
+    return int(error) >= 200 && int(error) <= 299;
 }
 
 } // namespace sync
