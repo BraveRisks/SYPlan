@@ -45,15 +45,6 @@ extension String {
         }
     }
     
-    /// 將string轉成Dictionary<String, Any>
-    var dictionary: Dictionary<String, Any> {
-        get {
-            guard let data = self.data(using: .utf8) else { return [:] }
-            let any = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-            return any as? Dictionary<String, Any> ?? [:]
-        }
-    }
-    
     /// 計算文字的高度
     ///
     /// - Parameters:
@@ -94,8 +85,14 @@ extension String {
     func hexadecimal() -> Data? {
         var data = Data(capacity: self.count / 2)
         
-        let regex = try! NSRegularExpression(pattern: "[0-9a-f]{1,2}", options: .caseInsensitive)
-        regex.enumerateMatches(in: self, range: NSMakeRange(0, utf16.count)) { match, flags, stop in
+        guard let regex = try? NSRegularExpression(pattern: "[0-9a-f]{1,2}",
+                                                   options: .caseInsensitive)
+        else {
+            return nil
+        }
+        
+        regex.enumerateMatches(in: self, range: NSMakeRange(0, utf16.count))
+        { match, flags, stop in
             let byteString = (self as NSString).substring(with: match!.range)
             var num = UInt8(byteString, radix: 16)!
             data.append(&num, count: 1)

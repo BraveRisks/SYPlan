@@ -32,7 +32,9 @@ class GoogleAdDemoViewController: UIViewController {
     private func setup() {
         view.backgroundColor = UIColor(hex: "d84157")
         
-        guard let adView = Bundle.loadNib(with: "UnifiedNativeAdView", type: GADUnifiedNativeAdView.self) else {
+        guard let adView = Bundle.loadNib(with: "UnifiedNativeAdView",
+                                          type: GADUnifiedNativeAdView.self)
+        else {
             assert(false, "Could not load nib file for adView")
         }
         

@@ -13,6 +13,7 @@ import CoreData
 import RealmSwift
 import FBSDKCoreKit
 import GoogleMaps
+import Mix
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -147,7 +148,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         print("Realm URL = \(String(describing: config.fileURL))")
         print("Realm schemaVersion = \(String(describing: config.schemaVersion))")
-        
+
         // Notifacation
         if #available(iOS 10.0, *) {
             UNUserNotificationCenter.current().delegate = self
@@ -337,6 +338,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 @available(iOS 10.0, *)
 extension AppDelegate: UNUserNotificationCenterDelegate {
+    
     // 當 App 本來就在前景，收到推播時則會觸發 userNotificationCenter(:willPresent:withCompletionHandler:)
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification,

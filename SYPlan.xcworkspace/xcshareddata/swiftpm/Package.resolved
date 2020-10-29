@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Mix",
+        "repositoryURL": "https://github.com/BraveRisks/Mix",
+        "state": {
+          "branch": null,
+          "revision": "4cce71256bdcb2fd47a27317c84388c3d56db24f",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

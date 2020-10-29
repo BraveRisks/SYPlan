@@ -170,7 +170,10 @@ class AttributedStringBuilder: NSObject {
         let attachment = NSTextAttachment()
         attachment.image = image
         attachment.bounds = bounds
-        attributes[NSAttributedString.Key.attachment] = attachment
+        
+        let temp = NSAttributedString(attachment: attachment)
+        attrStr.append(temp)
+        
         return self
     }
     
@@ -203,14 +206,12 @@ class AttributedStringBuilder: NSObject {
 }
 
 extension String {
-    var toAttributedString: NSMutableAttributedString {
-        get {
-            return NSMutableAttributedString(string: self)
-        }
-    }
+    
+    var toAttributedString: NSMutableAttributedString { NSMutableAttributedString(string: self) }
 }
 
 extension NSMutableAttributedString {
+    
     func addWith(font: UIFont, range: NSRange) {
         self.addAttribute(NSAttributedString.Key.font, value: font, range: range)
     }
