@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Mix
 
 class ContainerViewController: UIViewController {
     

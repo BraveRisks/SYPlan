@@ -150,10 +150,10 @@
 		EBD16BF720C12F92006FA1E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD16BF620C12F92006FA1E8 /* Assets.xcassets */; };
 		EBD16BFA20C12F92006FA1E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD16BF820C12F92006FA1E8 /* LaunchScreen.storyboard */; };
 		EBD4625A24C67E1400393677 /* OSLogDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4625924C67E1400393677 /* OSLogDemoVC.swift */; };
+		EBD6E76425515FF1008FA990 /* Mix in Frameworks */ = {isa = PBXBuildFile; productRef = EBD6E76325515FF1008FA990 /* Mix */; };
 		EBE6DA9422438BE700A34C93 /* CoreImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE6DA9322438BE700A34C93 /* CoreImageViewController.swift */; };
 		EBEFF6862278432900E1E696 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFF6852278432900E1E696 /* Reachability.swift */; };
 		EBF0B3032252EC0E00E2712E /* PDFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF0B3022252EC0E00E2712E /* PDFManager.swift */; };
-		EBF8F00A25359B7A009F1E77 /* Mix in Frameworks */ = {isa = PBXBuildFile; productRef = EBF8F00925359B7A009F1E77 /* Mix */; };
 		EBF8F22E22939DA10097D402 /* UIFitTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF8F22D22939DA10097D402 /* UIFitTextView.swift */; };
 		EBF9CB912189448C00B8C2C5 /* CardLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF9CB902189448C00B8C2C5 /* CardLayout.swift */; };
 		EBFA75B022657461009DCB4F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFA75AF22657461009DCB4F /* Date+Extension.swift */; };
@@ -417,7 +417,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBF8F00A25359B7A009F1E77 /* Mix in Frameworks */,
+				EBD6E76425515FF1008FA990 /* Mix in Frameworks */,
 				EB5E7CE922DC06F300CF6A37 /* AdSupport.framework in Frameworks */,
 				1F39E26FA845719902AA48F2 /* Pods_SYPlan.framework in Frameworks */,
 			);
@@ -1159,7 +1159,7 @@
 			);
 			name = SYPlan;
 			packageProductDependencies = (
-				EBF8F00925359B7A009F1E77 /* Mix */,
+				EBD6E76325515FF1008FA990 /* Mix */,
 			);
 			productName = SYPlan;
 			productReference = EBD16BEC20C12F91006FA1E8 /* SYPlan.app */;
@@ -1262,7 +1262,7 @@
 			);
 			mainGroup = EBD16BE320C12F91006FA1E8;
 			packageReferences = (
-				EBF8F00825359B7A009F1E77 /* XCRemoteSwiftPackageReference "Mix" */,
+				EBD6E76225515FF1008FA990 /* XCRemoteSwiftPackageReference "Mix" */,
 			);
 			productRefGroup = EBD16BED20C12F91006FA1E8 /* Products */;
 			projectDirPath = "";
@@ -1827,6 +1827,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = AdHoc;
@@ -1848,6 +1849,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SYPlan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2007,6 +2009,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -2061,6 +2064,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -2082,6 +2086,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SYPlan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2113,6 +2118,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SYPlan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2337,20 +2343,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		EBF8F00825359B7A009F1E77 /* XCRemoteSwiftPackageReference "Mix" */ = {
+		EBD6E76225515FF1008FA990 /* XCRemoteSwiftPackageReference "Mix" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/BraveRisks/Mix";
 			requirement = {
-				kind = exactVersion;
-				version = 1.0.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EBF8F00925359B7A009F1E77 /* Mix */ = {
+		EBD6E76325515FF1008FA990 /* Mix */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EBF8F00825359B7A009F1E77 /* XCRemoteSwiftPackageReference "Mix" */;
+			package = EBD6E76225515FF1008FA990 /* XCRemoteSwiftPackageReference "Mix" */;
 			productName = Mix;
 		};
 /* End XCSwiftPackageProductDependency section */

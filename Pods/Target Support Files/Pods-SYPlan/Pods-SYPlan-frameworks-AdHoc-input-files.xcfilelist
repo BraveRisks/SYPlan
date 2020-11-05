@@ -1,5 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-SYPlan/Pods-SYPlan-frameworks.sh
-${BUILT_PRODUCTS_DIR}/EasyAlbum/EasyAlbum.framework
 ${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework
 ${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework
 ${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework

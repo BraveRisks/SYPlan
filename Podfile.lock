@@ -1,5 +1,4 @@
 PODS:
-  - EasyAlbum (2.2.0)
   - FacebookCore (0.9.0):
     - FBSDKCoreKit (~> 5.0)
   - FacebookLogin (0.9.0):
@@ -107,7 +106,6 @@ PODS:
   - Toaster (2.3.0)
 
 DEPENDENCIES:
-  - EasyAlbum (~> 2.2.0)
   - FacebookCore
   - FacebookLogin
   - Firebase/Analytics
@@ -121,7 +119,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - EasyAlbum
     - FacebookCore
     - FacebookLogin
     - FBSDKCoreKit
@@ -156,7 +153,6 @@ CHECKOUT OPTIONS:
     :git: https://github.com/devxoul/Toaster.git
 
 SPEC CHECKSUMS:
-  EasyAlbum: d6c2838350076f4a4e8e2687a7230e0832fd46a5
   FacebookCore: ba86524b66cfa86d0f8e65d08faa8504a9f732dd
   FacebookLogin: 6cee9fd6e1fe976fe8f7eec199e27b28b14f5d63
   FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
@@ -181,6 +177,6 @@ SPEC CHECKSUMS:
   RealmSwift: 15ddd6b3398ebfc99810811c44f095df1313adb3
   Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
 
-PODFILE CHECKSUM: 8fd7fb7fc01a4592e2c8c5d988d9d46c604b5db1
+PODFILE CHECKSUM: 23d6e923d3fe74cf93d9d5447efbd2627e6cae4a
 
 COCOAPODS: 1.8.4

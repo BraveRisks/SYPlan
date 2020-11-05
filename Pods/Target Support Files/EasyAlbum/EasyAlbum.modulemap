@@ -1,6 +1,0 @@
-framework module EasyAlbum {
-  umbrella header "EasyAlbum-umbrella.h"
-
-  export *
-  module * { export * }
-}
