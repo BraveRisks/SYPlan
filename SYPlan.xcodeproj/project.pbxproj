@@ -59,7 +59,7 @@
 		EB4C5560228D68B900C72B7A /* HttpSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4C555F228D68B900C72B7A /* HttpSession.swift */; };
 		EB5280CA23FF7ED0001EDBA3 /* IBConstructible.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5280C923FF7ED0001EDBA3 /* IBConstructible.swift */; };
 		EB53C7C52301347C00BBB3EA /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB53C7C42301347C00BBB3EA /* LoadingView.swift */; };
-		EB56D1242123BF6E00BE8BFC /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56D1232123BF6E00BE8BFC /* LocationViewController.swift */; };
+		EB56D1242123BF6E00BE8BFC /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56D1232123BF6E00BE8BFC /* LocationVC.swift */; };
 		EB56D14021240EB400BE8BFC /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56D13F21240EB400BE8BFC /* ShareViewController.swift */; };
 		EB56D14321240EB400BE8BFC /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB56D14121240EB400BE8BFC /* MainInterface.storyboard */; };
 		EB56D14721240EB400BE8BFC /* SYPlanShare.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EB56D13D21240EB400BE8BFC /* SYPlanShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -144,13 +144,14 @@
 		EBCBF9582368218300A9EA50 /* CatsAndDogs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EBCBF9572368218300A9EA50 /* CatsAndDogs.mlmodel */; };
 		EBCBF95D236822EF00A9EA50 /* CoreMLVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCBF95C236822EF00A9EA50 /* CoreMLVC.swift */; };
 		EBCBF961236833ED00A9EA50 /* CGImagePropertyOrientation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCBF960236833ED00A9EA50 /* CGImagePropertyOrientation+Extension.swift */; };
+		EBCFF48D2554D5A10092D3B5 /* EasyAlbum in Frameworks */ = {isa = PBXBuildFile; productRef = EBCFF48C2554D5A10092D3B5 /* EasyAlbum */; };
 		EBD16BF020C12F91006FA1E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD16BEF20C12F91006FA1E8 /* AppDelegate.swift */; };
 		EBD16BF220C12F91006FA1E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD16BF120C12F91006FA1E8 /* ViewController.swift */; };
 		EBD16BF520C12F91006FA1E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD16BF320C12F91006FA1E8 /* Main.storyboard */; };
 		EBD16BF720C12F92006FA1E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD16BF620C12F92006FA1E8 /* Assets.xcassets */; };
 		EBD16BFA20C12F92006FA1E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD16BF820C12F92006FA1E8 /* LaunchScreen.storyboard */; };
 		EBD4625A24C67E1400393677 /* OSLogDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4625924C67E1400393677 /* OSLogDemoVC.swift */; };
-		EBD6E76425515FF1008FA990 /* Mix in Frameworks */ = {isa = PBXBuildFile; productRef = EBD6E76325515FF1008FA990 /* Mix */; };
+		EBE4FCD2255BDFDE009A84D8 /* LifeCircleVCDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4FCD1255BDFDE009A84D8 /* LifeCircleVCDemo.swift */; };
 		EBE6DA9422438BE700A34C93 /* CoreImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE6DA9322438BE700A34C93 /* CoreImageViewController.swift */; };
 		EBEFF6862278432900E1E696 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFF6852278432900E1E696 /* Reachability.swift */; };
 		EBF0B3032252EC0E00E2712E /* PDFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF0B3022252EC0E00E2712E /* PDFManager.swift */; };
@@ -273,7 +274,7 @@
 		EB4C555F228D68B900C72B7A /* HttpSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpSession.swift; sourceTree = "<group>"; };
 		EB5280C923FF7ED0001EDBA3 /* IBConstructible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBConstructible.swift; sourceTree = "<group>"; };
 		EB53C7C42301347C00BBB3EA /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		EB56D1232123BF6E00BE8BFC /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		EB56D1232123BF6E00BE8BFC /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		EB56D13D21240EB400BE8BFC /* SYPlanShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SYPlanShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB56D13F21240EB400BE8BFC /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		EB56D14221240EB400BE8BFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -370,6 +371,7 @@
 		EBD16BF920C12F92006FA1E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBD16BFB20C12F92006FA1E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBD4625924C67E1400393677 /* OSLogDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogDemoVC.swift; sourceTree = "<group>"; };
+		EBE4FCD1255BDFDE009A84D8 /* LifeCircleVCDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCircleVCDemo.swift; sourceTree = "<group>"; };
 		EBE6DA9322438BE700A34C93 /* CoreImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreImageViewController.swift; sourceTree = "<group>"; };
 		EBEFF6852278432900E1E696 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		EBF0B3022252EC0E00E2712E /* PDFManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFManager.swift; sourceTree = "<group>"; };
@@ -417,7 +419,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBD6E76425515FF1008FA990 /* Mix in Frameworks */,
+				EBCFF48D2554D5A10092D3B5 /* EasyAlbum in Frameworks */,
 				EB5E7CE922DC06F300CF6A37 /* AdSupport.framework in Frameworks */,
 				1F39E26FA845719902AA48F2 /* Pods_SYPlan.framework in Frameworks */,
 			);
@@ -503,6 +505,7 @@
 		EB2A63FC24AAD55E0049962E /* UI Page */ = {
 			isa = PBXGroup;
 			children = (
+				EBE4FCC4255BDFB6009A84D8 /* LifeCircleDemo */,
 				EB7BBCEE2519D28F00115639 /* FlashViewDemo */,
 				EBC8BD8A23FF88B500DB0D8F /* SaveImageDemo */,
 				EB13498C23E7B62400C1FF0F /* CropImageDemo */,
@@ -670,7 +673,7 @@
 		EB56D1222123BDFC00BE8BFC /* LocationDemo */ = {
 			isa = PBXGroup;
 			children = (
-				EB56D1232123BF6E00BE8BFC /* LocationViewController.swift */,
+				EB56D1232123BF6E00BE8BFC /* LocationVC.swift */,
 			);
 			path = LocationDemo;
 			sourceTree = "<group>";
@@ -1032,6 +1035,14 @@
 			path = OSLogDemo;
 			sourceTree = "<group>";
 		};
+		EBE4FCC4255BDFB6009A84D8 /* LifeCircleDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EBE4FCD1255BDFDE009A84D8 /* LifeCircleVCDemo.swift */,
+			);
+			path = LifeCircleDemo;
+			sourceTree = "<group>";
+		};
 		EBE6DA9222438BC600A34C93 /* CoreImageDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -1159,7 +1170,7 @@
 			);
 			name = SYPlan;
 			packageProductDependencies = (
-				EBD6E76325515FF1008FA990 /* Mix */,
+				EBCFF48C2554D5A10092D3B5 /* EasyAlbum */,
 			);
 			productName = SYPlan;
 			productReference = EBD16BEC20C12F91006FA1E8 /* SYPlan.app */;
@@ -1262,7 +1273,7 @@
 			);
 			mainGroup = EBD16BE320C12F91006FA1E8;
 			packageReferences = (
-				EBD6E76225515FF1008FA990 /* XCRemoteSwiftPackageReference "Mix" */,
+				EBCFF48B2554D5A10092D3B5 /* XCRemoteSwiftPackageReference "EasyAlbum" */,
 			);
 			productRefGroup = EBD16BED20C12F91006FA1E8 /* Products */;
 			projectDirPath = "";
@@ -1510,13 +1521,14 @@
 				EBD4625A24C67E1400393677 /* OSLogDemoVC.swift in Sources */,
 				EB8090A422D6D2DD008220B7 /* GoogleAdDemoViewController.swift in Sources */,
 				EB653E93250F516800DF90F4 /* KKBox-exam-solution.swift in Sources */,
+				EBE4FCD2255BDFDE009A84D8 /* LifeCircleVCDemo.swift in Sources */,
 				EB4C5560228D68B900C72B7A /* HttpSession.swift in Sources */,
 				EBC28C22212FDF35000B87EA /* URL+Extension.swift in Sources */,
 				EB76F8B52202772700C278D7 /* Download.swift in Sources */,
 				EB653E98250F518200DF90F4 /* Sequence+Extension.swift in Sources */,
 				EB02605324BC47340086CD5A /* UIAlertController+Extension.swift in Sources */,
 				EB877DB62109686E0075788C /* RegularExpressionViewController.swift in Sources */,
-				EB56D1242123BF6E00BE8BFC /* LocationViewController.swift in Sources */,
+				EB56D1242123BF6E00BE8BFC /* LocationVC.swift in Sources */,
 				EB11848121885EE200753334 /* PinterestViewController.swift in Sources */,
 				EBF9CB912189448C00B8C2C5 /* CardLayout.swift in Sources */,
 				EB3EF9EE23AB2567007F07AB /* ApiDemoVC.swift in Sources */,
@@ -2343,21 +2355,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		EBD6E76225515FF1008FA990 /* XCRemoteSwiftPackageReference "Mix" */ = {
+		EBCFF48B2554D5A10092D3B5 /* XCRemoteSwiftPackageReference "EasyAlbum" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/BraveRisks/Mix";
+			repositoryURL = "https://github.com/ray00178/EasyAlbum";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.1;
+				minimumVersion = 2.3.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EBD6E76325515FF1008FA990 /* Mix */ = {
+		EBCFF48C2554D5A10092D3B5 /* EasyAlbum */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EBD6E76225515FF1008FA990 /* XCRemoteSwiftPackageReference "Mix" */;
-			productName = Mix;
+			package = EBCFF48B2554D5A10092D3B5 /* XCRemoteSwiftPackageReference "EasyAlbum" */;
+			productName = EasyAlbum;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -11,38 +11,37 @@ import UIKit
 extension String {
     
     /// 轉換為NSString
-    var nsString: NSString {
-        return self as NSString
-    }
+    var nsString: NSString { self as NSString }
     
     /// 檢查是否為有效的台灣手機格式
     var isValidPhone: Bool {
-        get {
-            let pattern = "09\\d{8}$|\\+?8869\\d{8}$"
-            let regex = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
-            let matches = regex.matches(in: self, options: .withTransparentBounds, range: NSRange(location: 0, length: self.count))
-            return matches.count > 0
-        }
+        let pattern = "09\\d{8}$|\\+?8869\\d{8}$"
+        let regex = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
+        let matches = regex.matches(in: self, options: .withTransparentBounds, range: NSRange(location: 0, length: self.count))
+        return matches.count > 0
     }
     
     /// 檢查是否為有效的Email格式
     var isValidEmail: Bool {
-        get {
-            let pattern = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-            let regex = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
-            let matches = regex.matches(in: self, options: .withTransparentBounds, range: NSRange(location: 0, length: self.count))
-            return matches.count > 0
-        }
+        let pattern = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let regex = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
+        let matches = regex.matches(in: self, options: .withTransparentBounds, range: NSRange(location: 0, length: self.count))
+        return matches.count > 0
     }
     
     /// 檢查輸入字串中有包含「號」
     var hasAddressNo: Bool {
-        get {
-            let pattern = ".*號.*"
-            let regex = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
-            let matches = regex.matches(in: self, options: .withTransparentBounds, range: NSRange(location: 0, length: self.count))
-            return matches.count > 0
-        }
+        let pattern = ".*號.*"
+        let regex = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
+        let matches = regex.matches(in: self, options: .withTransparentBounds, range: NSRange(location: 0, length: self.count))
+        return matches.count > 0
+    }
+    
+    /// 將string轉成Dictionary<String, Any>
+    var dictionary: Dictionary<String, Any> {
+        guard let data = self.data(using: .utf8) else { return [:] }
+        let any = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+        return any as? Dictionary<String, Any> ?? [:]
     }
     
     /// 計算文字的高度

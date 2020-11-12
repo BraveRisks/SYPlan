@@ -2,12 +2,12 @@
   "object": {
     "pins": [
       {
-        "package": "Mix",
-        "repositoryURL": "https://github.com/BraveRisks/Mix",
+        "package": "EasyAlbum",
+        "repositoryURL": "https://github.com/ray00178/EasyAlbum",
         "state": {
           "branch": null,
-          "revision": "67e562bccba88cde1ed93dd41ed59f573e1d38e4",
-          "version": "1.11.5"
+          "revision": "c5493f3e6c439666f50d60f2bf433d38a37debe9",
+          "version": "2.3.1"
         }
       }
     ]

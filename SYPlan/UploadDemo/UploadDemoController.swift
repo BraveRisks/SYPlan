@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import EasyAlbum
+import EasyAlbum
 
 class UploadDemoController: UIViewController {
     private var mTableView: UITableView!
@@ -78,9 +78,9 @@ class UploadDemoController: UIViewController {
     }
     
     @objc private func goGallery(_ btn: UIBarButtonItem) {
-//        EasyAlbum.of(appName: "SYPlan")
-//                 .limit(10)
-//                 .start(self, delegate: self)
+        EasyAlbum.of(appName: "SYPlan")
+                 .limit(10)
+                 .start(self, delegate: self)
     }
 }
 
@@ -109,36 +109,36 @@ extension UploadDemoController: UploadTableCellDelegate {
     }
 }
 
-//extension UploadDemoController: EasyAlbumDelegate {
-//    func easyAlbumDidSelected(_ photos: [AlbumData]) {
-//        if tasks.count > 0 {
-//            tasks.removeAll()
-//            mTableView.reloadData()
-//        }
-//
-//        let queue = DispatchQueue(label: "com.sinyi.SYPlan.Resize")
-//        let group = DispatchGroup()
-//        for i in 0 ..< photos.count {
-//            group.enter()
-//            queue.async(group: group) {
-//                let oriImg = photos[i].image!
-//                self.tasks.append(UploadTask(oriImg: oriImg, clipImg: oriImg.resizeForScale(), index: i))
-//                print("Compression --> \(i) - \(self.tasks[i].clipImg)")
-//                group.leave()
-//            }
-//        }
-//        group.notify(queue: .main) {
-//            self.mTableView.reloadData()
-//            for task in self.tasks {
-//                self.uploadPhoto(task)
-//            }
-//        }
-//    }
-//
-//    func easyAlbumDidCanceled() {
-//
-//    }
-//}
+extension UploadDemoController: EasyAlbumDelegate {
+    func easyAlbumDidSelected(_ photos: [AlbumData]) {
+        if tasks.count > 0 {
+            tasks.removeAll()
+            mTableView.reloadData()
+        }
+
+        let queue = DispatchQueue(label: "com.sinyi.SYPlan.Resize")
+        let group = DispatchGroup()
+        for i in 0 ..< photos.count {
+            group.enter()
+            queue.async(group: group) {
+                let oriImg = photos[i].image!
+                self.tasks.append(UploadTask(oriImg: oriImg, clipImg: oriImg.resizeForScale(), index: i))
+                print("Compression --> \(i) - \(self.tasks[i].clipImg)")
+                group.leave()
+            }
+        }
+        group.notify(queue: .main) {
+            self.mTableView.reloadData()
+            for task in self.tasks {
+                self.uploadPhoto(task)
+            }
+        }
+    }
+
+    func easyAlbumDidCanceled() {
+
+    }
+}
 
 extension UploadDemoController: URLSessionDelegate, URLSessionDataDelegate {
     func urlSession(_ session: URLSession, task: URLSessionTask, didSendBodyData bytesSent: Int64, totalBytesSent: Int64, totalBytesExpectedToSend: Int64) {

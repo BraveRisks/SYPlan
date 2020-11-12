@@ -1,5 +1,5 @@
 //
-//  LocationViewController.swift
+//  LocationVC.swift
 //  SYPlan
 //
 //  Created by Ray on 2018/8/15.
@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class LocationViewController: UIViewController {
+class LocationVC: UIViewController {
 
     var locationManager: CLLocationManager?
     
@@ -110,7 +110,7 @@ class LocationViewController: UIViewController {
     }
 }
 
-extension LocationViewController: CLLocationManagerDelegate {
+extension LocationVC: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         // 取得定位授權權限狀況
         switch status {
@@ -145,7 +145,7 @@ extension LocationViewController: CLLocationManagerDelegate {
     }
 }
 
-extension LocationViewController: UITableViewDataSource, UITableViewDelegate {
+extension LocationVC: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

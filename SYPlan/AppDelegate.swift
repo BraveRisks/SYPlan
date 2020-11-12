@@ -13,7 +13,6 @@ import CoreData
 import RealmSwift
 import FBSDKCoreKit
 import GoogleMaps
-import Mix
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -148,7 +147,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         print("Realm URL = \(String(describing: config.fileURL))")
         print("Realm schemaVersion = \(String(describing: config.schemaVersion))")
-
+        
         // Notifacation
         if #available(iOS 10.0, *) {
             UNUserNotificationCenter.current().delegate = self
