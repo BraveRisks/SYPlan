@@ -11,6 +11,11 @@
 - [Dark Mode](https://github.com/BraveRisks/SYPlan/blob/master/SYPlan/DarkModeDemo/DarkModeVC.swift)
 - [Crop Image](https://github.com/BraveRisks/SYPlan/blob/master/SYPlan/CropImageDemo/CropImageDemoVC.swift)
 - [Save Image](https://github.com/BraveRisks/SYPlan/blob/master/SYPlan/SaveImageDemo/SaveImageVC.swift)
+- [LifeCircle](https://github.com/BraveRisks/SYPlan/blob/master/SYPlan/LifeCircleDemo/LifeCircleDemoVC.swift)
+  ```swift
+  如果是UIViewController，didSet{} early trigger viewDidLoad()
+  如果是UIView，init() early trigger didSet{}
+  ```
 
 ---
 
