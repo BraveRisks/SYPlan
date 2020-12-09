@@ -151,7 +151,7 @@
 		EBD16BF720C12F92006FA1E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD16BF620C12F92006FA1E8 /* Assets.xcassets */; };
 		EBD16BFA20C12F92006FA1E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD16BF820C12F92006FA1E8 /* LaunchScreen.storyboard */; };
 		EBD4625A24C67E1400393677 /* OSLogDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4625924C67E1400393677 /* OSLogDemoVC.swift */; };
-		EBE4FCD2255BDFDE009A84D8 /* LifeCircleVCDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4FCD1255BDFDE009A84D8 /* LifeCircleVCDemo.swift */; };
+		EBE4FCD2255BDFDE009A84D8 /* LifeCircleDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4FCD1255BDFDE009A84D8 /* LifeCircleDemoVC.swift */; };
 		EBE6DA9422438BE700A34C93 /* CoreImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE6DA9322438BE700A34C93 /* CoreImageViewController.swift */; };
 		EBEFF6862278432900E1E696 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFF6852278432900E1E696 /* Reachability.swift */; };
 		EBF0B3032252EC0E00E2712E /* PDFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF0B3022252EC0E00E2712E /* PDFManager.swift */; };
@@ -371,7 +371,7 @@
 		EBD16BF920C12F92006FA1E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBD16BFB20C12F92006FA1E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBD4625924C67E1400393677 /* OSLogDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogDemoVC.swift; sourceTree = "<group>"; };
-		EBE4FCD1255BDFDE009A84D8 /* LifeCircleVCDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCircleVCDemo.swift; sourceTree = "<group>"; };
+		EBE4FCD1255BDFDE009A84D8 /* LifeCircleDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCircleDemoVC.swift; sourceTree = "<group>"; };
 		EBE6DA9322438BE700A34C93 /* CoreImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreImageViewController.swift; sourceTree = "<group>"; };
 		EBEFF6852278432900E1E696 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		EBF0B3022252EC0E00E2712E /* PDFManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFManager.swift; sourceTree = "<group>"; };
@@ -1038,7 +1038,7 @@
 		EBE4FCC4255BDFB6009A84D8 /* LifeCircleDemo */ = {
 			isa = PBXGroup;
 			children = (
-				EBE4FCD1255BDFDE009A84D8 /* LifeCircleVCDemo.swift */,
+				EBE4FCD1255BDFDE009A84D8 /* LifeCircleDemoVC.swift */,
 			);
 			path = LifeCircleDemo;
 			sourceTree = "<group>";
@@ -1521,7 +1521,7 @@
 				EBD4625A24C67E1400393677 /* OSLogDemoVC.swift in Sources */,
 				EB8090A422D6D2DD008220B7 /* GoogleAdDemoViewController.swift in Sources */,
 				EB653E93250F516800DF90F4 /* KKBox-exam-solution.swift in Sources */,
-				EBE4FCD2255BDFDE009A84D8 /* LifeCircleVCDemo.swift in Sources */,
+				EBE4FCD2255BDFDE009A84D8 /* LifeCircleDemoVC.swift in Sources */,
 				EB4C5560228D68B900C72B7A /* HttpSession.swift in Sources */,
 				EBC28C22212FDF35000B87EA /* URL+Extension.swift in Sources */,
 				EB76F8B52202772700C278D7 /* Download.swift in Sources */,

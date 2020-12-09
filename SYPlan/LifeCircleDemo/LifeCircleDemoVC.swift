@@ -1,5 +1,5 @@
 //
-//  LifeCircleVCDemo.swift
+//  LifeCircleDemoVC.swift
 //  SYPlan
 //
 //  Created by Ray on 2020/11/11.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class LifeCircleVCDemo: UIViewController {
+class LifeCircleDemoVC: UIViewController {
 
     private var label: UILabel?
     private var tableView: UITableView?
     
     var value: String? {
-        didSet { print("LifeCircleVCDemo didSet = step 1") }
+        didSet { print("LifeCircleDemoVC didSet = step 1") }
     }
     
     override func viewDidLoad() {
@@ -35,7 +35,7 @@ class LifeCircleVCDemo: UIViewController {
     }
 
     private func setup() {
-        print("LifeCircleVCDemo viewDidLoad = step 2")
+        print("LifeCircleDemoVC viewDidLoad = step 2")
         
         label = UILabel()
         label?.text = "didSet before viewDidLoad"
@@ -44,7 +44,7 @@ class LifeCircleVCDemo: UIViewController {
         label?.numberOfLines = 0
         label?.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(label!)
-        
+
         tableView = UITableView(frame: .zero, style: .plain)
         tableView?.addCell(LifeCircleCell.self, isNib: false)
         tableView?.rowHeight = 80.0
@@ -52,7 +52,7 @@ class LifeCircleVCDemo: UIViewController {
         tableView?.delegate = self
         tableView?.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView!)
-        
+
         // AutoLayout
         label?.topAnchor
               .constraint(equalTo: view.topAnchor, constant: 20.0)
@@ -63,7 +63,7 @@ class LifeCircleVCDemo: UIViewController {
         label?.trailingAnchor
               .constraint(equalTo: view.trailingAnchor, constant: -16.0)
               .isActive = true
-        
+
         tableView?.topAnchor
                   .constraint(equalTo: label!.bottomAnchor)
                   .isActive = true
@@ -81,7 +81,7 @@ class LifeCircleVCDemo: UIViewController {
     }
 }
 
-extension LifeCircleVCDemo: UITableViewDataSource, UITableViewDelegate {
+extension LifeCircleDemoVC: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -98,7 +98,7 @@ extension LifeCircleVCDemo: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-extension LifeCircleVCDemo {
+extension LifeCircleDemoVC {
     
     class LifeCircleCell: UITableViewCell {
         

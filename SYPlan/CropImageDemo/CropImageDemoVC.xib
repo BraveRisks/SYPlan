@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -42,7 +43,7 @@
                             <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done"/>
                         </textField>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" systemColor="systemBrownColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Q3F-XN-aZd"/>
                         <constraint firstAttribute="bottom" secondItem="pha-hp-7sc" secondAttribute="bottom" id="QF7-7Z-Qzs"/>
@@ -68,7 +69,7 @@
                             <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done"/>
                         </textField>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" systemColor="systemPinkColor"/>
                     <constraints>
                         <constraint firstItem="cnS-uT-GQ1" firstAttribute="leading" secondItem="9tc-M7-Fl3" secondAttribute="trailing" constant="10" id="0zS-au-Qdg"/>
                         <constraint firstItem="9tc-M7-Fl3" firstAttribute="leading" secondItem="diS-9Z-Bvm" secondAttribute="leading" constant="10" id="6zm-3g-0nG"/>
@@ -94,7 +95,7 @@
                             <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done"/>
                         </textField>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" systemColor="systemTealColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="2OW-cp-SEi"/>
                         <constraint firstAttribute="trailing" secondItem="XOx-6T-uwm" secondAttribute="trailing" constant="10" id="CoC-cZ-wCZ"/>
@@ -109,18 +110,18 @@
                     <rect key="frame" x="10" y="248" width="394" height="40"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eO-mE-sVb">
-                            <rect key="frame" x="10" y="0.0" width="68.5" height="40"/>
+                            <rect key="frame" x="10" y="0.0" width="68" height="40"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="輸入剪裁高度" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pnc-cP-jOV">
-                            <rect key="frame" x="88.5" y="3" width="295.5" height="34"/>
+                            <rect key="frame" x="88" y="3" width="296" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done"/>
                         </textField>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" systemColor="systemYellowColor"/>
                     <constraints>
                         <constraint firstItem="6eO-mE-sVb" firstAttribute="leading" secondItem="zsQ-s8-mqd" secondAttribute="leading" constant="10" id="6AF-zP-X2R"/>
                         <constraint firstItem="pnc-cP-jOV" firstAttribute="leading" secondItem="6eO-mE-sVb" secondAttribute="trailing" constant="10" id="LUO-rc-3JW"/>
@@ -140,11 +141,11 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIu-ch-K5f">
                             <rect key="frame" x="197" y="199.5" width="0.0" height="0.0"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                            <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" systemColor="systemRedColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <constraints>
                         <constraint firstItem="h50-P5-Tz5" firstAttribute="top" secondItem="oCE-DA-dU0" secondAttribute="top" id="5I0-ff-jnn"/>
                         <constraint firstItem="wIu-ch-K5f" firstAttribute="centerX" secondItem="oCE-DA-dU0" secondAttribute="centerX" id="7ZA-jg-px1"/>
@@ -163,11 +164,11 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvj-S6-D32">
                             <rect key="frame" x="197" y="272.5" width="0.0" height="0.0"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                            <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" systemColor="systemRedColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     <constraints>
                         <constraint firstItem="fM8-BT-tHe" firstAttribute="leading" secondItem="CVh-Ur-m2z" secondAttribute="leading" id="5EH-tq-YFT"/>
                         <constraint firstAttribute="bottom" secondItem="hvj-S6-D32" secondAttribute="bottom" id="OYz-Hl-vnw"/>
@@ -177,9 +178,9 @@
                         <constraint firstAttribute="bottom" secondItem="fM8-BT-tHe" secondAttribute="bottom" id="mSi-wg-n38"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xig-5g-kI9">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xig-5g-kI9">
                     <rect key="frame" x="10" y="802" width="394" height="50"/>
-                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" systemColor="systemRedColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="gKs-la-DZK"/>
                     </constraints>
@@ -189,6 +190,7 @@
                     </state>
                 </button>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="tX0-zY-FNU" firstAttribute="leading" secondItem="wnw-aO-j7b" secondAttribute="leading" id="9n9-4b-zlg"/>
@@ -216,8 +218,30 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wnw-aO-j7b" secondAttribute="trailing" constant="10" id="zde-WE-7hM"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

@@ -62,6 +62,7 @@ extension FacebookWebDemoViewController: UITableViewDataSource, UITableViewDeleg
         tableView.deselectRow(at: indexPath, animated: false)
         
         let web = WebViewController()
+        web.url = indexPath.row % 2 == 0 ? "https://www.mobile01.com/" : "https://www.sinyi.com.tw"
         web.modalPresentationStyle = .overCurrentContext
         present(web, animated: true, completion: nil)
     }

@@ -412,7 +412,7 @@ extension ContainerViewController: UICollectionViewDataSource, UICollectionViewD
             vc.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(vc, animated: true)
         case .lifeCircle:
-            let vc = LifeCircleVCDemo()
+            let vc = LifeCircleDemoVC()
             vc.value = "didSet"
             vc.title = content.rawValue
             vc.hidesBottomBarWhenPushed = true

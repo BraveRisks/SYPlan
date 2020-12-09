@@ -16,8 +16,11 @@ class WebViewController: UIViewController {
     private var velocityThreshold: CGFloat = 3600.0
     private var originYThreshold: CGFloat = 530.0
     
-    // 用來判斷是否滾動至頂部
+    /// 用來判斷是否滾動至頂部
     private var isScrollToTap: Bool = true
+    
+    /// 開啟網址
+    var url: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +40,7 @@ class WebViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        fbWebView.url = "https://www.mobile01.com/"
+        fbWebView.url = url
     }
     
     override func viewDidDisappear(_ animated: Bool) {
