@@ -304,6 +304,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return handle
     }
     
+    /// Universal Links
+    /// Reference: https://developer.apple.com/documentation/xcode/allowing_apps_and_websites_to_link_to_your_content/supporting_universal_links_in_your_app
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        
+        guard userActivity.activityType == NSUserActivityTypeBrowsingWeb,
+              let webURL = userActivity.webpageURL,
+              let components = NSURLComponents(url: webURL, resolvingAgainstBaseURL: true) else {
+            return false
+        }
+        
+        // Check for specific URL components that you need.
+        guard let path = components.path,
+              let params = components.queryItems else {
+            return false
+        }
+        
+        // path = /demo/
+        // params = [number=plan1234]
+        print("path = \(path), params = \(params)")
+
+        if let number = params.first(where: { $0.name == "number" } )?.value {
+            print("number = \(number)")
+            let tabVC = window?.rootViewController as? TabBarController
+            tabVC?.setTabIndex(on: 0, content: .fbWeb)
+            return true
+        } else {
+            print("Content not found")
+            return false
+        }
+    }
+    
     func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
         backgroundSessionCompletionHandler = completionHandler
     }

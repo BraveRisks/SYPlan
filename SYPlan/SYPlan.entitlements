@@ -8,5 +8,10 @@
 	<array>
 		<string>Default</string>
 	</array>
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>applinks:applelogindemo.herokuapp.com</string>
+		<string>applinks:applelogindemo.herokuapp.com?mode=developer+managed</string>
+	</array>
 </dict>
 </plist>
