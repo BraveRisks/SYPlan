@@ -28,6 +28,8 @@
 		EB25F3C922816DF2002B1F23 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB25F3C822816DF2002B1F23 /* CoreDataViewController.swift */; };
 		EB25F3CC22817696002B1F23 /* Person.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB25F3CA22817696002B1F23 /* Person.xcdatamodeld */; };
 		EB26A3582387825E0090E25D /* AttributedStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB877DB9210975CF0075788C /* AttributedStringHelper.swift */; };
+		EB29DC3925AC284600394B2D /* TabSwipeDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29DC3725AC284600394B2D /* TabSwipeDemoVC.swift */; };
+		EB29DC3A25AC284600394B2D /* TabSwipeDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB29DC3825AC284600394B2D /* TabSwipeDemoVC.xib */; };
 		EB2A640624AAE5280049962E /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2A640524AAE5280049962E /* NotificationCenter.framework */; };
 		EB2A640924AAE5280049962E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2A640824AAE5280049962E /* TodayViewController.swift */; };
 		EB2A640C24AAE5280049962E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2A640A24AAE5280049962E /* MainInterface.storyboard */; };
@@ -69,6 +71,7 @@
 		EB5E7CE922DC06F300CF6A37 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E7CE822DC06F300CF6A37 /* AdSupport.framework */; };
 		EB6001082276E41B00843615 /* WebServiceDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6001062276E41B00843615 /* WebServiceDemoVC.swift */; };
 		EB6001092276E41B00843615 /* WebServiceDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6001072276E41B00843615 /* WebServiceDemoVC.xib */; };
+		EB6213F625AD318D00FB3E65 /* TabSwipeContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6213F525AD318D00FB3E65 /* TabSwipeContainerVC.swift */; };
 		EB653E8E250F516800DF90F4 /* DateDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB653E86250F516600DF90F4 /* DateDemo.swift */; };
 		EB653E8F250F516800DF90F4 /* DispatchQueueDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB653E87250F516700DF90F4 /* DispatchQueueDemo.swift */; };
 		EB653E90250F516800DF90F4 /* AssociatedtypeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB653E88250F516700DF90F4 /* AssociatedtypeDemo.swift */; };
@@ -216,6 +219,16 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EB9749FD259C2F2900F63647 /* Embed App Clips */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed App Clips";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -242,6 +255,8 @@
 		EB1BFD3F219E991100B12F68 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
 		EB25F3C822816DF2002B1F23 /* CoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
 		EB25F3CB22817696002B1F23 /* Person.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Person.xcdatamodel; sourceTree = "<group>"; };
+		EB29DC3725AC284600394B2D /* TabSwipeDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSwipeDemoVC.swift; sourceTree = "<group>"; };
+		EB29DC3825AC284600394B2D /* TabSwipeDemoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabSwipeDemoVC.xib; sourceTree = "<group>"; };
 		EB2A640424AAE5280049962E /* TodayWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2A640524AAE5280049962E /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		EB2A640824AAE5280049962E /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -286,6 +301,7 @@
 		EB5E7CE822DC06F300CF6A37 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		EB6001062276E41B00843615 /* WebServiceDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceDemoVC.swift; sourceTree = "<group>"; };
 		EB6001072276E41B00843615 /* WebServiceDemoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebServiceDemoVC.xib; sourceTree = "<group>"; };
+		EB6213F525AD318D00FB3E65 /* TabSwipeContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSwipeContainerVC.swift; sourceTree = "<group>"; };
 		EB649AA720E1DB3100D5FF7E /* SYPlan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SYPlan.entitlements; sourceTree = "<group>"; };
 		EB653E86250F516600DF90F4 /* DateDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateDemo.swift; sourceTree = "<group>"; };
 		EB653E87250F516700DF90F4 /* DispatchQueueDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueDemo.swift; sourceTree = "<group>"; };
@@ -502,6 +518,16 @@
 			path = CoreDataDemo;
 			sourceTree = "<group>";
 		};
+		EB29DC3625AC27F900394B2D /* TabSwipeVCDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EB29DC3725AC284600394B2D /* TabSwipeDemoVC.swift */,
+				EB29DC3825AC284600394B2D /* TabSwipeDemoVC.xib */,
+				EB6213F525AD318D00FB3E65 /* TabSwipeContainerVC.swift */,
+			);
+			path = TabSwipeVCDemo;
+			sourceTree = "<group>";
+		};
 		EB2A63FC24AAD55E0049962E /* UI Page */ = {
 			isa = PBXGroup;
 			children = (
@@ -517,6 +543,7 @@
 				EB3ABF68218832F300460295 /* CollectionViewLayoutDemo */,
 				EB44A32C21757D8A005AA612 /* FacebookWebDemo */,
 				EB9E5CB724F89C220074A203 /* GoogleMapDemo */,
+				EB29DC3625AC27F900394B2D /* TabSwipeVCDemo */,
 			);
 			name = "UI Page";
 			sourceTree = "<group>";
@@ -1159,6 +1186,7 @@
 				EB0857DB20C8B782007B2AB8 /* Firebase Crashlytics */,
 				194EF795BF40368FBBC6B1E5 /* [CP] Embed Pods Frameworks */,
 				6D3117E5A26DC518950D4CB8 /* [CP] Copy Pods Resources */,
+				EB9749FD259C2F2900F63647 /* Embed App Clips */,
 			);
 			buildRules = (
 			);
@@ -1216,8 +1244,8 @@
 		EBD16BE420C12F91006FA1E8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1200;
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = "Sinyi Realty Inc";
 				TargetAttributes = {
 					EB2A640324AAE5280049962E = {
@@ -1337,6 +1365,7 @@
 				EB8090A722D6DF48008220B7 /* UnifiedNativeAdView.xib in Resources */,
 				EBC4CF9024036047009B7AC9 /* SaveImageVC.xib in Resources */,
 				EB139FFA2405F9D500ED1770 /* ImageLoaderCell.xib in Resources */,
+				EB29DC3A25AC284600394B2D /* TabSwipeDemoVC.xib in Resources */,
 				EBC9B5ED2424ADF700AAC335 /* LinkDemoCell.xib in Resources */,
 				EBD16BF520C12F91006FA1E8 /* Main.storyboard in Resources */,
 				EBC4CF942403A0AD009B7AC9 /* SaveImageCell.xib in Resources */,
@@ -1485,6 +1514,7 @@
 				EBE6DA9422438BE700A34C93 /* CoreImageViewController.swift in Sources */,
 				EB56D15121242AE800BE8BFC /* ShareExtensionViewController.swift in Sources */,
 				EB07B4B422856F4F00F7B7B2 /* RealmViewController.swift in Sources */,
+				EB29DC3925AC284600394B2D /* TabSwipeDemoVC.swift in Sources */,
 				EB7FB3CB22D5CA6D0018B879 /* CADisplayLinkDemoViewController.swift in Sources */,
 				EB44A33D21759188005AA612 /* ArticleTableViewCell.swift in Sources */,
 				EB44A34021759804005AA612 /* WebViewController.swift in Sources */,
@@ -1495,6 +1525,7 @@
 				EB44A32F21757DC6005AA612 /* FacebookWebDemoViewController.swift in Sources */,
 				EBAAF2392328DF8B00D0FFD6 /* UIViewController+Extension.swift in Sources */,
 				EBB3459A2177262100E24A15 /* UIColor+Extension.swift in Sources */,
+				EB6213F625AD318D00FB3E65 /* TabSwipeContainerVC.swift in Sources */,
 				EB13499423E81FF700C1FF0F /* CropImageDemoVC.swift in Sources */,
 				EB776D312276F57C000F39CB /* WebApiManager.swift in Sources */,
 				EB818C5C21364A5A00286D4C /* UploadService.swift in Sources */,

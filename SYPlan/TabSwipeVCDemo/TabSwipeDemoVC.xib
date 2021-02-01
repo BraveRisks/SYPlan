@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabSwipeDemoVC" customModule="SYPlan" customModuleProvider="target">
+            <connections>
+                <outlet property="pagerTabView" destination="6Pu-gA-VUJ" id="OIy-Yc-b4Q"/>
+                <outlet property="scrollView" destination="T9H-7C-mIe" id="dBO-Qu-sP0"/>
+                <outlet property="subscriptionButton" destination="u8T-lT-Lmz" id="AFr-SX-5FL"/>
+                <outlet property="typeButton" destination="hLE-SL-cGF" id="M4j-6A-Fxd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9H-7C-mIe">
+                    <rect key="frame" x="0.0" y="132" width="375" height="586"/>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Pu-gA-VUJ" customClass="UIPagerTabView" customModule="SYPlan" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="88" width="375" height="45"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="dUC-3N-KVt"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yGQ-Bo-WEC">
+                    <rect key="frame" x="304" y="580" width="56" height="120"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNg-np-dAm">
+                            <rect key="frame" x="0.0" y="0.0" width="56" height="56"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="BXU-IL-5oo"/>
+                                <constraint firstAttribute="width" constant="56" id="JWa-L4-hzH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <state key="normal" title="定位">
+                                <color key="titleColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="28"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLE-SL-cGF">
+                            <rect key="frame" x="0.0" y="64" width="56" height="56"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="56" id="CA0-qp-Ec4"/>
+                                <constraint firstAttribute="height" constant="56" id="CzY-Re-5ox"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <state key="normal" title="列表">
+                                <color key="titleColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="28"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="16F-dX-TEq">
+                    <rect key="frame" x="0.0" y="718" width="375" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGp-sh-CIG">
+                            <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="60"/>
+                            <color key="backgroundColor" red="0.37647058820000001" green="0.37647058820000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="hEP-5c-ThP"/>
+                            </constraints>
+                            <state key="normal" title="聯絡經紀人">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dqu-cp-1f7">
+                            <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="60"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="查看我家行情">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8T-lT-Lmz">
+                    <rect key="frame" x="97.666666666666686" y="653" width="160" height="40"/>
+                    <color key="backgroundColor" red="0.37647058820000001" green="0.37647058820000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="4Aw-c4-J5H"/>
+                        <constraint firstAttribute="width" constant="160" id="FuT-fS-h23"/>
+                    </constraints>
+                    <state key="normal" title="訂閱最新實價登錄">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Xc4-nT-Bep"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="16F-dX-TEq" firstAttribute="top" secondItem="u8T-lT-Lmz" secondAttribute="bottom" constant="25" id="0B6-o2-Cat"/>
+                <constraint firstAttribute="trailing" secondItem="16F-dX-TEq" secondAttribute="trailing" id="3vr-8g-STc"/>
+                <constraint firstItem="6Pu-gA-VUJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="83R-vw-PT7"/>
+                <constraint firstAttribute="trailing" secondItem="T9H-7C-mIe" secondAttribute="trailing" id="9Oa-q9-Q7z"/>
+                <constraint firstAttribute="trailing" secondItem="yGQ-Bo-WEC" secondAttribute="trailing" constant="15" id="9cE-mg-oGx"/>
+                <constraint firstItem="T9H-7C-mIe" firstAttribute="top" secondItem="6Pu-gA-VUJ" secondAttribute="bottom" id="MAD-pO-5qZ"/>
+                <constraint firstItem="16F-dX-TEq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QVI-sl-qtx"/>
+                <constraint firstItem="6Pu-gA-VUJ" firstAttribute="top" secondItem="Xc4-nT-Bep" secondAttribute="top" id="TIB-fr-dsX"/>
+                <constraint firstItem="Xc4-nT-Bep" firstAttribute="bottom" secondItem="16F-dX-TEq" secondAttribute="bottom" id="TrB-PT-D6h"/>
+                <constraint firstAttribute="trailing" secondItem="6Pu-gA-VUJ" secondAttribute="trailing" id="Vt2-FV-onN"/>
+                <constraint firstItem="T9H-7C-mIe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cyr-em-RAi"/>
+                <constraint firstItem="16F-dX-TEq" firstAttribute="top" secondItem="yGQ-Bo-WEC" secondAttribute="bottom" constant="18" id="gI3-rE-bfd"/>
+                <constraint firstItem="16F-dX-TEq" firstAttribute="top" secondItem="T9H-7C-mIe" secondAttribute="bottom" id="o1Z-1Y-LBN"/>
+                <constraint firstItem="u8T-lT-Lmz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-10" id="ubu-56-BgW"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+            <point key="canvasLocation" x="119.2" y="105.66502463054188"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

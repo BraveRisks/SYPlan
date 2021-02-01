@@ -14,6 +14,8 @@ class GoogleMapDemoVC: UIViewController {
 
     private var map: GMSMapView?
     
+    var position: (lat: Double, lng: Double) = (25.032659, 121.565957)
+    
     /// 繪製View
     private lazy var drawView: DrawView = {
         let view = DrawView()
@@ -26,12 +28,12 @@ class GoogleMapDemoVC: UIViewController {
         super.viewDidLoad()
         setup()
         addMarker()
-        addDrawView()
+        //addDrawView()
     }
     
     private func setup() {
-        let position = GMSCameraPosition(latitude: 25.032659, longitude: 121.565957, zoom: 15.0)
-        map = GMSMapView(frame: .zero, camera: position)
+        let camera = GMSCameraPosition(latitude: position.lat, longitude: position.lng, zoom: 15.0)
+        map = GMSMapView(frame: .zero, camera: camera)
         
         // 顯示交通狀態
         //map?.isTrafficEnabled = true
@@ -113,6 +115,12 @@ class GoogleMapDemoVC: UIViewController {
                 .isActive = true
         drawView.bottomAnchorEqual(to: view.bottomAnchor)
                 .isActive = true
+    }
+    
+    public func animateTo(position: (lat: Double, lng: Double)?) {
+        guard let p = position else { return }
+        
+        map?.animate(to: GMSCameraPosition(latitude: p.lat, longitude: p.lng, zoom: 15.0))
     }
 }
 

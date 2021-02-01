@@ -40,7 +40,7 @@ class ContainerViewController: UIViewController {
                 return [.fbWeb, .customCollectionViewLayout, .coreImage,
                         .animationNumber, .qrCode, .waterMark, .font,
                         .cropImage, .saveImage, .googleMap, .flash,
-                        .location, .lifeCircle]
+                        .location, .lifeCircle, .tabSwipe]
             case .network:
                 return [.upload, .download, .webService, .apiRefresh,
                         .imageLoader]
@@ -112,6 +112,8 @@ class ContainerViewController: UIViewController {
             case location = "Location"
             
             case lifeCircle = "LifeCirlce"
+            
+            case tabSwipe = "Tab Swipe"
         }
     }
     
@@ -414,6 +416,11 @@ extension ContainerViewController: UICollectionViewDataSource, UICollectionViewD
         case .lifeCircle:
             let vc = LifeCircleDemoVC()
             vc.value = "didSet"
+            vc.title = content.rawValue
+            vc.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(vc, animated: true)
+        case .tabSwipe:
+            let vc = TabSwipeDemoVC(nibName: "TabSwipeDemoVC", bundle: nil)
             vc.title = content.rawValue
             vc.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(vc, animated: true)

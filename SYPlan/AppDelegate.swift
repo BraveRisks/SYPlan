@@ -317,6 +317,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Check for specific URL components that you need.
         guard let path = components.path,
               let params = components.queryItems else {
+            // path = /demo/
+            print("path = \(components.path?.split(separator: "/").last)")
             return false
         }
         

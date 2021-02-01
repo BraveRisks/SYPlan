@@ -31,14 +31,16 @@ protocol UIPagerTabViewDelegate: class {
 /// ```
 class UIPagerTabView: UIView {
     
-    private var mScrollView: UIScrollView!
-    private var mLineView: UIView!
+    private var scrollView: UIScrollView!
+    private var lineView: UIView!
+    
+    private var lineViewLeadingConstraint: NSLayoutConstraint!
     
     /// Indicator width
-    private var mLineViewWidthConstraint: NSLayoutConstraint!
+    private var lineViewWidthConstraint: NSLayoutConstraint!
     
     /// Indicator height
-    private var mLineViewHeightConstraint: NSLayoutConstraint!
+    private var lineViewHeightConstraint: NSLayoutConstraint!
     
     /// 指示名稱
     var items: [String] = [] {
@@ -66,11 +68,18 @@ class UIPagerTabView: UIView {
     
     /// 指示條的高度 default：2.0
     var indicatorHieght: CGFloat = 2.0 {
-        didSet { mLineViewHeightConstraint.constant = indicatorHieght }
+        didSet { lineViewHeightConstraint.constant = indicatorHieght }
     }
     
     /// 指示條距離左右的間距 default：20.0
-    var indicatorPadding: CGFloat = 20.0
+    var indicatorPadding: CGFloat = 20.0 {
+        didSet {
+            lineViewLeadingConstraint.isActive = false
+            lineViewLeadingConstraint = lineView.leadingAnchor.constraint(equalTo: leadingAnchor,
+                                                                          constant: indicatorPadding)
+            lineViewLeadingConstraint.isActive = true
+        }
+    }
     
     /// 目前的位置
     var currentIndex: Int = 0
@@ -92,6 +101,7 @@ class UIPagerTabView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        // 1
         print("init coder")
         setup()
     }
@@ -107,30 +117,43 @@ class UIPagerTabView: UIView {
     private func setup() {
         // 2
         print("init setup")
-        mScrollView = UIScrollView(frame: .zero)
-        mScrollView.showsVerticalScrollIndicator = false
-        mScrollView.showsHorizontalScrollIndicator = false
-        mScrollView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(mScrollView)
-        NSLayoutConstraint.activate([
-            mScrollView.topAnchor.constraint(equalTo: topAnchor),
-            mScrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            mScrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            mScrollView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
+        scrollView = UIScrollView(frame: .zero)
+        scrollView.showsVerticalScrollIndicator = false
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(scrollView)
         
-        mLineView = UIView(frame: .zero)
-        mLineView.backgroundColor = itemTintColor
-        mLineView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(mLineView)
-        mLineViewWidthConstraint = mLineView.widthAnchor.constraint(equalToConstant: 0.0)
-        mLineViewHeightConstraint = mLineView.heightAnchor.constraint(equalToConstant: indicatorHieght)
-        NSLayoutConstraint.activate([
-            mLineView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: indicatorPadding),
-            mLineViewWidthConstraint,
-            mLineViewHeightConstraint,
-            mLineView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
+        scrollView.topAnchor
+                  .constraint(equalTo: topAnchor)
+                  .isActive = true
+        scrollView.leadingAnchor
+                  .constraint(equalTo: leadingAnchor)
+                  .isActive = true
+        scrollView.trailingAnchor
+                  .constraint(equalTo: trailingAnchor)
+                  .isActive = true
+        scrollView.bottomAnchor
+                  .constraint(equalTo: bottomAnchor)
+                  .isActive = true
+
+        lineView = UIView(frame: .zero)
+        lineView.backgroundColor = itemTintColor
+        lineView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(lineView)
+        
+        lineViewLeadingConstraint = lineView.leadingAnchor.constraint(equalTo: leadingAnchor,
+                                                                      constant: indicatorPadding)
+        lineViewLeadingConstraint.isActive = true
+        
+        lineViewWidthConstraint = lineView.widthAnchor.constraint(equalToConstant: 0.0)
+        lineViewWidthConstraint.isActive = true
+        
+        lineViewHeightConstraint = lineView.heightAnchor.constraint(equalToConstant: indicatorHieght)
+        lineViewHeightConstraint.isActive = true
+        
+        lineView.bottomAnchor
+                .constraint(equalTo: bottomAnchor)
+                .isActive = true
     }
     
     private func addButton() {
@@ -141,15 +164,15 @@ class UIPagerTabView: UIView {
         if count <= 0 { return }
         
         // 如果已有新增，則將之前的給移除
-        if mScrollView.subviews.count > 0 {
-            mScrollView.subviews.forEach { (view) in
+        if scrollView.subviews.count > 0 {
+            scrollView.subviews.forEach { (view) in
                 if view is UIButton { view.removeFromSuperview() }
             }
         }
         
         // 設定Indicator width
         let linwViewWidth = width / CGFloat(count) - (indicatorPadding * 2)
-        mLineViewWidthConstraint.constant = linwViewWidth < 0 ? 0.0 : linwViewWidth
+        lineViewWidthConstraint.constant = linwViewWidth < 0 ? 0.0 : linwViewWidth
         
         var btnX: CGFloat = 0.0
         let btnY: CGFloat = 0.0
@@ -161,10 +184,11 @@ class UIPagerTabView: UIView {
             btn.frame = CGRect(x: btnX, y: btnY, width: btnW, height: btnH)
             btn.setTitleColor(i == currentIndex ? itemTintColor : itemColor, for: .normal)
             btn.tag = i
-            mScrollView.addSubview(btn)
+            scrollView.addSubview(btn)
         }
+        
         let contentSize = CGSize(width: width, height: btnH)
-        mScrollView.contentSize = contentSize
+        scrollView.contentSize = contentSize
     }
     
     private func createButton(_ title: String) -> UIButton {
@@ -176,19 +200,19 @@ class UIPagerTabView: UIView {
     }
     
     private func changeColor(isTint: Bool) {
-        mScrollView.subviews.forEach { (view) in
+        scrollView.subviews.forEach { (view) in
             if let btn = view as? UIButton {
                 btn.setTitleColor(btn.tag == currentIndex ? itemTintColor : itemColor, for: .normal)
             }
         }
         
         if isTint {
-            mLineView.backgroundColor = itemTintColor
+            lineView.backgroundColor = itemTintColor
         }
     }
     
     private func changeFont() {
-        mScrollView.subviews.forEach { (view) in
+        scrollView.subviews.forEach { (view) in
             if let btn = view as? UIButton {
                 btn.titleLabel?.font = itemFont
             }
@@ -201,11 +225,11 @@ class UIPagerTabView: UIView {
         changeColor(isTint: false)
         
         let width = button.frame.width
-        let originY = mLineView.frame.minY
+        let originY = lineView.frame.minY
         let x = width * CGFloat(tag) + indicatorPadding
         isScrollByClick = true
         UIView.animate(withDuration: 0.2) {
-            self.mLineView.frame.origin = CGPoint(x: x, y: originY)
+            self.lineView.frame.origin = CGPoint(x: x, y: originY)
         }
         
         delegate?.pagerTabView(pagerTabView: self, didSelected: tag)
@@ -232,8 +256,8 @@ extension UIPagerTabView: UIScrollViewDelegate {
         
         // 再換算scrollView移動時，所對應indicator的距離
         let offsetX = scrollView.contentOffset.x / scale
-        let originY = mLineView.frame.minY
-        mLineView.frame.origin = CGPoint(x: offsetX + indicatorPadding, y: originY)
+        let originY = lineView.frame.minY
+        lineView.frame.origin = CGPoint(x: offsetX + indicatorPadding, y: originY)
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {

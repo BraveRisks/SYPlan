@@ -34,16 +34,16 @@ class NavigationDemoSwipeController: UINavigationController {
         
         // Reference: https://juejin.im/entry/5795809dd342d30059ed5c60
         // Support fullscreen swipe back
-        let target = interactivePopGestureRecognizer?.delegate
-        let targetView = interactivePopGestureRecognizer?.view
-        let action = NSSelectorFromString("handleNavigationTransition:")
+        //let target = interactivePopGestureRecognizer?.delegate
+        //let targetView = interactivePopGestureRecognizer?.view
+        //let action = NSSelectorFromString("handleNavigationTransition:")
         
-        let pan = UIPanGestureRecognizer(target: target, action: action)
-        pan.delegate = self
-        targetView?.addGestureRecognizer(pan)
+        //let pan = UIPanGestureRecognizer(target: target, action: action)
+        //pan.delegate = self
+        //targetView?.addGestureRecognizer(pan)
         
         // Disable system
-        interactivePopGestureRecognizer?.isEnabled = false
+        //interactivePopGestureRecognizer?.isEnabled = false
         
         createWatermarkView()
     }
