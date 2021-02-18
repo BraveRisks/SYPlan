@@ -23,6 +23,10 @@ class NavigationDemoSwipeController: UINavigationController {
         return .lightContent
     }
     
+    override func viewDidLayoutSubviews() {
+        createWatermarkView()
+    }
+    
     private func setup() {
         let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationBar.titleTextAttributes = textAttributes
@@ -34,21 +38,21 @@ class NavigationDemoSwipeController: UINavigationController {
         
         // Reference: https://juejin.im/entry/5795809dd342d30059ed5c60
         // Support fullscreen swipe back
-        //let target = interactivePopGestureRecognizer?.delegate
-        //let targetView = interactivePopGestureRecognizer?.view
-        //let action = NSSelectorFromString("handleNavigationTransition:")
+        let target = interactivePopGestureRecognizer?.delegate
+        let targetView = interactivePopGestureRecognizer?.view
+        let action = NSSelectorFromString("handleNavigationTransition:")
         
-        //let pan = UIPanGestureRecognizer(target: target, action: action)
-        //pan.delegate = self
-        //targetView?.addGestureRecognizer(pan)
+        let pan = UIPanGestureRecognizer(target: target, action: action)
+        pan.delegate = self
+        targetView?.addGestureRecognizer(pan)
         
         // Disable system
-        //interactivePopGestureRecognizer?.isEnabled = false
-        
-        createWatermarkView()
+        interactivePopGestureRecognizer?.isEnabled = false
     }
     
     public func createWatermarkView(with userID: String = "384861") {
+        guard watermarkImage == nil else { return }
+        
         // 計算系統的高度
         var sysHeight = UIApplication.shared.statusBarFrame.height
         
@@ -58,7 +62,8 @@ class NavigationDemoSwipeController: UINavigationController {
         let rect = CGRect(origin: .zero,
                           size: CGSize(width: view.frame.width, height: view.frame.height - sysHeight))
         let watermarkView = WatermarkView(frame: rect, userID: userID)
-        if let data = UserDefaults.standard.data(forKey: "image"), let image = UIImage(data: data) {
+        if let data = UserDefaults.standard.data(forKey: "image"),
+           let image = UIImage(data: data) {
             print("addWatermark has userdefault data size \(data.count)")
             watermarkImage = image
         } else {

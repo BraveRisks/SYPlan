@@ -66,7 +66,8 @@ class WatermarkView: UIView {
         print("!! start \(Date().milliStamp)")
         
         DispatchQueue.main.async {
-            if #available(iOS 10.0, *) {
+            // 20210203 在iOS14 later 使用UIGraphicsImageRenderer無法繪製正確圖，待修正
+            /*if #available(iOS 10.0, *) {
                 let format = UIGraphicsImageRendererFormat()
                 format.scale = 1.0
                 format.opaque = false
@@ -92,7 +93,15 @@ class WatermarkView: UIView {
                 
                 completionHandler(image)
                 print("!! end \(Date().milliStamp)")
-            }
+            }*/
+            
+            UIGraphicsBeginImageContextWithOptions(size, false, 1.0)
+            self.layer.render(in: UIGraphicsGetCurrentContext()!)
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
+            completionHandler(image)
+            print("!! end \(Date().milliStamp)")
         }
     }
     

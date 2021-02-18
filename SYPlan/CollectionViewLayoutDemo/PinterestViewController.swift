@@ -10,15 +10,15 @@ import UIKit
 
 class PinterestViewController: UIViewController {
     
-    private var mCollectionView: UICollectionView!
+    private var collectionView: UICollectionView!
     
-    private lazy var mPinterestLayout: PinterestLayout = {
+    private lazy var pinterestLayout: PinterestLayout = {
         let layout = PinterestLayout()
         layout.delegate = self
         return layout
     }()
     
-    private lazy var mCardLayout: CardLayout = {
+    private lazy var cardLayout: CardLayout = {
         let layout = CardLayout()
         return layout
     }()
@@ -30,7 +30,7 @@ class PinterestViewController: UIViewController {
         setup()
         print("PinterestViewController viewDidLoad")
     }
-    
+        
     deinit {
         print("\(self) deinit")
     }
@@ -41,22 +41,23 @@ class PinterestViewController: UIViewController {
         for i in 0 ..< 20 {
             datas.append(Pinterest(image: "photo_\(i + 1)", title: "美麗的女孩兒-\(i + 1)"))
         }
+
+        collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: pinterestLayout)
+        //collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: cardLayout)
+        collectionView.addCell(PinterestCollectionCell.self)
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.backgroundColor = .white
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(collectionView)
         
-        mCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: mPinterestLayout)
-        //mCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: mCardLayout)
-        mCollectionView.addCell(PinterestCollectionCell.self)
-        mCollectionView.showsVerticalScrollIndicator = false
-        mCollectionView.backgroundColor = .white
-        mCollectionView.dataSource = self
-        mCollectionView.delegate = self
-        mCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(mCollectionView)
-        
+        // AutoLayout
         NSLayoutConstraint.activate([
-            mCollectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0.0),
-            mCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0.0),
-            mCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0.0),
-            mCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0.0)
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0.0),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0.0),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0.0),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0.0)
         ])
     }
 }

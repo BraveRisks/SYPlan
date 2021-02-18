@@ -33,8 +33,9 @@ class UIFBWebView: UIView {
         didSet {
             //mTitleLab.text = url
             mTitleBtn.setTitle(url, for: .normal)
-            if url == nil { return }
-            mWebView.load(URLRequest(url: URL(string: url!)!))
+            
+            guard let value = url, let url = URL(string: value) else { return }
+            mWebView.load(URLRequest(url: url))
             
             // WKWebView progress KVO
             // http://pkuflint.me/2018/understanding-kvo-in-swift/

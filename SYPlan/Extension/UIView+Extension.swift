@@ -22,6 +22,18 @@ extension UIView {
             accessibilityIdentifier = newValue
         }
     }
+    
+    /// 依照UIView的位置，找到UIViewController
+    /// - Returns: UIViewController maybe nil.
+    func findViewController() -> UIViewController? {
+        if let nextResponder = self.next as? UIViewController {
+            return nextResponder
+        } else if let nextResponder = self.next as? UIView {
+            return nextResponder.findViewController()
+        } else {
+            return nil
+        }
+    }
 }
 
 // MARK: shadow、corner

@@ -205,6 +205,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		EB3B11F825C8EF6B00DD3A2C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EB56D1372123FA3E00BE8BFC /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1187,6 +1197,7 @@
 				194EF795BF40368FBBC6B1E5 /* [CP] Embed Pods Frameworks */,
 				6D3117E5A26DC518950D4CB8 /* [CP] Copy Pods Resources */,
 				EB9749FD259C2F2900F63647 /* Embed App Clips */,
+				EB3B11F825C8EF6B00DD3A2C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1890,6 +1901,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SYPlan",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/SDK",
 				);
 				INFOPLIST_FILE = SYPlan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1904,6 +1916,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "400 Sinyi SYPlan Dev";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = AdHoc;
 		};
@@ -2127,6 +2140,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SYPlan",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/SDK",
 				);
 				INFOPLIST_FILE = SYPlan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -2141,6 +2155,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "400 Sinyi SYPlan Dev";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -2159,6 +2174,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SYPlan",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/SDK",
 				);
 				INFOPLIST_FILE = SYPlan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -2173,6 +2189,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "400 Sinyi SYPlan Dev";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};
