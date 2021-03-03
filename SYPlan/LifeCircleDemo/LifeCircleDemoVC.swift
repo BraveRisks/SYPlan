@@ -8,6 +8,30 @@
 
 import UIKit
 
+/// Life Circle
+/// ```
+/// LifeCircleDemoVC viewDidLoad
+/// LifeCircleDemoVC viewWillAppear
+/// LifeCircleDemoVC viewDidLayoutSubviews
+/// LifeCircleDemoVC viewDidAppear
+///
+/// present other viewcontroller (if present UIAlertController 不會觸發Life Circle)
+///
+/// LifeCircleDemo2VC viewDidLoad
+/// LifeCircleDemoVC  viewWillDisappear
+/// LifeCircleDemo2VC viewWillAppear
+/// LifeCircleDemo2VC viewDidLayoutSubviews
+/// LifeCircleDemo2VC viewDidLayoutSubviews
+/// LifeCircleDemo2VC viewDidAppear
+/// LifeCircleDemoVC  viewDidDisappear
+///
+/// dismiss viewcontroller
+///
+/// LifeCircleDemo2VC viewWillDisappear
+/// LifeCircleDemoVC  viewWillAppear
+/// LifeCircleDemoVC  viewDidAppear
+/// LifeCircleDemo2VC viewDidDisappear
+/// ```
 class LifeCircleDemoVC: UIViewController {
 
     private var label: UILabel?
@@ -19,10 +43,32 @@ class LifeCircleDemoVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("LifeCircleDemoVC viewDidLoad")
         setup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("LifeCircleDemoVC viewWillAppear")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("LifeCircleDemoVC viewDidAppear")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("LifeCircleDemoVC viewWillDisappear")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("LifeCircleDemoVC viewDidDisappear")
+    }
+    
     override func viewDidLayoutSubviews() {
+        print("LifeCircleDemoVC viewDidLayoutSubviews")
         var safeAreaBottom: CGFloat = 0.0
         
         if #available(iOS 11.0, *) {
@@ -95,6 +141,19 @@ extension LifeCircleDemoVC: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueCell(LifeCircleCell.self, indexPath: indexPath)
         cell.value = "didSet on \(indexPath.row)"
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        
+        if indexPath.row % 2 == 0 {
+            let vc = LifeCircleDemo2VC()
+            present(vc, animated: true, completion: nil)
+        } else {
+            let ac = UIAlertController(title: "Life Circle", message: nil, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "關閉", style: .cancel, handler: nil))
+            present(ac, animated: true, completion: nil)
+        }
     }
 }
 

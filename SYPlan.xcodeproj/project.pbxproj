@@ -25,6 +25,7 @@
 		EB15562221378CAE007C6BF8 /* UploadResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB15562121378CAE007C6BF8 /* UploadResult.swift */; };
 		EB177BE521AE3CCC00921060 /* UIPagerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB177BE421AE3CCC00921060 /* UIPagerTabView.swift */; };
 		EB1BFD40219E991100B12F68 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BFD3F219E991100B12F68 /* CGFloat+Extension.swift */; };
+		EB22102E25E09E5100D7374A /* LifeCircleDemo2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB22102D25E09E5100D7374A /* LifeCircleDemo2VC.swift */; };
 		EB25F3C922816DF2002B1F23 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB25F3C822816DF2002B1F23 /* CoreDataViewController.swift */; };
 		EB25F3CC22817696002B1F23 /* Person.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB25F3CA22817696002B1F23 /* Person.xcdatamodeld */; };
 		EB26A3582387825E0090E25D /* AttributedStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB877DB9210975CF0075788C /* AttributedStringHelper.swift */; };
@@ -263,6 +264,7 @@
 		EB15562121378CAE007C6BF8 /* UploadResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadResult.swift; sourceTree = "<group>"; };
 		EB177BE421AE3CCC00921060 /* UIPagerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPagerTabView.swift; sourceTree = "<group>"; };
 		EB1BFD3F219E991100B12F68 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		EB22102D25E09E5100D7374A /* LifeCircleDemo2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCircleDemo2VC.swift; sourceTree = "<group>"; };
 		EB25F3C822816DF2002B1F23 /* CoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
 		EB25F3CB22817696002B1F23 /* Person.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Person.xcdatamodel; sourceTree = "<group>"; };
 		EB29DC3725AC284600394B2D /* TabSwipeDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSwipeDemoVC.swift; sourceTree = "<group>"; };
@@ -1076,6 +1078,7 @@
 			isa = PBXGroup;
 			children = (
 				EBE4FCD1255BDFDE009A84D8 /* LifeCircleDemoVC.swift */,
+				EB22102D25E09E5100D7374A /* LifeCircleDemo2VC.swift */,
 			);
 			path = LifeCircleDemo;
 			sourceTree = "<group>";
@@ -1567,6 +1570,7 @@
 				EB4C5560228D68B900C72B7A /* HttpSession.swift in Sources */,
 				EBC28C22212FDF35000B87EA /* URL+Extension.swift in Sources */,
 				EB76F8B52202772700C278D7 /* Download.swift in Sources */,
+				EB22102E25E09E5100D7374A /* LifeCircleDemo2VC.swift in Sources */,
 				EB653E98250F518200DF90F4 /* Sequence+Extension.swift in Sources */,
 				EB02605324BC47340086CD5A /* UIAlertController+Extension.swift in Sources */,
 				EB877DB62109686E0075788C /* RegularExpressionViewController.swift in Sources */,

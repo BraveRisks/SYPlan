@@ -314,6 +314,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
         
+        print("webURL = \(webURL)")
+        print("components.path = \(components.path)")
+        
         // Check for specific URL components that you need.
         guard let path = components.path,
               let params = components.queryItems else {

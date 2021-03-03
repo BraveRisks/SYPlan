@@ -35,7 +35,8 @@ class UIFBWebView: UIView {
             mTitleBtn.setTitle(url, for: .normal)
             
             guard let value = url, let url = URL(string: value) else { return }
-            mWebView.load(URLRequest(url: url))
+            let request = URLRequest(url: url)
+            mWebView.load(request)
             
             // WKWebView progress KVO
             // http://pkuflint.me/2018/understanding-kvo-in-swift/
@@ -217,8 +218,16 @@ class UIFBWebView: UIView {
             mLineView.trailingAnchor.constraint(equalTo: mContainerView.trailingAnchor, constant: 0.0)
         ])
         
+        let preferences = WKPreferences()
+        preferences.javaScriptEnabled = true
         let config = WKWebViewConfiguration()
+        config.preferences = preferences
+        
+        // 在既有的UserAgent後，添加自訂義文字
+        //config.applicationNameForUserAgent = "Sinyi Intra App"
+        
         mWebView = WKWebView(frame: CGRect.zero, configuration: config)
+        mWebView.customUserAgent = "Custom User Agent App"
         mWebView.navigationDelegate = self
         mWebView.uiDelegate = self
         mWebView.translatesAutoresizingMaskIntoConstraints = false
@@ -344,6 +353,14 @@ extension UIFBWebView: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         // 3 網頁載入完畢
         print("webView didFinish navigation")
+        webView.evaluateJavaScript("navigator.userAgent", completionHandler: { (result, error) in
+            // 系統 Mozilla/5.0 (iPhone; CPU iPhone OS 12_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148
+            if let unwrappedUserAgent = result as? String {
+                print("UserAgent: \(unwrappedUserAgent)")
+            } else {
+                print("Failed to get the user agent = \(String(describing: error))")
+            }
+        })
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
