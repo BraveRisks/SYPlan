@@ -28,7 +28,7 @@ class UIFBWebView: UIView {
     private let smallWH: CGFloat = 22.0
     private var estimatedProgressObserver: NSKeyValueObservation?
     private var webTitleObserver: NSKeyValueObservation?
-    
+        
     var url: String? {
         didSet {
             //mTitleLab.text = url
@@ -58,7 +58,7 @@ class UIFBWebView: UIView {
     }
     
     weak var delegate: UIFBWebViewDelegate?
-    
+        
     override init(frame: CGRect) {
         super.init(frame: frame)
         if frame == CGRect.zero { return }
@@ -353,6 +353,7 @@ extension UIFBWebView: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         // 3 網頁載入完畢
         print("webView didFinish navigation")
+
         webView.evaluateJavaScript("navigator.userAgent", completionHandler: { (result, error) in
             // 系統 Mozilla/5.0 (iPhone; CPU iPhone OS 12_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148
             if let unwrappedUserAgent = result as? String {
@@ -365,17 +366,24 @@ extension UIFBWebView: WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         // 網頁載入時，發生錯誤
-        print("webView didFail navigation")
+        print("webView didFail navigation = \(error)")
     }
     
     func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
         // 當網頁有重新導向時，會調用該方法
-        print("webView didReceiveServerRedirectForProvisionalNavigation navigation")
+        let url = String(describing: webView.url?.absoluteString)
+        print("webView didReceiveServerRedirectForProvisionalNavigation navigation = \(url)")
     }
     
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
-        //
-        print("webView didFailProvisionalNavigation navigation")
+        print("webView didFailProvisionalNavigation navigation = \(error)")
+    }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+        
+        print("webView decidePolicyFor navigationResponse")
+        
+        decisionHandler(.allow)
     }
 }
 

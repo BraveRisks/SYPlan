@@ -9,10 +9,11 @@
 import UIKit
 
 protocol PinterestLayoutDelegate: class {
-    func collectionView(_ collectionView:UICollectionView, heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat
+    func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat
 }
 
 class PinterestLayout: UICollectionViewLayout {
+    
     weak var delegate: PinterestLayoutDelegate?
     
     private var numberOfColumns = 2

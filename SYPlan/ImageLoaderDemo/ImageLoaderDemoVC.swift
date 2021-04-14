@@ -21,15 +21,11 @@ class ImageLoaderDemoVC: UIViewController {
         "https://i2.kknews.cc/SIG=38lohod/134o0006560np09479o7.jpg",
         "https://images.chinatimes.com/newsphoto/2019-11-23/900/20191123001228.jpg",
         "https://a.ksd-i.com/a/2019-09-26/120513-774720.jpg",
-        "https://files2018.hblady.com/2018-07-30/ryzescrgfqj.jpg",
         "https://news.cts.com.tw/photo/cts/201903/201903281956128_l.jpg",
-        "https://img.mttmp.com/images/2018/02/01/23/5817_jwpbHO_7axnsx2.jpg!r800x0.jpg",
-        "https://img.mttmp.com/images/2018/02/14/12/5245_pbDpuS_habxn4v.jpg",
         "https://images.chinatimes.com/newsphoto/2016-10-14/900/20161014003105.jpg",
         "https://img2.ali213.net/picfile/News/2018/10/13/584_90892ed7f4d330c97195c7d4badf610c.jpg",
         "https://i2.wp.com/inews.gtimg.com/newsapp_match/0/1447746561/0",
         "https://imgs.fun1shot.com/c7a0083c763a604a715f492d96e35085.jpeg",
-        "https://img1.how01.com/imgs/eb/ea/b/127b0002b496dfae0ae5.jpg",
         "https://5b0988e595225.cdn.sohucs.com/images/20191021/20645577ac26462888abb48a1e94e7ec.png",
         "https://n.sinaimg.cn/sinacn10108/560/w1080h1080/20190624/1152-hyvnhqq1620185.jpg"
     ]
@@ -73,10 +69,20 @@ extension ImageLoaderDemoVC: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueCell(ImageLoaderCell.self, indexPath: indexPath)
         
         let path = paths[index]
-        ImageLoader.share.load(path: path) { (image, oriPath) in
-            guard path == oriPath else { return }
-            
-            cell.item = (image, oriPath)
+        let uuid = ImageLoader.share.load(path: path) { (result) in
+            switch result {
+            case .success(let image):
+                cell.item = (image, path)
+            case .failure(let error):
+                cell.item = (nil, nil)
+                print("ImageLoader error = \(error.description)")
+            }
+        }
+        
+        cell.onReuse = {
+            if let uuid = uuid {
+                ImageLoader.share.cancelLoad(uuid, path)
+            }
         }
         
         return cell

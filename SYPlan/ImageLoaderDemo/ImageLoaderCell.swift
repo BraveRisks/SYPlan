@@ -13,9 +13,11 @@ class ImageLoaderCell: UITableViewCell {
     @IBOutlet weak var pictureImageView: UIImageView!
     @IBOutlet weak var pathLabel: UILabel!
     
-    var item: (image: UIImage?, path: String)? {
+    var item: (image: UIImage?, path: String?)? {
         didSet { setData() }
     }
+    
+    var onReuse: (() -> Swift.Void)? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,7 +29,9 @@ class ImageLoaderCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
+        onReuse?()
         pictureImageView.image = nil
+        pathLabel.text = nil
         super.prepareForReuse()
     }
     
