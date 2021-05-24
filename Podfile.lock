@@ -98,11 +98,11 @@ PODS:
   - nanopb/encode (1.30906.0)
   - PDFGenerator (3.1.0)
   - PromisesObjC (1.2.11)
-  - Realm (5.4.8):
-    - Realm/Headers (= 5.4.8)
-  - Realm/Headers (5.4.8)
-  - RealmSwift (5.4.8):
-    - Realm (= 5.4.8)
+  - Realm (5.5.1):
+    - Realm/Headers (= 5.5.1)
+  - Realm/Headers (5.5.1)
+  - RealmSwift (5.5.1):
+    - Realm (= 5.5.1)
   - Toaster (2.3.0)
 
 DEPENDENCIES:
@@ -114,7 +114,7 @@ DEPENDENCIES:
   - GoogleMaps
   - LookinServer
   - PDFGenerator (= 3.1.0)
-  - RealmSwift (= 5.4.8)
+  - RealmSwift (= 5.5.1)
   - Toaster (from `https://github.com/devxoul/Toaster.git`, branch `master`)
 
 SPEC REPOS:
@@ -173,10 +173,10 @@ SPEC CHECKSUMS:
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PDFGenerator: 17d6bc525db0a3fcd156fbf00f9d1b8d5cc75d1e
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
-  Realm: 042bbb59227a0159eda397b8a5a49fbd67495ce7
-  RealmSwift: 15ddd6b3398ebfc99810811c44f095df1313adb3
+  Realm: c2ffe0667f9c98c9ba65f608ba85684d39826145
+  RealmSwift: 5a35c1c35c3e1925e6fcd092c881d5cc4a826bff
   Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
 
-PODFILE CHECKSUM: 23d6e923d3fe74cf93d9d5447efbd2627e6cae4a
+PODFILE CHECKSUM: 8612ea489cf09a30beb1c6f55e9b59d22cb132bf
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.1
